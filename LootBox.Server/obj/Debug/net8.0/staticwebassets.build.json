@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "FiS/SnFS78vylqqiV+PwoFAClv1pH5u/ZoJIIyQKz10=",
+  "Source": "LootBox.Server",
+  "BasePath": "_content/LootBox.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\lootbox.client.esproj",
+      "Version": 2,
+      "Source": "lootbox.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

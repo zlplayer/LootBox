@@ -1,0 +1,15 @@
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\bin\Debug\net8.0\LootBox.Application.deps.json
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\bin\Debug\net8.0\LootBox.Application.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\bin\Debug\net8.0\LootBox.Application.pdb
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\bin\Debug\net8.0\LootBox.Domain.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\bin\Debug\net8.0\LootBox.Domain.pdb
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.csproj.AssemblyReference.cache
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.AssemblyInfoInputs.cache
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.AssemblyInfo.cs
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.csproj.CoreCompileInputs.cache
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox..29E153F8.Up2Date
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\refint\LootBox.Application.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.pdb
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\ref\LootBox.Application.dll

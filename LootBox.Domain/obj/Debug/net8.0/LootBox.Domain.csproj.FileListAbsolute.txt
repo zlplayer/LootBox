@@ -1,0 +1,11 @@
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\bin\Debug\net8.0\LootBox.Domain.deps.json
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\bin\Debug\net8.0\LootBox.Domain.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\bin\Debug\net8.0\LootBox.Domain.pdb
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Domain.AssemblyInfoInputs.cache
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Domain.AssemblyInfo.cs
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Domain.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\refint\LootBox.Domain.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Domain.pdb
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\ref\LootBox.Domain.dll

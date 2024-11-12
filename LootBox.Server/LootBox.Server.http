@@ -1,0 +1,6 @@
+@LootBox.Server_HostAddress = http://localhost:5117
+
+GET {{LootBox.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
