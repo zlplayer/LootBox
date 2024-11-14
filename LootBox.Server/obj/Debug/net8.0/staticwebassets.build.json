@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FiS/SnFS78vylqqiV+PwoFAClv1pH5u/ZoJIIyQKz10=",
+  "Hash": "MfzyXNFPfeH+amR7MMDeSZMqp7Uz6SNKtYZUi64jWYc=",
   "Source": "LootBox.Server",
   "BasePath": "_content/LootBox.Server",
   "Mode": "Default",
@@ -19,5 +19,6 @@
     }
   ],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

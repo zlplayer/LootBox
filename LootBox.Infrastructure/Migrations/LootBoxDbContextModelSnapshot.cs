@@ -144,6 +144,23 @@ namespace LootBox.Infrastructure.Migrations
                     b.ToTable("Rarities");
                 });
 
+            modelBuilder.Entity("LootBox.Domain.Entities.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("LootBox.Domain.Entities.TypeItem", b =>
                 {
                     b.Property<int>("Id")
@@ -159,6 +176,36 @@ namespace LootBox.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TypeItems");
+                });
+
+            modelBuilder.Entity("LootBox.Domain.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("LootBox.Domain.Entities.WearRating", b =>
@@ -224,6 +271,17 @@ namespace LootBox.Infrastructure.Migrations
                     b.Navigation("WearRating");
                 });
 
+            modelBuilder.Entity("LootBox.Domain.Entities.User", b =>
+                {
+                    b.HasOne("LootBox.Domain.Entities.Role", "Role")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("LootBox.Domain.Entities.Case", b =>
                 {
                     b.Navigation("CaseAndItem");
@@ -237,6 +295,11 @@ namespace LootBox.Infrastructure.Migrations
             modelBuilder.Entity("LootBox.Domain.Entities.Rarity", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("LootBox.Domain.Entities.Role", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("LootBox.Domain.Entities.TypeItem", b =>

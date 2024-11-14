@@ -9,3 +9,4 @@ C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Doma
 C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\refint\LootBox.Domain.dll
 C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Domain.pdb
 C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\ref\LootBox.Domain.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Domain\obj\Debug\net8.0\LootBox.Domain.sourcelink.json

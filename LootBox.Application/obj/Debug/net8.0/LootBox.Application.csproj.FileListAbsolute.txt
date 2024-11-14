@@ -13,3 +13,4 @@ C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox
 C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\refint\LootBox.Application.dll
 C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.pdb
 C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\ref\LootBox.Application.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Application\obj\Debug\net8.0\LootBox.Application.sourcelink.json

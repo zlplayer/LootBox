@@ -15,6 +15,8 @@ namespace LootBox.Infrastructure
         public DbSet<Domain.Entities.CaseAndItem> CaseAndItems { get; set; }
         public DbSet<Domain.Entities.Rarity> Rarities { get; set; }
         public DbSet<Domain.Entities.WearRating> WearRatings { get; set; }
+        public DbSet<Domain.Entities.User> Users { get; set; }
+        public DbSet<Domain.Entities.Role> Roles { get; set; }
 
         public LootBoxDbContext(DbContextOptions<LootBoxDbContext> options) : base(options)
         {

@@ -2,7 +2,9 @@
 using LootBox.Application.Mappings;
 using LootBox.Application.Middleware;
 using LootBox.Application.Services;
+using LootBox.Domain.Entities;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -24,7 +26,8 @@ namespace LootBox.Application.Extensions
             services.AddScoped<ITypeItemService, TypeItemService>();
             services.AddScoped<IWearRatingService, WearRatingService>();
             services.AddScoped<IRarityService, RarityService>();
-            
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
         }
     }

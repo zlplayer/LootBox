@@ -20,22 +20,28 @@ namespace LootBox.Infrastructure.Seeders
         {
             if (_dbContext.Database.CanConnect())
             {
-                if(!_dbContext.Rarities.Any())
+                if (!_dbContext.Rarities.Any())
                 {
                     var rarities = GetRarity();
                     _dbContext.Rarities.AddRange(rarities);
                     _dbContext.SaveChanges();
                 }
-                if(!_dbContext.WearRatings.Any())
+                if (!_dbContext.WearRatings.Any())
                 {
                     var wearRatings = GetWearRatings();
                     _dbContext.WearRatings.AddRange(wearRatings);
                     _dbContext.SaveChanges();
                 }
-                if(!_dbContext.TypeItems.Any())
+                if (!_dbContext.TypeItems.Any())
                 {
                     var typeItems = GetTypeItems();
                     _dbContext.TypeItems.AddRange(typeItems);
+                    _dbContext.SaveChanges();
+                }
+                if (!_dbContext.Roles.Any())
+                {
+                    var roles = GetRoles();
+                    _dbContext.Roles.AddRange(roles);
                     _dbContext.SaveChanges();
                 }
             }
@@ -78,7 +84,7 @@ namespace LootBox.Infrastructure.Seeders
             };
         }
 
-        private IEnumerable<WearRating> GetWearRatings() 
+        private IEnumerable<WearRating> GetWearRatings()
         {
             return new List<WearRating>
             {
@@ -132,6 +138,20 @@ namespace LootBox.Infrastructure.Seeders
                 {
                     Name = "Knife"
                 }
+            };
+        }
+        private IEnumerable<Role> GetRoles()
+        {
+            return new List<Role>
+            {
+                new Role
+                {
+                    Name = "User"
+                },
+                new Role
+                {
+                    Name = "Admin"
+                } 
             };
         }
     }

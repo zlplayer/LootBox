@@ -25,8 +25,6 @@ namespace LootBox.Application.Services
         }
         public async Task Create(CaseDto caseDto)
         {
-
-
             var newCase= _mapper.Map<Case>(caseDto);
             await _caseRepository.Create(newCase);
         }
@@ -99,22 +97,22 @@ namespace LootBox.Application.Services
 
         public async Task<ItemDto> DrawItemFromCase(int caseId)
         {
-            // Krok 1: Pobieramy przedmioty ze skrzynki
+            
             var items = await _caseRepository.GetItemsByCaseId(caseId);
 
-            // Obsługa przypadku, gdy nie ma żadnych przedmiotów
+            
             if (!items.Any())
             {
                 throw new NotFoundException("No items found in the case");
             }
 
-            // Obsługa przypadku, gdy jest tylko jeden przedmiot w skrzynce
+            
             if (items.Count() == 1)
             {
                 return _mapper.Map<ItemDto>(items.First());
             }
 
-            // Krok 2: Pobieramy dostępne rzadkości dla przedmiotów w skrzynce
+            
             var availableRarities = items
                 .Select(i => i.Rarity)
                 .Distinct()
@@ -126,24 +124,20 @@ namespace LootBox.Application.Services
                 throw new InvalidOperationException("No rarities defined for items in this case");
             }
 
-            // Krok 3: Losujemy rzadkość z dostępnych w tej skrzynce procentów
             var selectedRarity = DrawRarity(availableRarities);
             if (selectedRarity == null)
             {
                 throw new InvalidOperationException("Failed to draw a rarity from available rarities");
             }
 
-            // Krok 4: Filtrujemy przedmioty zgodnie z wylosowaną rzadkością
             var itemsOfSelectedRarity = items.Where(i => i.Rarity.Id == selectedRarity.Id).ToList();
             if (!itemsOfSelectedRarity.Any())
             {
                 throw new NotFoundException("No items found for the selected rarity in the case");
             }
 
-            // Krok 5: Losujemy przedmiot z wybranej rzadkości
             var selectedItem = itemsOfSelectedRarity[_random.Next(itemsOfSelectedRarity.Count)];
 
-            // Krok 6: Mapowanie i zwracanie wyniku
             return _mapper.Map<ItemDto>(selectedItem);
         }
 
@@ -179,7 +173,6 @@ namespace LootBox.Application.Services
                 }
             }
 
-            // Jeśli coś poszło nie tak, zwróć domyślną rzadkość (lub rzuć wyjątek)
             throw new InvalidOperationException("Failed to select rarity based on available percentages");
         }
 

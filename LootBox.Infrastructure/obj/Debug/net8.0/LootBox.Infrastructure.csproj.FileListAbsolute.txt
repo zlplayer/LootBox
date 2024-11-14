@@ -17,3 +17,4 @@ C:\Users\Konzo\source\repos\LootBox\LootBox.Infrastructure\obj\Debug\net8.0\refi
 C:\Users\Konzo\source\repos\LootBox\LootBox.Infrastructure\obj\Debug\net8.0\LootBox.Infrastructure.pdb
 C:\Users\Konzo\source\repos\LootBox\LootBox.Infrastructure\obj\Debug\net8.0\LootBox.Infrastructure.genruntimeconfig.cache
 C:\Users\Konzo\source\repos\LootBox\LootBox.Infrastructure\obj\Debug\net8.0\ref\LootBox.Infrastructure.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Infrastructure\obj\Debug\net8.0\LootBox.Infrastructure.sourcelink.json

@@ -25,6 +25,7 @@ namespace LootBox.Infrastructure.Extensions
             services.AddScoped<ITypeItemRepository, TypeItemRepository>();
             services.AddScoped<IWearRatingRepository, WearRatingRepository>();
             services.AddScoped<IRarityRepository, RarityRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
 
         }
     }
