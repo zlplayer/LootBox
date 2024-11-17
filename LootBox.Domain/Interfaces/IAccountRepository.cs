@@ -10,5 +10,6 @@ namespace LootBox.Domain.Interfaces
     public interface IAccountRepository
     {
         Task RegisterUser(User user);
+        Task<User> GetUserByEmail(string email);
     }
 }

@@ -1,7 +1,11 @@
-﻿using LootBox.Application.Interfaces;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using LootBox.Application.Dtos;
+using LootBox.Application.Interfaces;
 using LootBox.Application.Mappings;
 using LootBox.Application.Middleware;
 using LootBox.Application.Services;
+using LootBox.Application.Validators;
 using LootBox.Domain.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -29,6 +33,11 @@ namespace LootBox.Application.Extensions
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
+            services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
+            services.AddControllers().AddFluentValidation(fv =>
+            {
+                fv.RegisterValidatorsFromAssemblyContaining<RegisterUserDtoValidator>();
+            });
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using LootBox.Domain.Entities;
 using LootBox.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,7 @@ namespace LootBox.Infrastructure.Repositories
             await _dbContext.AddAsync(user);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<User> GetUserByEmail(string email)=> await _dbContext.Users.FirstOrDefaultAsync(x => x.Email == email);
     }
 }
