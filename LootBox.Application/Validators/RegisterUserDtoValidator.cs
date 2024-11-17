@@ -24,11 +24,10 @@ namespace LootBox.Application.Validators
 
                 var emailInUse = accountRepository.GetUserByEmail(email);
 
-                if (emailInUse != null)
+                if (emailInUse.Result != null)
                 {
-                    context.AddFailure("Email", "Email is already in use");
+                    context.AddFailure("Email", "Email jest w użyciu");
                 }
-
 
             });
 

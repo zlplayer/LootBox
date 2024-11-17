@@ -2,11 +2,15 @@
 using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
 using LootBox.Domain.Entities;
+using LootBox.Domain.Exceptions;
 using LootBox.Domain.Interfaces;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,11 +21,13 @@ namespace LootBox.Application.Services
         private readonly IMapper _mapper;
         private readonly IAccountRepository _accountRepository;
         private readonly IPasswordHasher<User> _passwordHasher;
-        public AccountService(IMapper mapper, IAccountRepository accountRepository, IPasswordHasher<User> passwordHasher)
+        private readonly AuthenticationSettings _authenticationSettings;
+        public AccountService(IMapper mapper, IAccountRepository accountRepository, IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings)
         {
-            _mapper= mapper;
+            _mapper = mapper;
             _accountRepository = accountRepository;
             _passwordHasher = passwordHasher;
+            _authenticationSettings = authenticationSettings;
         }
 
         public async Task RegisterUser(RegisterUserDto registerUserDto)
@@ -29,6 +35,45 @@ namespace LootBox.Application.Services
             var newUser = _mapper.Map<User>(registerUserDto);
             newUser.PasswordHash = _passwordHasher.HashPassword(newUser, registerUserDto.Password);
             await _accountRepository.RegisterUser(newUser);
+        }
+
+        public async Task<string> GenerateJwt(LoginDto loginDto)
+        {
+            var user = await _accountRepository.GetUserByEmail(loginDto.Email);
+            if (user == null)
+            {
+                throw new BadRequestException("błędne hasło lub login");
+            }
+            var result = _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, loginDto.Password);
+            if (result == PasswordVerificationResult.Failed)
+            {
+                throw new BadRequestException("błędne hasło lub login");
+            }
+
+            // Generate JWT
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.Role.Name),
+               
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authenticationSettings.JwtKey));
+            var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var expires = DateTime.Now.AddDays(_authenticationSettings.JwtExpireDays);
+
+            var token = new JwtSecurityToken(
+                _authenticationSettings.JwtIssuer,
+                _authenticationSettings.JwtIssuer,
+                claims,
+                expires: expires,
+                signingCredentials: cred
+            );
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var tokenString = tokenHandler.WriteToken(token);
+            return tokenString;
         }
     }
 }

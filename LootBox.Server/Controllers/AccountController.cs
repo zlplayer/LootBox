@@ -20,16 +20,19 @@ namespace LootBox.Server.Controllers
             await _accountService.RegisterUser(registerDto);
             return Ok();
         }
-        //[HttpPost("login")]
-        //public async Task<IActionResult> Login(LoginDto loginDto)
-        //{
-        //    var response = await _accountService.Login(loginDto);
-        //    if (response == null)
-        //    {
-        //        return Unauthorized();
-        //    }
-        //    return Ok(response);
-        //}
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginDto loginDto)
+        {
+            var response = await _accountService.GenerateJwt(loginDto);
+            if (response == null)
+            {
+                return Unauthorized();
+            }
+            return Ok(response);
+        }
+        
+
         //[HttpGet("user")]
         //public async Task<IActionResult> GetUser()
         //{

@@ -16,34 +16,58 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-
-builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddApplication();
-
-var app = builder.Build();
-
-
-var scope=app.Services.CreateScope();
-var seeder=scope.ServiceProvider.GetRequiredService<LootBoxSeeder>();
-seeder.Seed();
-
-
-app.UseDefaultFiles();
-app.UseStaticFiles();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+builder.Services.AddSwaggerGen(options =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please insert JWT with Bearer into field",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer"
+    });
+    //options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    //{
+    //    {
+    //        new OpenApiSecurityScheme
+    //        {
+    //            Reference = new OpenApiReference
+    //            {
+    //                Type = ReferenceType.SecurityScheme,
+    //                Id = "Bearer"
+    //            }
+    //        },
+    //        new string[] {}
+    //    } });
+});
 
-app.UseAuthorization();
 
-app.MapControllers();
+    builder.Services.AddInfrastructure(builder.Configuration);
+    builder.Services.AddApplication(builder.Configuration);
 
-app.MapFallbackToFile("/index.html");
+    var app = builder.Build();
 
-app.Run();
+
+    var scope = app.Services.CreateScope();
+    var seeder = scope.ServiceProvider.GetRequiredService<LootBoxSeeder>();
+    seeder.Seed();
+
+
+    app.UseDefaultFiles();
+    app.UseStaticFiles();
+
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.MapFallbackToFile("/index.html");
+
+    app.Run();
+

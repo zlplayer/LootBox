@@ -43,6 +43,7 @@ namespace LootBox.Application.Mappings
 
 
             CreateMap<RegisterUserDto, User>().ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.Password));
+            CreateMap<User, RegisterUserDto>().ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.PasswordHash));
         }
     }
 }

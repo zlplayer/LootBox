@@ -23,6 +23,7 @@ namespace LootBox.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<User> GetUserByEmail(string email)=> await _dbContext.Users.FirstOrDefaultAsync(x => x.Email == email);
+        public async Task<User> GetUserByEmail(string email)=> await _dbContext.Users.Include(x=>x.Role).FirstOrDefaultAsync(x => x.Email == email);
+       
     }
 }
