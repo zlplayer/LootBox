@@ -64,6 +64,8 @@ namespace LootBox.Application.Extensions
             {
                 fv.RegisterValidatorsFromAssemblyContaining<RegisterUserDtoValidator>();
             });
+
+            services.AddScoped<IEquipmentService, EquipmentService>();
         }
     }
 }

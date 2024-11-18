@@ -46,9 +46,19 @@ namespace LootBox.Application.Mappings
             CreateMap<User, RegisterUserDto>().ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.PasswordHash));
 
 
-            CreateMap<UpdateUserDto, User>().ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.Password));
-            CreateMap<User, UpdateUserDto>().ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.PasswordHash));
-            CreateMap<User, UserDto>().ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.Name));
+            CreateMap<UpdateUserDto, User>()
+                .ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.Password));
+
+            CreateMap<User, UpdateUserDto>()
+                .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.PasswordHash));
+
+            CreateMap<User, UserDto>()
+                .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.Name));
+
+            CreateMap<Item, EquipmentDto>().
+                ForMember(m => m.RarityColor, opt => opt.MapFrom(src => src.Rarity.Color))
+                .ForMember(m => m.TypeItemName, opt => opt.MapFrom(src => src.TypeItem.Name))
+                .ForMember(m => m.WearRatingName, opt => opt.MapFrom(src => src.WearRating.Name));
         }
     }
 }

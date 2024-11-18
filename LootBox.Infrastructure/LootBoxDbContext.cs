@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LootBox.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,15 @@ namespace LootBox.Infrastructure
 {
     public class LootBoxDbContext : DbContext
     {
-        public DbSet<Domain.Entities.Case> Cases { get; set; }
-        public DbSet<Domain.Entities.Item> Items { get; set; }
-        public DbSet<Domain.Entities.TypeItem> TypeItems { get; set; }
-        public DbSet<Domain.Entities.CaseAndItem> CaseAndItems { get; set; }
-        public DbSet<Domain.Entities.Rarity> Rarities { get; set; }
-        public DbSet<Domain.Entities.WearRating> WearRatings { get; set; }
-        public DbSet<Domain.Entities.User> Users { get; set; }
-        public DbSet<Domain.Entities.Role> Roles { get; set; }
+        public DbSet<Case> Cases { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<TypeItem> TypeItems { get; set; }
+        public DbSet<CaseAndItem> CaseAndItems { get; set; }
+        public DbSet<Rarity> Rarities { get; set; }
+        public DbSet<WearRating> WearRatings { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Equipment> Equipments { get; set; }
 
         public LootBoxDbContext(DbContextOptions<LootBoxDbContext> options) : base(options)
         {

@@ -30,5 +30,6 @@ namespace LootBox.Domain.Entities
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public  IEnumerable<CaseAndItem>? CaseAndItems { get; set; }= new List<CaseAndItem>();
+        public IEnumerable<Equipment> Equipments { get; set; } = new List<Equipment>();
     }
 }

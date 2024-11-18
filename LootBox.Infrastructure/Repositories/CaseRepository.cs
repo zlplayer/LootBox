@@ -67,6 +67,5 @@ namespace LootBox.Infrastructure.Repositories
             _dbContext.CaseAndItems.Remove(caseAndItem);
             await _dbContext.SaveChangesAsync();
         }
-
     }
 }

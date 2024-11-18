@@ -53,32 +53,21 @@ namespace LootBox.Server.Controllers
             return Ok();
         }
 
-        [HttpGet]
+        [HttpGet("user")]
         public async Task<IActionResult> GetAllUsers()
         {
             var users = await _accountService.GetAllUsers();
             return Ok(users);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("user/{id}")]
         public async Task<IActionResult> GetUserById([FromRoute] int id)
         {
             var user = await _accountService.GetUserById(id);
             return Ok(user);
         }
 
-        //[HttpGet("user")]
-        //public async Task<IActionResult> GetUser()
-        //{
-        //    var user = await _accountService.GetUser();
-        //    return Ok(user);
-        //}
-        //[HttpPut("user")]
-        //public async Task<IActionResult> UpdateUser(UpdateUserDto updateUserDto)
-        //{
-        //    await _accountService.UpdateUser(updateUserDto);
-        //    return Ok();
-        //}
+        
         //[HttpPut("change-password")]
         //public async Task<IActionResult> ChangePassword(ChangePasswordDto changePasswordDto)
         //{

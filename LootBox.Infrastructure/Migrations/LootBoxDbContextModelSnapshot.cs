@@ -78,6 +78,32 @@ namespace LootBox.Infrastructure.Migrations
                     b.ToTable("CaseAndItems");
                 });
 
+            modelBuilder.Entity("LootBox.Domain.Entities.Equipment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Added")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Equipments");
+                });
+
             modelBuilder.Entity("LootBox.Domain.Entities.Item", b =>
                 {
                     b.Property<int>("Id")
@@ -244,6 +270,25 @@ namespace LootBox.Infrastructure.Migrations
                     b.Navigation("Item");
                 });
 
+            modelBuilder.Entity("LootBox.Domain.Entities.Equipment", b =>
+                {
+                    b.HasOne("LootBox.Domain.Entities.Item", "Item")
+                        .WithMany("Equipments")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LootBox.Domain.Entities.User", "User")
+                        .WithMany("Equipments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("LootBox.Domain.Entities.Item", b =>
                 {
                     b.HasOne("LootBox.Domain.Entities.Rarity", "Rarity")
@@ -290,6 +335,8 @@ namespace LootBox.Infrastructure.Migrations
             modelBuilder.Entity("LootBox.Domain.Entities.Item", b =>
                 {
                     b.Navigation("CaseAndItems");
+
+                    b.Navigation("Equipments");
                 });
 
             modelBuilder.Entity("LootBox.Domain.Entities.Rarity", b =>
@@ -305,6 +352,11 @@ namespace LootBox.Infrastructure.Migrations
             modelBuilder.Entity("LootBox.Domain.Entities.TypeItem", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("LootBox.Domain.Entities.User", b =>
+                {
+                    b.Navigation("Equipments");
                 });
 
             modelBuilder.Entity("LootBox.Domain.Entities.WearRating", b =>
