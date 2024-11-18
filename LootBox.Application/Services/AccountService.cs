@@ -75,5 +75,45 @@ namespace LootBox.Application.Services
             var tokenString = tokenHandler.WriteToken(token);
             return tokenString;
         }
+
+        public async Task ChangeRole(int userId, int roleId)
+        {
+            await _accountRepository.ChangeRole(userId, roleId);
+        }
+
+        public async Task UpdateUser(int id,UpdateUserDto user)
+        {
+            var userToUpdate = await _accountRepository.GetUserById(id);
+            if (userToUpdate == null)
+            {
+                throw new NotFoundException("User not found");
+            }
+
+            var mapperUser= _mapper.Map(user, userToUpdate);
+
+            if (!string.IsNullOrEmpty(user.Password) && user.Password == user.ConfirmPassword)
+            {
+                userToUpdate.PasswordHash = _passwordHasher.HashPassword(userToUpdate, user.Password);
+            }
+            await _accountRepository.UpdateUser(mapperUser);
+        }
+
+        public async Task DeleteUser(int id)
+        {
+            await _accountRepository.DeleteUser(id);
+        }
+
+        public async Task<UserDto> GetUserById(int id)
+        {
+            var account= await _accountRepository.GetUserById(id);
+
+            return _mapper.Map<UserDto>(account);
+        }
+
+        public async Task<IEnumerable<UserDto>> GetAllUsers()
+        {
+            var users = await _accountRepository.GetAllUsers();
+            return _mapper.Map<IEnumerable<UserDto>>(users);
+        }
     }
 }

@@ -11,5 +11,10 @@ namespace LootBox.Domain.Interfaces
     {
         Task RegisterUser(User user);
         Task<User> GetUserByEmail(string email);
+        Task ChangeRole(int userId, int roleId);
+        Task UpdateUser(User user);
+        Task DeleteUser(int id);
+        Task<User> GetUserById(int id);
+        Task<IEnumerable<User>> GetAllUsers();
     }
 }

@@ -31,7 +31,41 @@ namespace LootBox.Server.Controllers
             }
             return Ok(response);
         }
-        
+
+        [HttpPost("{userId}")]
+        public async Task<IActionResult> ChangeRole([FromRoute] int userId, int roleId)
+        {
+            await _accountService.ChangeRole(userId, roleId);
+            return Ok();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] UpdateUserDto user)
+        {
+            await _accountService.UpdateUser(id, user);
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser([FromRoute] int id)
+        {
+            await _accountService.DeleteUser(id);
+            return Ok();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var users = await _accountService.GetAllUsers();
+            return Ok(users);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUserById([FromRoute] int id)
+        {
+            var user = await _accountService.GetUserById(id);
+            return Ok(user);
+        }
 
         //[HttpGet("user")]
         //public async Task<IActionResult> GetUser()
