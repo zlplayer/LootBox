@@ -11,7 +11,7 @@ namespace LootBox.Application.Validators
 {
     public class UpdateUserValidatorDto: AbstractValidator<RegisterUserDto>
     {
-        public UpdateUserValidatorDto(IAccountRepository accountRepository)
+        public UpdateUserValidatorDto()
         {
             RuleFor(x => x.Password).NotEmpty().MinimumLength(6);
             RuleFor(x => x.ConfirmPassword).Equal(x => x.Password);

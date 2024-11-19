@@ -17,6 +17,6 @@ namespace LootBox.Application.Interfaces
         Task DeleteUser(int id);
         Task<IEnumerable<UserDto>> GetAllUsers();
         Task<UserDto> GetUserById(int id);
-
+        Task ChangePassword(int userId, ChangePasswordUserDto newPassword);
     }
 }

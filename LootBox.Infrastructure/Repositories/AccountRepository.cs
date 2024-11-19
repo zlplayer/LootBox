@@ -49,5 +49,13 @@ namespace LootBox.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task ChangePassword(int userId, string newPassword)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == userId);
+            user.PasswordHash = newPassword;
+            _dbContext.Update(user);
+            await _dbContext.SaveChangesAsync();
+        }
+
     }
 }

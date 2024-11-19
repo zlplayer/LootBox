@@ -115,5 +115,16 @@ namespace LootBox.Application.Services
             var users = await _accountRepository.GetAllUsers();
             return _mapper.Map<IEnumerable<UserDto>>(users);
         }
+
+        public async Task ChangePassword(int userId, ChangePasswordUserDto newPassword)
+        {
+            var user = await _accountRepository.GetUserById(userId);
+            if (user == null)
+            {
+                throw new NotFoundException("User not found");
+            }
+            user.PasswordHash = _passwordHasher.HashPassword(user, newPassword.NewPassword);
+            await _accountRepository.UpdateUser(user);
+        }
     }
 }

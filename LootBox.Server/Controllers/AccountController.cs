@@ -67,12 +67,12 @@ namespace LootBox.Server.Controllers
             return Ok(user);
         }
 
-        
-        //[HttpPut("change-password")]
-        //public async Task<IActionResult> ChangePassword(ChangePasswordDto changePasswordDto)
-        //{
-        //    await _accountService.ChangePassword(changePasswordDto);
-        //    return Ok();
-        //}
+        [HttpPut("changePassword/{userId}")]
+        public async Task<IActionResult> ChangePassword([FromRoute]int userId, ChangePasswordUserDto newPassword)
+        {
+            await _accountService.ChangePassword(userId, newPassword);
+            return Ok();
+        }
+
     }
 }

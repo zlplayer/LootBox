@@ -4,6 +4,7 @@ using LootBox.Application.Interfaces;
 using LootBox.Domain.Entities;
 using LootBox.Domain.Exceptions;
 using LootBox.Domain.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,9 +33,9 @@ namespace LootBox.Application.Services
         {
             var item = await _itemRespository.GetItemById(id);
 
-            if (item == null)
+            if (id == null)
             {
-                throw new NotFoundException("Item not found");
+                throw new NotFoundException("Nie znaleziono");
             }
 
             return _mapper.Map<ItemDto>(item);

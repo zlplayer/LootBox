@@ -31,6 +31,11 @@ namespace LootBox.Application.Middleware
                 context.Response.StatusCode = 403;
                 await context.Response.WriteAsync(forbidden.Message);
             }
+            catch(Domain.Exceptions.KeyNotFoundException keyNotFound)
+            {
+                context.Response.StatusCode = 404;
+                await context.Response.WriteAsync(keyNotFound.Message);
+            }
             catch (Exception ex)
             {
                 context.Response.StatusCode = 500;
