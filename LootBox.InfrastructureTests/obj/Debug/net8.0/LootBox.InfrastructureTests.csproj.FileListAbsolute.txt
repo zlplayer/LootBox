@@ -236,3 +236,5 @@ C:\Users\Konzo\source\repos\LootBox\LootBox.InfrastructureTests\obj\Debug\net8.0
 C:\Users\Konzo\source\repos\LootBox\LootBox.InfrastructureTests\obj\Debug\net8.0\LootBox.InfrastructureTests.pdb
 C:\Users\Konzo\source\repos\LootBox\LootBox.InfrastructureTests\obj\Debug\net8.0\LootBox.InfrastructureTests.genruntimeconfig.cache
 C:\Users\Konzo\source\repos\LootBox\LootBox.InfrastructureTests\obj\Debug\net8.0\ref\LootBox.InfrastructureTests.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.InfrastructureTests\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.InfrastructureTests\bin\Debug\net8.0\Moq.dll

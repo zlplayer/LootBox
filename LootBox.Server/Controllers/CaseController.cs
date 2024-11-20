@@ -1,6 +1,7 @@
 ﻿using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
 using LootBox.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +19,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPost("/Case")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create( CaseDto caseDto)
         {
 
@@ -41,6 +43,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPut("/Case/{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update([FromRoute]int id,CaseDto caseDto)
         {
             await _caseService.Update(id,caseDto);
@@ -48,6 +51,8 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpDelete("/Case/{id}")]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> Delete([FromRoute]int id)
         {
             await _caseService.Delete(id);
@@ -57,6 +62,8 @@ namespace LootBox.Server.Controllers
 
 
         [HttpPost("/Case/{caseId}/Item/{itemId}")]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> AddItemToCase([FromRoute] int caseId, [FromRoute] int itemId)
         {
             await _caseService.AddItemToCase(caseId, itemId);
@@ -71,6 +78,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpDelete("/Case/{caseId}/Items/{itemId}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteItemInCase([FromRoute] int caseId, [FromRoute] int itemId)
         {
             await _caseService.DeleteItemInCase(caseId, itemId);
@@ -78,6 +86,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPost("/Case/{caseId}/Draw")]
+        [Authorize]
         public async Task<IActionResult> DrawItemFromCase([FromRoute] int caseId)
         {
             var item = await _caseService.DrawItemFromCase(caseId);

@@ -1,6 +1,7 @@
 ﻿using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
 using LootBox.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace LootBox.Server.Controllers
 {
     [Route("api/Equipment")]
     [ApiController]
+    [Authorize]
     public class EquipmentController : ControllerBase
     {
         private readonly IEquipmentService _equipmentService;

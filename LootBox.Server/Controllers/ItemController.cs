@@ -1,5 +1,6 @@
 ﻿using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LootBox.Server.Controllers
@@ -16,6 +17,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPost("/Item")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(CreateItemDto itemDto)
         {
             await _itemService.Create(itemDto);
@@ -38,6 +40,8 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPut("/Item/{id}")]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> Update([FromRoute]int id, [FromBody] UpdateItemDto itemDto)
         {
             await _itemService.Update(id, itemDto);
@@ -45,6 +49,8 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpDelete("/Item/{id}")]
+        [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> Delete([FromRoute]int id)
         {
             await _itemService.Delete(id);

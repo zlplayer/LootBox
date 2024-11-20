@@ -33,7 +33,7 @@ namespace LootBox.Application.Services
         {
             var item = await _itemRespository.GetItemById(id);
 
-            if (id == null)
+            if (item == null)
             {
                 throw new NotFoundException("Nie znaleziono");
             }

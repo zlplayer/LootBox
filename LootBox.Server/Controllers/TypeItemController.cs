@@ -1,6 +1,7 @@
 ﻿using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
 using LootBox.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace LootBox.Server.Controllers
 {
     [Route("api")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class TypeItemController : ControllerBase
     {
         private readonly ITypeItemService _typeItemService;

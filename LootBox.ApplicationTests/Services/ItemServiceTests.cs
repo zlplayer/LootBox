@@ -71,8 +71,9 @@ namespace LootBox.Tests.Application.Services
             var act = async () => await _itemService.GetItemById(1);
 
             // Assert
-            await act.Should().ThrowAsync<NotFoundException>().WithMessage("Item not found");
+            await act.Should().ThrowAsync<NotFoundException>().WithMessage("Nie znaleziono");
         }
+
 
         [Fact]
         public async Task Create_ShouldCallRepositoryCreate_WhenCalled()

@@ -6,6 +6,7 @@ using LootBox.Application.Extensions;
 using Microsoft.OpenApi.Models;
 using LootBox.Server;
 using Microsoft.AspNetCore.Http.Features;
+using LootBox.Application.Middleware;
 
 
 
@@ -52,7 +53,7 @@ builder.Services.AddSwaggerGen(options =>
     var seeder = scope.ServiceProvider.GetRequiredService<LootBoxSeeder>();
     seeder.Seed();
 
-
+    app.UseMiddleware<ErrorHandingMiddleware>();
     app.UseDefaultFiles();
     app.UseStaticFiles();
 

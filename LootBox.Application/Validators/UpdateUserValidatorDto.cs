@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LootBox.Application.Validators
 {
-    public class UpdateUserValidatorDto: AbstractValidator<RegisterUserDto>
+    public class UpdateUserValidatorDto: AbstractValidator<UpdateUserDto>
     {
         public UpdateUserValidatorDto()
         {

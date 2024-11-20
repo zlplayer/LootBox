@@ -1,5 +1,6 @@
 ﻿using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,6 +34,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPost("{userId}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> ChangeRole([FromRoute] int userId, int roleId)
         {
             await _accountService.ChangeRole(userId, roleId);
@@ -40,6 +42,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] UpdateUserDto user)
         {
             await _accountService.UpdateUser(id, user);
@@ -47,6 +50,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteUser([FromRoute] int id)
         {
             await _accountService.DeleteUser(id);
@@ -54,6 +58,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpGet("user")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllUsers()
         {
             var users = await _accountService.GetAllUsers();
@@ -61,6 +66,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpGet("user/{id}")]
+        [Authorize]
         public async Task<IActionResult> GetUserById([FromRoute] int id)
         {
             var user = await _accountService.GetUserById(id);

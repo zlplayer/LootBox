@@ -1,12 +1,14 @@
 ﻿using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
 using LootBox.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LootBox.Server.Controllers
 {
     [ApiController]
     [Route("api")]
+    [Authorize(Roles ="Admin")]
     public class RarityController : ControllerBase
     {
         private readonly IRarityService _rarityService;

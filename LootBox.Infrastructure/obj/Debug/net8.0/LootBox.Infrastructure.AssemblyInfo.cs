@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LootBox.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64b13498dfbd690452b795482e4305a6ac250fe9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07df53bda265d3574cd99046a6a3974664364c7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LootBox.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LootBox.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
