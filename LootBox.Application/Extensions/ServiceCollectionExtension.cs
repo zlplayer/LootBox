@@ -60,13 +60,13 @@ namespace LootBox.Application.Extensions
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
-            services.AddScoped<IValidator<ChangePasswordUserDto>, ChangePasswordUserDtoValidator>();
-            services.AddScoped<IValidator<UpdateUserDto>, UpdateUserValidatorDto>();
+            //services.AddScoped<IValidator<ChangePasswordUserDto>, ChangePasswordUserDtoValidator>();
+            //services.AddScoped<IValidator<UpdateUserDto>, UpdateUserValidatorDto>();
             services.AddControllers().AddFluentValidation(fv =>
             {
                 fv.RegisterValidatorsFromAssemblyContaining<RegisterUserDtoValidator>();
-                fv.RegisterValidatorsFromAssemblyContaining<ChangePasswordUserDtoValidator>();
-                fv.RegisterValidatorsFromAssemblyContaining<UpdateUserValidatorDto>();
+                //fv.RegisterValidatorsFromAssemblyContaining<ChangePasswordUserDtoValidator>();
+                //fv.RegisterValidatorsFromAssemblyContaining<UpdateUserValidatorDto>();
 
             });
 

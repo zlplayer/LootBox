@@ -19,9 +19,11 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPost("/Case")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Create( CaseDto caseDto)
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Create( [FromForm] CreateCaseDto caseDto)
         {
+            if (string.IsNullOrEmpty(caseDto.Name))
+                return BadRequest("Name is required.");
 
             await _caseService.Create(caseDto);
             return Ok();
@@ -43,15 +45,15 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPut("/Case/{id}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Update([FromRoute]int id,CaseDto caseDto)
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Update([FromRoute]int id, [FromForm] CreateCaseDto caseDto)
         {
             await _caseService.Update(id,caseDto);
             return Ok();
         }
 
         [HttpDelete("/Case/{id}")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> Delete([FromRoute]int id)
         {
@@ -62,7 +64,7 @@ namespace LootBox.Server.Controllers
 
 
         [HttpPost("/Case/{caseId}/Item/{itemId}")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> AddItemToCase([FromRoute] int caseId, [FromRoute] int itemId)
         {
@@ -78,7 +80,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpDelete("/Case/{caseId}/Items/{itemId}")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteItemInCase([FromRoute] int caseId, [FromRoute] int itemId)
         {
             await _caseService.DeleteItemInCase(caseId, itemId);
@@ -86,7 +88,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPost("/Case/{caseId}/Draw")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> DrawItemFromCase([FromRoute] int caseId)
         {
             var item = await _caseService.DrawItemFromCase(caseId);

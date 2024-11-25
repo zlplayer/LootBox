@@ -18,7 +18,7 @@ namespace LootBox.Server.Controllers
 
         [HttpPost("/Item")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Create(CreateItemDto itemDto)
+        public async Task<IActionResult> Create([FromForm]CreateItemDto itemDto)
         {
             await _itemService.Create(itemDto);
             return Ok();
@@ -42,7 +42,7 @@ namespace LootBox.Server.Controllers
         [HttpPut("/Item/{id}")]
         [Authorize(Roles = "Admin")]
 
-        public async Task<IActionResult> Update([FromRoute]int id, [FromBody] UpdateItemDto itemDto)
+        public async Task<IActionResult> Update([FromRoute]int id, [FromForm] UpdateItemDto itemDto)
         {
             await _itemService.Update(id, itemDto);
             return Ok();

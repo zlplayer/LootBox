@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace LootBox.Application.Dtos
 {
-    public class CaseDto
+    public class CreateCaseDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; } =default!;
-        public string Image { get; set; }
+        public string Name { get; set; } = default!;
+        public IFormFile? ImageFile { get; set; }
         public float Price { get; set; }
-
     }
 }

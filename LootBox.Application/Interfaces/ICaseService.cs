@@ -6,10 +6,10 @@ namespace LootBox.Application.Interfaces
 {
     public interface ICaseService
     {
-        Task Create(CaseDto caseDto);
+        Task Create(CreateCaseDto caseDto);
         Task<IEnumerable<CaseDto>> GetAllCase();
         Task<CaseDto> GetCaseById(int id);
-        Task Update(int id, CaseDto caseDto);
+        Task Update(int id, CreateCaseDto caseDto);
         Task Delete(int id);
 
         Task AddItemToCase(int caseId, int itemId);

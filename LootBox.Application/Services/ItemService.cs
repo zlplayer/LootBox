@@ -4,6 +4,7 @@ using LootBox.Application.Interfaces;
 using LootBox.Domain.Entities;
 using LootBox.Domain.Exceptions;
 using LootBox.Domain.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,12 @@ namespace LootBox.Application.Services
         public async Task Create(CreateItemDto itemDto)
         {
             var newItem = _mapper.Map<Item>(itemDto);
+
+            if (itemDto.ImageFile != null)
+            {
+                newItem.Image = await ConvertFileToBase64Async(itemDto.ImageFile);
+            }
+
             await _itemRespository.Create(newItem);
         }
 
@@ -56,6 +63,11 @@ namespace LootBox.Application.Services
                 throw new NotFoundException("Item not found");
             }
 
+            if (itemDto.ImageFile != null)
+            {
+                itemToUpdate.Image = await ConvertFileToBase64Async(itemDto.ImageFile);
+            }
+
             var mappedItem = _mapper.Map(itemDto, itemToUpdate);
             await _itemRespository.Update(mappedItem);
         }
@@ -63,6 +75,13 @@ namespace LootBox.Application.Services
         public async Task Delete(int id)
         {
             await _itemRespository.Delete(id);
+        }
+
+        private async Task<string> ConvertFileToBase64Async(IFormFile file)
+        {
+            using var memoryStream = new MemoryStream();
+            await file.CopyToAsync(memoryStream);
+            return Convert.ToBase64String(memoryStream.ToArray());
         }
     }
 }

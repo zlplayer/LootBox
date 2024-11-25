@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using LootBox.Application.Dtos;
 using LootBox.Domain.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,10 @@ namespace LootBox.Application.Mappings
     public class CaseMappingProfile: Profile
     {
         public CaseMappingProfile() {
+
+            CreateMap<CreateCaseDto, Case>();
+
+
             CreateMap<CaseDto, Case>();
             CreateMap<Case, CaseDto>();
 

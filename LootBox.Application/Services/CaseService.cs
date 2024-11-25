@@ -4,6 +4,7 @@ using LootBox.Application.Interfaces;
 using LootBox.Domain.Entities;
 using LootBox.Domain.Exceptions;
 using LootBox.Domain.Interfaces;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,15 @@ namespace LootBox.Application.Services
             _caseRepository = caseRepository;
             _random = random;
         }
-        public async Task Create(CaseDto caseDto)
+        public async Task Create(CreateCaseDto caseDto)
         {
-            var newCase= _mapper.Map<Case>(caseDto);
+            var newCase = _mapper.Map<Case>(caseDto);
+
+            if (caseDto.ImageFile != null)
+            {
+                newCase.Image = await ConvertFileToBase64Async(caseDto.ImageFile);
+            }
+
             await _caseRepository.Create(newCase);
         }
 
@@ -46,7 +53,7 @@ namespace LootBox.Application.Services
             
             return _mapper.Map<CaseDto>(@case);
         }
-        public async Task Update(int id,CaseDto caseDto)
+        public async Task Update(int id,CreateCaseDto caseDto)
         {
             var caseToUpdate = await _caseRepository.GetCaseById(id);
 
@@ -54,7 +61,12 @@ namespace LootBox.Application.Services
             {
                 throw new NotFoundException("Case not found");
             }
-            
+
+            if (caseDto.ImageFile != null)
+            {
+                caseToUpdate.Image = await ConvertFileToBase64Async(caseDto.ImageFile);
+            }
+
             var mappedCase = _mapper.Map(caseDto, caseToUpdate);
             await _caseRepository.Update(mappedCase);
         }
@@ -141,23 +153,7 @@ namespace LootBox.Application.Services
             return _mapper.Map<ItemDto>(selectedItem);
         }
 
-        // Funkcja do losowania rzadkości na podstawie procentów
-        //private Rarity DrawRarity(IEnumerable<Rarity> rarities)
-        //{
-        //    float roll = (float)_random.NextDouble() * 100f;
-        //    float cumulative = 0f;
-
-        //    foreach (var rarity in rarities.OrderBy(r => r.Percent))
-        //    {
-        //        cumulative += rarity.Percent;
-        //        if (roll <= cumulative)
-        //        {
-        //            return rarity;
-        //        }
-        //    }
-
-        //    return null; // Zapasowy powrót, ale nie powinien się zdarzyć
-        //}
+        
         public Rarity DrawRarity(List<Rarity> availableRarities)
         {
             var totalPercent = availableRarities.Sum(r => r.Percent);
@@ -176,5 +172,11 @@ namespace LootBox.Application.Services
             throw new InvalidOperationException("Failed to select rarity based on available percentages");
         }
 
+        private async Task<string> ConvertFileToBase64Async(IFormFile file)
+        {
+            using var memoryStream = new MemoryStream();
+            await file.CopyToAsync(memoryStream);
+            return Convert.ToBase64String(memoryStream.ToArray());
+        }
     }
 }

@@ -3,244 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\Konzo\\source\\repos\\LootBox\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.servertests\\controllers\\wearratingcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|solutionrelative:lootbox.servertests\\controllers\\wearratingcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\wearratingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\wearratingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.servertests\\controllers\\typeitemcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|solutionrelative:lootbox.servertests\\controllers\\typeitemcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\typeitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\typeitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.servertests\\controllers\\raritycontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|solutionrelative:lootbox.servertests\\controllers\\raritycontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.servertests\\controllers\\itemcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|solutionrelative:lootbox.servertests\\controllers\\itemcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructuretests\\lootbox.infrastructuretests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|solutionrelative:lootbox.infrastructuretests\\lootbox.infrastructuretests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\raritycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\raritycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.servertests\\controllers\\equipmentcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|solutionrelative:lootbox.servertests\\controllers\\equipmentcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\equipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\equipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.servertests\\controllers\\casecontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|solutionrelative:lootbox.servertests\\controllers\\casecontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\casecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\casecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\repositories\\caserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\repositories\\caserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.servertests\\controllers\\accountcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA5AFD09-0055-4B16-8186-D3EF535E01AD}|LootBox.ServerTests\\LootBox.ServerTests.csproj|solutionrelative:lootbox.servertests\\controllers\\accountcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\changepassworduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\changepassworduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\validators\\updateuservalidatordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\validators\\updateuservalidatordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\validators\\changepassworduserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\validators\\changepassworduserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\validators\\registeruserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\validators\\registeruserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructuretests\\repositories\\accountrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|solutionrelative:lootbox.infrastructuretests\\repositories\\accountrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructuretests\\repositories\\typeitemrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|solutionrelative:lootbox.infrastructuretests\\repositories\\typeitemrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructuretests\\repositories\\caserepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|solutionrelative:lootbox.infrastructuretests\\repositories\\caserepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructuretests\\repositories\\equipmentrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|solutionrelative:lootbox.infrastructuretests\\repositories\\equipmentrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructuretests\\repositories\\itemrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|solutionrelative:lootbox.infrastructuretests\\repositories\\itemrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\lootboxdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\lootboxdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\seeders\\lootboxseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\seeders\\lootboxseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructuretests\\repositories\\wearratingrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|solutionrelative:lootbox.infrastructuretests\\repositories\\wearratingrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\repositories\\wearratingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\repositories\\wearratingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructuretests\\repositories\\rarityrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03E1D17E-204A-4F6B-8E34-3DBD27A17A54}|LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj|solutionrelative:lootbox.infrastructuretests\\repositories\\rarityrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\repositories\\rarityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\repositories\\rarityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\repositories\\typeitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\repositories\\typeitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\repositories\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\repositories\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.applicationtests\\services\\wearratingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|solutionrelative:lootbox.applicationtests\\services\\wearratingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\services\\wearratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\services\\wearratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.applicationtests\\services\\typeitemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|solutionrelative:lootbox.applicationtests\\services\\typeitemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.applicationtests\\services\\itemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|solutionrelative:lootbox.applicationtests\\services\\itemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.applicationtests\\services\\rarityservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|solutionrelative:lootbox.applicationtests\\services\\rarityservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\services\\typeitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\services\\typeitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.applicationtests\\services\\caseservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|solutionrelative:lootbox.applicationtests\\services\\caseservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.applicationtests\\services\\equipmentservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|solutionrelative:lootbox.applicationtests\\services\\equipmentservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.applicationtests\\services\\accountservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|solutionrelative:lootbox.applicationtests\\services\\accountservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\services\\rarityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\services\\rarityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\updateitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\updateitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\exceptions\\keynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\exceptions\\keynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|solutionrelative:lootbox.infrastructure\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\middleware\\errorhandingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\middleware\\errorhandingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\createitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\createitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\services\\caseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\services\\caseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\interfaces\\iequipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\interfaces\\iequipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\interfaces\\icaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\interfaces\\icaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\exceptions\\forbiddenexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\exceptions\\forbiddenexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\interfaces\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\interfaces\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\mappings\\casemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\mappings\\casemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\createcasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\createcasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\entities\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\entities\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\casedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\casedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\caseanditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\caseanditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\casecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\casecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\equipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\equipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\changepassworduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\changepassworduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\entities\\case.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\entities\\case.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\services\\equipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -249,14 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.applicationtests\\lootbox.applicationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{9312D8CF-BBF9-4C49-9147-B492564A8896}|LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj|solutionrelative:lootbox.applicationtests\\lootbox.applicationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\createitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\createitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -271,20 +99,8 @@
       "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\interfaces\\iequipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\interfaces\\iequipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\interfaces\\iequipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\createequipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\createequipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\mappings\\casemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\mappings\\casemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -297,10 +113,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\entities\\case.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\entities\\case.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\entities\\rarity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -319,10 +131,6 @@
       "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\entities\\wearrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\caseanditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\caseanditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -335,16 +143,8 @@
       "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\wearratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\updateitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\updateitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.domain\\interfaces\\icaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA67F65D-D145-4225-A079-A584943C3BE7}|LootBox.Domain\\LootBox.Domain.csproj|solutionrelative:lootbox.domain\\interfaces\\icaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\interfaces\\icaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\interfaces\\icaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\authenticationsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -377,10 +177,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\lootbox.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\lootbox.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\casedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|solutionrelative:lootbox.application\\dtos\\casedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{588A53CB-E520-49A8-BDE2-0BCD9C97DEE7}|LootBox.Application\\LootBox.Application.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.application\\dtos\\typeitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -426,7 +222,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 194,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -434,276 +230,88 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\ItemController.cs",
+              "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\ItemController.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\ItemController.cs",
+              "RelativeToolTip": "LootBox.Server\\Controllers\\ItemController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:55:27.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WearRatingControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\WearRatingControllerTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ServerTests\\Controllers\\WearRatingControllerTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\WearRatingControllerTests.cs",
-              "RelativeToolTip": "LootBox.ServerTests\\Controllers\\WearRatingControllerTests.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAowGcAAAAAAAAAAAAAAA==",
+              "Title": "ItemService.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\ItemService.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Services\\ItemService.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\ItemService.cs",
+              "RelativeToolTip": "LootBox.Application\\Services\\ItemService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:38:12.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T18:51:38.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TypeItemControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\TypeItemControllerTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ServerTests\\Controllers\\TypeItemControllerTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\TypeItemControllerTests.cs",
-              "RelativeToolTip": "LootBox.ServerTests\\Controllers\\TypeItemControllerTests.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAgwGQAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:35:28.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RarityControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\RarityControllerTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ServerTests\\Controllers\\RarityControllerTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\RarityControllerTests.cs",
-              "RelativeToolTip": "LootBox.ServerTests\\Controllers\\RarityControllerTests.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAgwHAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:32:38.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EquipmentControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\EquipmentControllerTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ServerTests\\Controllers\\EquipmentControllerTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\EquipmentControllerTests.cs",
-              "RelativeToolTip": "LootBox.ServerTests\\Controllers\\EquipmentControllerTests.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAgwGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:29:02.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CaseControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\CaseControllerTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ServerTests\\Controllers\\CaseControllerTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\CaseControllerTests.cs",
-              "RelativeToolTip": "LootBox.ServerTests\\Controllers\\CaseControllerTests.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAgwKcAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:22:43.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AccountControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\AccountControllerTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ServerTests\\Controllers\\AccountControllerTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\AccountControllerTests.cs",
-              "RelativeToolTip": "LootBox.ServerTests\\Controllers\\AccountControllerTests.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAgwJ4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:10:56.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ChangePasswordUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\ChangePasswordUserDto.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\ChangePasswordUserDto.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\ChangePasswordUserDto.cs",
-              "RelativeToolTip": "LootBox.Application\\Dtos\\ChangePasswordUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:15:03.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ItemControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\ItemControllerTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ServerTests\\Controllers\\ItemControllerTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ServerTests\\Controllers\\ItemControllerTests.cs",
-              "RelativeToolTip": "LootBox.ServerTests\\Controllers\\ItemControllerTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T16:15:02.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "EquipmentDto.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\EquipmentDto.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\EquipmentDto.cs",
               "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\EquipmentDto.cs",
               "RelativeToolTip": "LootBox.Application\\Dtos\\EquipmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:26:42.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LootBox.InfrastructureTests.csproj",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj",
-              "RelativeDocumentMoniker": "LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj",
-              "RelativeToolTip": "LootBox.InfrastructureTests\\LootBox.InfrastructureTests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-19T16:06:59.891Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:46:44.779Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Program.cs",
-              "RelativeDocumentMoniker": "LootBox.Server\\Program.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Program.cs",
-              "RelativeToolTip": "LootBox.Server\\Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwDYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CreateItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateItemDto.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\CreateItemDto.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateItemDto.cs",
+              "RelativeToolTip": "LootBox.Application\\Dtos\\CreateItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T10:34:22.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ServiceCollectionExtension.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Extensions\\ServiceCollectionExtension.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Extensions\\ServiceCollectionExtension.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Extensions\\ServiceCollectionExtension.cs",
-              "RelativeToolTip": "LootBox.Application\\Extensions\\ServiceCollectionExtension.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAwEQAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:13:29.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WearRatingController.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\WearRatingController.cs",
-              "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\WearRatingController.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\WearRatingController.cs",
-              "RelativeToolTip": "LootBox.Server\\Controllers\\WearRatingController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAiwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:05:25.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UpdateUserValidatorDto.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Validators\\UpdateUserValidatorDto.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Validators\\UpdateUserValidatorDto.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Validators\\UpdateUserValidatorDto.cs",
-              "RelativeToolTip": "LootBox.Application\\Validators\\UpdateUserValidatorDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:10:27.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TypeItemController.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\TypeItemController.cs",
-              "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\TypeItemController.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\TypeItemController.cs",
-              "RelativeToolTip": "LootBox.Server\\Controllers\\TypeItemController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAiwCsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:00:41.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ChangePasswordUserDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Validators\\ChangePasswordUserDtoValidator.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Validators\\ChangePasswordUserDtoValidator.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Validators\\ChangePasswordUserDtoValidator.cs",
-              "RelativeToolTip": "LootBox.Application\\Validators\\ChangePasswordUserDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:16:38.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RegisterUserDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Validators\\RegisterUserDtoValidator.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Validators\\RegisterUserDtoValidator.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Validators\\RegisterUserDtoValidator.cs",
-              "RelativeToolTip": "LootBox.Application\\Validators\\RegisterUserDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T19:58:50.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T19:16:50.872Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RarityController.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\RarityController.cs",
-              "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\RarityController.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\RarityController.cs",
-              "RelativeToolTip": "LootBox.Server\\Controllers\\RarityController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA6wCsAAAA3AAAAAAAAAA==",
+              "Title": "CaseMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Mappings\\CaseMappingProfile.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Mappings\\CaseMappingProfile.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Mappings\\CaseMappingProfile.cs",
+              "RelativeToolTip": "LootBox.Application\\Mappings\\CaseMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:51:33.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:49:33.437Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "LootBox.Server\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAqwEcAAAA9AAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "ItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\ItemDto.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\ItemDto.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\ItemDto.cs",
+              "RelativeToolTip": "LootBox.Application\\Dtos\\ItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T19:01:28.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T18:45:56.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EquipmentController.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\EquipmentController.cs",
-              "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\EquipmentController.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\EquipmentController.cs",
-              "RelativeToolTip": "LootBox.Server\\Controllers\\EquipmentController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAiwB0AAABHAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "CaseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CaseDto.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\CaseDto.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CaseDto.cs",
+              "RelativeToolTip": "LootBox.Application\\Dtos\\CaseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:53:54.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\CaseRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Repositories\\CaseRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\CaseRepository.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Repositories\\CaseRepository.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAowEAAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:05:15.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:45:58.287Z"
             },
             {
               "$type": "Document",
@@ -713,755 +321,13 @@
               "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\CaseController.cs",
               "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\CaseController.cs",
               "RelativeToolTip": "LootBox.Server\\Controllers\\CaseController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAqwFIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwDAAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T12:56:03.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T18:13:51.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ItemController.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\ItemController.cs",
-              "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\ItemController.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\ItemController.cs",
-              "RelativeToolTip": "LootBox.Server\\Controllers\\ItemController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T18:45:34.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Repositories\\AccountRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\AccountRepository.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Repositories\\AccountRepository.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA2wDUAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T19:07:11.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "AccountRepositoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\AccountRepositoryTests.cs",
-              "RelativeDocumentMoniker": "LootBox.InfrastructureTests\\Repositories\\AccountRepositoryTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\AccountRepositoryTests.cs",
-              "RelativeToolTip": "LootBox.InfrastructureTests\\Repositories\\AccountRepositoryTests.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAiwE4AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:39:50.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CaseRepositoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\CaseRepositoryTests.cs",
-              "RelativeDocumentMoniker": "LootBox.InfrastructureTests\\Repositories\\CaseRepositoryTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\CaseRepositoryTests.cs",
-              "RelativeToolTip": "LootBox.InfrastructureTests\\Repositories\\CaseRepositoryTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:53:46.181Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "TypeItemRepositoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\TypeItemRepositoryTests.cs",
-              "RelativeDocumentMoniker": "LootBox.InfrastructureTests\\Repositories\\TypeItemRepositoryTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\TypeItemRepositoryTests.cs",
-              "RelativeToolTip": "LootBox.InfrastructureTests\\Repositories\\TypeItemRepositoryTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T14:25:32.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "EquipmentRepositoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\EquipmentRepositoryTests.cs",
-              "RelativeDocumentMoniker": "LootBox.InfrastructureTests\\Repositories\\EquipmentRepositoryTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\EquipmentRepositoryTests.cs",
-              "RelativeToolTip": "LootBox.InfrastructureTests\\Repositories\\EquipmentRepositoryTests.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAowBwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T14:03:47.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ItemRepositoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\ItemRepositoryTests.cs",
-              "RelativeDocumentMoniker": "LootBox.InfrastructureTests\\Repositories\\ItemRepositoryTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\ItemRepositoryTests.cs",
-              "RelativeToolTip": "LootBox.InfrastructureTests\\Repositories\\ItemRepositoryTests.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCkAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T16:02:06.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "LootBoxDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\LootBoxDbContext.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\LootBoxDbContext.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\LootBoxDbContext.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\LootBoxDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T21:33:36.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LootBoxSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Seeders\\LootBoxSeeder.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Seeders\\LootBoxSeeder.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Seeders\\LootBoxSeeder.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Seeders\\LootBoxSeeder.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T21:29:04.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "WearRatingRepositoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\WearRatingRepositoryTests.cs",
-              "RelativeDocumentMoniker": "LootBox.InfrastructureTests\\Repositories\\WearRatingRepositoryTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\WearRatingRepositoryTests.cs",
-              "RelativeToolTip": "LootBox.InfrastructureTests\\Repositories\\WearRatingRepositoryTests.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAowHkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T14:28:11.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "RarityRepositoryTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\RarityRepositoryTests.cs",
-              "RelativeDocumentMoniker": "LootBox.InfrastructureTests\\Repositories\\RarityRepositoryTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.InfrastructureTests\\Repositories\\RarityRepositoryTests.cs",
-              "RelativeToolTip": "LootBox.InfrastructureTests\\Repositories\\RarityRepositoryTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T14:20:53.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "RarityRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\RarityRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Repositories\\RarityRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\RarityRepository.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Repositories\\RarityRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:05:36.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\ItemRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Repositories\\ItemRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\ItemRepository.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Repositories\\ItemRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T18:56:31.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "EquipmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\EquipmentRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Repositories\\EquipmentRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\EquipmentRepository.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Repositories\\EquipmentRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:21:06.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "WearRatingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\WearRatingRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Repositories\\WearRatingRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\WearRatingRepository.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Repositories\\WearRatingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:07:05.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "WearRatingServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\WearRatingServiceTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\Services\\WearRatingServiceTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\WearRatingServiceTests.cs",
-              "RelativeToolTip": "LootBox.ApplicationTests\\Services\\WearRatingServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:37:47.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "TypeItemServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\TypeItemServiceTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\Services\\TypeItemServiceTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\TypeItemServiceTests.cs",
-              "RelativeToolTip": "LootBox.ApplicationTests\\Services\\TypeItemServiceTests.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAwwCgAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:36:16.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "TypeItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\TypeItemRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Repositories\\TypeItemRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Repositories\\TypeItemRepository.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Repositories\\TypeItemRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAywCUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:06:32.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ItemServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\ItemServiceTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\Services\\ItemServiceTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\ItemServiceTests.cs",
-              "RelativeToolTip": "LootBox.ApplicationTests\\Services\\ItemServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:45:41.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "RarityServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\RarityServiceTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\Services\\RarityServiceTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\RarityServiceTests.cs",
-              "RelativeToolTip": "LootBox.ApplicationTests\\Services\\RarityServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:30:51.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "EquipmentServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\EquipmentServiceTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\Services\\EquipmentServiceTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\EquipmentServiceTests.cs",
-              "RelativeToolTip": "LootBox.ApplicationTests\\Services\\EquipmentServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:53:08.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "AccountServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\AccountServiceTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\Services\\AccountServiceTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\AccountServiceTests.cs",
-              "RelativeToolTip": "LootBox.ApplicationTests\\Services\\AccountServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T09:24:12.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ItemService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\ItemService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Services\\ItemService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\ItemService.cs",
-              "RelativeToolTip": "LootBox.Application\\Services\\ItemService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAiwCUAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T19:02:14.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "KeyNotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Exceptions\\KeyNotFoundException.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Exceptions\\KeyNotFoundException.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Exceptions\\KeyNotFoundException.cs",
-              "RelativeToolTip": "LootBox.Domain\\Exceptions\\KeyNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T16:25:01.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ServiceCollectionExtension.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
-              "RelativeDocumentMoniker": "LootBox.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
-              "RelativeToolTip": "LootBox.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T21:51:00.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "CaseServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\CaseServiceTests.cs",
-              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\Services\\CaseServiceTests.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\Services\\CaseServiceTests.cs",
-              "RelativeToolTip": "LootBox.ApplicationTests\\Services\\CaseServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T10:29:01.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "ErrorHandingMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Middleware\\ErrorHandingMiddleware.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Middleware\\ErrorHandingMiddleware.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Middleware\\ErrorHandingMiddleware.cs",
-              "RelativeToolTip": "LootBox.Application\\Middleware\\ErrorHandingMiddleware.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAiwBcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T16:19:02.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "TypeItemService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\TypeItemService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Services\\TypeItemService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\TypeItemService.cs",
-              "RelativeToolTip": "LootBox.Application\\Services\\TypeItemService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAwwEYAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:41:27.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "WearRatingService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\WearRatingService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Services\\WearRatingService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\WearRatingService.cs",
-              "RelativeToolTip": "LootBox.Application\\Services\\WearRatingService.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwD4AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:34:25.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "CaseService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\CaseService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Services\\CaseService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\CaseService.cs",
-              "RelativeToolTip": "LootBox.Application\\Services\\CaseService.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAUwKcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:00:31.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "NotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Exceptions\\NotFoundException.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Exceptions\\NotFoundException.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Exceptions\\NotFoundException.cs",
-              "RelativeToolTip": "LootBox.Domain\\Exceptions\\NotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T17:55:53.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "RarityService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\RarityService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Services\\RarityService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\RarityService.cs",
-              "RelativeToolTip": "LootBox.Application\\Services\\RarityService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAwwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:43:43.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "BadRequestException.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Exceptions\\BadRequestException.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Exceptions\\BadRequestException.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Exceptions\\BadRequestException.cs",
-              "RelativeToolTip": "LootBox.Domain\\Exceptions\\BadRequestException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T17:54:44.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "IItemService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IItemService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\IItemService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IItemService.cs",
-              "RelativeToolTip": "LootBox.Application\\Interfaces\\IItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T19:27:14.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "ForbiddenException.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Exceptions\\ForbiddenException.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Exceptions\\ForbiddenException.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Exceptions\\ForbiddenException.cs",
-              "RelativeToolTip": "LootBox.Domain\\Exceptions\\ForbiddenException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T17:55:18.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\appsettings.json",
-              "RelativeDocumentMoniker": "LootBox.Server\\appsettings.json",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\appsettings.json",
-              "RelativeToolTip": "LootBox.Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-26T10:40:58.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "IAccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IAccountRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Interfaces\\IAccountRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IAccountRepository.cs",
-              "RelativeToolTip": "LootBox.Domain\\Interfaces\\IAccountRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T19:19:53.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Equipment.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Equipment.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Equipment.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Equipment.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\Equipment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:15:37.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "EquipmentService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\EquipmentService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Services\\EquipmentService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\EquipmentService.cs",
-              "RelativeToolTip": "LootBox.Application\\Services\\EquipmentService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwDMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:44:29.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "LootBox.ApplicationTests.csproj",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj",
-              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj",
-              "RelativeToolTip": "LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-19T15:45:53.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "IAccountService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IAccountService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\IAccountService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IAccountService.cs",
-              "RelativeToolTip": "LootBox.Application\\Interfaces\\IAccountService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T19:23:04.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "CreateItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateItemDto.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\CreateItemDto.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateItemDto.cs",
-              "RelativeToolTip": "LootBox.Application\\Dtos\\CreateItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T19:16:50.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "RegisterUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\RegisterUserDto.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\RegisterUserDto.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\RegisterUserDto.cs",
-              "RelativeToolTip": "LootBox.Application\\Dtos\\RegisterUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T19:03:12.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\LoginDto.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\LoginDto.cs",
-              "RelativeToolTip": "LootBox.Application\\Dtos\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T14:02:05.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "IEquipmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IEquipmentRepository.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Interfaces\\IEquipmentRepository.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IEquipmentRepository.cs",
-              "RelativeToolTip": "LootBox.Domain\\Interfaces\\IEquipmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:41:24.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "IEquipmentService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IEquipmentService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\IEquipmentService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IEquipmentService.cs",
-              "RelativeToolTip": "LootBox.Application\\Interfaces\\IEquipmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:45:07.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "CreateEquipmentDto.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateEquipmentDto.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\CreateEquipmentDto.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateEquipmentDto.cs",
-              "RelativeToolTip": "LootBox.Application\\Dtos\\CreateEquipmentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:39:02.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "CaseMappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Mappings\\CaseMappingProfile.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Mappings\\CaseMappingProfile.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Mappings\\CaseMappingProfile.cs",
-              "RelativeToolTip": "LootBox.Application\\Mappings\\CaseMappingProfile.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:49:33.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "ItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\ItemDto.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\ItemDto.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\ItemDto.cs",
-              "RelativeToolTip": "LootBox.Application\\Dtos\\ItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T18:45:56.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T18:36:31.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "CaseAndItem.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\CaseAndItem.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\CaseAndItem.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\CaseAndItem.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\CaseAndItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:37:03.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Item.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Item.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Item.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T21:38:04.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "Case.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Case.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Case.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Case.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\Case.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:26:42.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "Rarity.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Rarity.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Rarity.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Rarity.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\Rarity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T21:33:31.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Role.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Role.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Role.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T18:38:48.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "TypeItem.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\TypeItem.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\TypeItem.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\TypeItem.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\TypeItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T21:48:52.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "WearRating.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\WearRating.cs",
-              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\WearRating.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\WearRating.cs",
-              "RelativeToolTip": "LootBox.Domain\\Entities\\WearRating.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T21:45:09.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 11,
               "Title": "CaseAndItemDto.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CaseAndItemDto.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\CaseAndItemDto.cs",
@@ -1469,25 +335,287 @@
               "RelativeToolTip": "LootBox.Application\\Dtos\\CaseAndItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T15:52:26.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T15:52:26.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 6,
+              "Title": "ICaseService.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\ICaseService.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\ICaseService.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\ICaseService.cs",
+              "RelativeToolTip": "LootBox.Application\\Interfaces\\ICaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T13:11:17.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CaseService.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\CaseService.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Services\\CaseService.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\CaseService.cs",
+              "RelativeToolTip": "LootBox.Application\\Services\\CaseService.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAkwDIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:10:47.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateCaseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateCaseDto.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\CreateCaseDto.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateCaseDto.cs",
+              "RelativeToolTip": "LootBox.Application\\Dtos\\CreateCaseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:29:28.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IAccountService.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\IAccountService.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IAccountService.cs",
+              "RelativeToolTip": "LootBox.Application\\Interfaces\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:23:04.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEquipmentService.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IEquipmentService.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\IEquipmentService.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IEquipmentService.cs",
+              "RelativeToolTip": "LootBox.Application\\Interfaces\\IEquipmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T20:45:07.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UpdateItemDto.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\UpdateItemDto.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\UpdateItemDto.cs",
               "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\UpdateItemDto.cs",
               "RelativeToolTip": "LootBox.Application\\Dtos\\UpdateItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T22:34:16.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T22:34:16.088Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 16,
+              "Title": "ChangePasswordUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\ChangePasswordUserDto.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\ChangePasswordUserDto.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\ChangePasswordUserDto.cs",
+              "RelativeToolTip": "LootBox.Application\\Dtos\\ChangePasswordUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:46:31.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "LootBox.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T18:36:31.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateEquipmentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateEquipmentDto.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\CreateEquipmentDto.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CreateEquipmentDto.cs",
+              "RelativeToolTip": "LootBox.Application\\Dtos\\CreateEquipmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T21:39:02.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IEquipmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IEquipmentRepository.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Interfaces\\IEquipmentRepository.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IEquipmentRepository.cs",
+              "RelativeToolTip": "LootBox.Domain\\Interfaces\\IEquipmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T20:41:24.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\LoginDto.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\LoginDto.cs",
+              "RelativeToolTip": "LootBox.Application\\Dtos\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:02:05.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RegisterUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\RegisterUserDto.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\RegisterUserDto.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\RegisterUserDto.cs",
+              "RelativeToolTip": "LootBox.Application\\Dtos\\RegisterUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:03:12.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ServiceCollectionExtension.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Extensions\\ServiceCollectionExtension.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Extensions\\ServiceCollectionExtension.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Extensions\\ServiceCollectionExtension.cs",
+              "RelativeToolTip": "LootBox.Application\\Extensions\\ServiceCollectionExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:20:51.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "LootBox.Server\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T17:09:02.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Case.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Case.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Case.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Case.cs",
+              "RelativeToolTip": "LootBox.Domain\\Entities\\Case.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T13:26:42.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LootBox.ApplicationTests.csproj",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj",
+              "RelativeDocumentMoniker": "LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj",
+              "RelativeToolTip": "LootBox.ApplicationTests\\LootBox.ApplicationTests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-19T15:45:53.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EquipmentService.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\EquipmentService.cs",
+              "RelativeDocumentMoniker": "LootBox.Application\\Services\\EquipmentService.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Services\\EquipmentService.cs",
+              "RelativeToolTip": "LootBox.Application\\Services\\EquipmentService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T20:44:29.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CaseAndItem.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\CaseAndItem.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\CaseAndItem.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\CaseAndItem.cs",
+              "RelativeToolTip": "LootBox.Domain\\Entities\\CaseAndItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T13:37:03.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Item.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Item.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Item.cs",
+              "RelativeToolTip": "LootBox.Domain\\Entities\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T21:38:04.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Rarity.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Rarity.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Rarity.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Rarity.cs",
+              "RelativeToolTip": "LootBox.Domain\\Entities\\Rarity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T21:33:31.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\Role.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\Role.cs",
+              "RelativeToolTip": "LootBox.Domain\\Entities\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T18:38:48.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TypeItem.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\TypeItem.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\TypeItem.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\TypeItem.cs",
+              "RelativeToolTip": "LootBox.Domain\\Entities\\TypeItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T21:48:52.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "WearRating.cs",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\WearRating.cs",
+              "RelativeDocumentMoniker": "LootBox.Domain\\Entities\\WearRating.cs",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Entities\\WearRating.cs",
+              "RelativeToolTip": "LootBox.Domain\\Entities\\WearRating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T21:45:09.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "UpdateUserDto.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\UpdateUserDto.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\UpdateUserDto.cs",
@@ -1495,12 +623,11 @@
               "RelativeToolTip": "LootBox.Application\\Dtos\\UpdateUserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:50:28.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:50:28.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 32,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\UserDto.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\UserDto.cs",
@@ -1508,12 +635,11 @@
               "RelativeToolTip": "LootBox.Application\\Dtos\\UserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T18:27:38.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T18:27:38.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 35,
               "Title": "ICaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\ICaseRepository.cs",
               "RelativeDocumentMoniker": "LootBox.Domain\\Interfaces\\ICaseRepository.cs",
@@ -1521,12 +647,11 @@
               "RelativeToolTip": "LootBox.Domain\\Interfaces\\ICaseRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:03:36.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:03:36.753Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 34,
               "Title": "WearRatingDto.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\WearRatingDto.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\WearRatingDto.cs",
@@ -1534,25 +659,11 @@
               "RelativeToolTip": "LootBox.Application\\Dtos\\WearRatingDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:32:55.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:32:55.347Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
-              "Title": "ICaseService.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\ICaseService.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\ICaseService.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\ICaseService.cs",
-              "RelativeToolTip": "LootBox.Application\\Interfaces\\ICaseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:11:17.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 36,
               "Title": "AuthenticationSettings.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\AuthenticationSettings.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\AuthenticationSettings.cs",
@@ -1560,12 +671,11 @@
               "RelativeToolTip": "LootBox.Application\\AuthenticationSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T13:43:20.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T13:43:20.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 39,
               "Title": "IRarityRepository.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IRarityRepository.cs",
               "RelativeDocumentMoniker": "LootBox.Domain\\Interfaces\\IRarityRepository.cs",
@@ -1573,12 +683,11 @@
               "RelativeToolTip": "LootBox.Domain\\Interfaces\\IRarityRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:19:18.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:19:18.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 37,
               "Title": "LootBox.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\LootBox.Infrastructure.csproj",
               "RelativeDocumentMoniker": "LootBox.Infrastructure\\LootBox.Infrastructure.csproj",
@@ -1586,12 +695,11 @@
               "RelativeToolTip": "LootBox.Infrastructure\\LootBox.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-22T21:28:09.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T21:28:09.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 38,
               "Title": "IItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IItemRepository.cs",
               "RelativeDocumentMoniker": "LootBox.Domain\\Interfaces\\IItemRepository.cs",
@@ -1599,12 +707,11 @@
               "RelativeToolTip": "LootBox.Domain\\Interfaces\\IItemRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T19:01:01.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T19:01:01.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 40,
               "Title": "ITypeItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\ITypeItemRepository.cs",
               "RelativeDocumentMoniker": "LootBox.Domain\\Interfaces\\ITypeItemRepository.cs",
@@ -1612,12 +719,11 @@
               "RelativeToolTip": "LootBox.Domain\\Interfaces\\ITypeItemRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:20:09.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:20:09.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 41,
               "Title": "IWearRatingRepository.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\Interfaces\\IWearRatingRepository.cs",
               "RelativeDocumentMoniker": "LootBox.Domain\\Interfaces\\IWearRatingRepository.cs",
@@ -1625,12 +731,11 @@
               "RelativeToolTip": "LootBox.Domain\\Interfaces\\IWearRatingRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:20:40.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:20:40.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 43,
               "Title": "LootBox.Server.csproj",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\LootBox.Server.csproj",
               "RelativeDocumentMoniker": "LootBox.Server\\LootBox.Server.csproj",
@@ -1638,12 +743,11 @@
               "RelativeToolTip": "LootBox.Server\\LootBox.Server.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-02T17:32:42.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T17:32:42.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 42,
               "Title": "LootBox.Application.csproj",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\LootBox.Application.csproj",
               "RelativeDocumentMoniker": "LootBox.Application\\LootBox.Application.csproj",
@@ -1651,12 +755,11 @@
               "RelativeToolTip": "LootBox.Application\\LootBox.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-26T13:12:59.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:12:59.636Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 44,
               "Title": "TypeItemDto.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\TypeItemDto.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\TypeItemDto.cs",
@@ -1664,25 +767,11 @@
               "RelativeToolTip": "LootBox.Application\\Dtos\\TypeItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:32:28.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:32:28.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
-              "Title": "CaseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CaseDto.cs",
-              "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\CaseDto.cs",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\CaseDto.cs",
-              "RelativeToolTip": "LootBox.Application\\Dtos\\CaseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:45:58.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 52,
               "Title": "20241114184742_addUser.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Migrations\\20241114184742_addUser.cs",
               "RelativeDocumentMoniker": "LootBox.Infrastructure\\Migrations\\20241114184742_addUser.cs",
@@ -1690,12 +779,11 @@
               "RelativeToolTip": "LootBox.Infrastructure\\Migrations\\20241114184742_addUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T18:47:42.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T18:47:42.468Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 46,
               "Title": "IRarityService.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IRarityService.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\IRarityService.cs",
@@ -1703,12 +791,11 @@
               "RelativeToolTip": "LootBox.Application\\Interfaces\\IRarityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:50:11.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:50:11.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 47,
               "Title": "IWearRatingService.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\IWearRatingService.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\IWearRatingService.cs",
@@ -1716,12 +803,11 @@
               "RelativeToolTip": "LootBox.Application\\Interfaces\\IWearRatingService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:49:36.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:49:36.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 45,
               "Title": "ITypeItemService.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Interfaces\\ITypeItemService.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Interfaces\\ITypeItemService.cs",
@@ -1729,12 +815,11 @@
               "RelativeToolTip": "LootBox.Application\\Interfaces\\ITypeItemService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:49:54.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:49:54.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 48,
               "Title": "RarityDto.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Application\\Dtos\\RarityDto.cs",
               "RelativeDocumentMoniker": "LootBox.Application\\Dtos\\RarityDto.cs",
@@ -1742,12 +827,11 @@
               "RelativeToolTip": "LootBox.Application\\Dtos\\RarityDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T16:32:09.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T16:32:09.735Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 49,
               "Title": "LootBox.Domain.csproj",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Domain\\LootBox.Domain.csproj",
               "RelativeDocumentMoniker": "LootBox.Domain\\LootBox.Domain.csproj",
@@ -1755,12 +839,11 @@
               "RelativeToolTip": "LootBox.Domain\\LootBox.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-26T13:02:56.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:02:56.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 50,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\WeatherForecastController.cs",
@@ -1768,12 +851,11 @@
               "RelativeToolTip": "LootBox.Server\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T12:55:46.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T12:55:46.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 51,
               "Title": "20241026134154_nullable.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Infrastructure\\Migrations\\20241026134154_nullable.cs",
               "RelativeDocumentMoniker": "LootBox.Infrastructure\\Migrations\\20241026134154_nullable.cs",

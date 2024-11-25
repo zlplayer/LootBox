@@ -27,19 +27,19 @@ builder.Services.AddSwaggerGen(options =>
         Type = SecuritySchemeType.Http,
         Scheme = "Bearer"
     });
-    //options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    //{
-    //    {
-    //        new OpenApiSecurityScheme
-    //        {
-    //            Reference = new OpenApiReference
-    //            {
-    //                Type = ReferenceType.SecurityScheme,
-    //                Id = "Bearer"
-    //            }
-    //        },
-    //        new string[] {}
-    //    } });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        } });
 });
 
 
@@ -53,7 +53,7 @@ builder.Services.AddSwaggerGen(options =>
     var seeder = scope.ServiceProvider.GetRequiredService<LootBoxSeeder>();
     seeder.Seed();
 
-    app.UseMiddleware<ErrorHandingMiddleware>();
+    //app.UseMiddleware<ErrorHandingMiddleware>();
     app.UseDefaultFiles();
     app.UseStaticFiles();
 
