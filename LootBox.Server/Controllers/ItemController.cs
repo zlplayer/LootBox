@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace LootBox.Server.Controllers
 {
     [ApiController]
-    [Route("api")]
+    [Route("api/item")]
     public class ItemController : ControllerBase
     {
         private readonly IItemService _itemService;
@@ -16,7 +16,7 @@ namespace LootBox.Server.Controllers
             _itemService = itemService;
         }
 
-        [HttpPost("/Item")]
+        [HttpPost]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([FromForm]CreateItemDto itemDto)
         {
@@ -25,21 +25,21 @@ namespace LootBox.Server.Controllers
 
         }
 
-        [HttpGet("/Item")]
+        [HttpGet]
         public async Task<IActionResult> GetAllItem()
         {
             var items = await _itemService.GetAllItem();
             return Ok(items);
         }
 
-        [HttpGet("/Item/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetItemById([FromRoute]int id)
         {
             var item = await _itemService.GetItemById(id);
             return Ok(item);
         }
 
-        [HttpPut("/Item/{id}")]
+        [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> Update([FromRoute]int id, [FromForm] UpdateItemDto itemDto)
@@ -48,7 +48,7 @@ namespace LootBox.Server.Controllers
             return Ok();
         }
 
-        [HttpDelete("/Item/{id}")]
+        [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> Delete([FromRoute]int id)

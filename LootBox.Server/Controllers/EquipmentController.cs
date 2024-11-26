@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LootBox.Server.Controllers
 {
-    [Route("api/Equipment")]
+    [Route("api/equipment")]
     [ApiController]
     [Authorize]
     public class EquipmentController : ControllerBase

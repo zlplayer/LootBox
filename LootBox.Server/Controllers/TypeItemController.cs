@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LootBox.Server.Controllers
 {
-    [Route("api")]
+    [Route("api/typeItem")]
     [ApiController]
     [Authorize(Roles = "Admin")]
     public class TypeItemController : ControllerBase
@@ -18,35 +18,35 @@ namespace LootBox.Server.Controllers
             _typeItemService = typeItemService;
         }
 
-        [HttpGet("typeitem")]
+        [HttpGet]
         public async Task<IActionResult> GetAllTypeItem()
         {
             var typeItems = await _typeItemService.GetAllTypeItem();
             return Ok(typeItems);
         }
 
-        [HttpGet("typeitem/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetTypeItemById(int id)
         {
             var typeItem = await _typeItemService.GetTypeItemById(id);
             return Ok(typeItem);
         }
 
-        [HttpPost("typeitem")]
+        [HttpPost]
         public async Task<IActionResult> CreateTypeItem([FromBody] TypeItemDto typeItem)
         {
             await _typeItemService.Create(typeItem);
             return Ok();
         }
 
-        [HttpPut("typeitem/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTypeItem(int id, [FromBody] TypeItemDto typeItem)
         {
             await _typeItemService.Update(id,typeItem);
             return Ok();
         }
 
-        [HttpDelete("typeitem/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTypeItem(int id)
         {
             await _typeItemService.Delete(id);

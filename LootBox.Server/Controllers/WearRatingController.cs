@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LootBox.Server.Controllers
 {
-    [Route("api/")]
+    [Route("api/wearRating")]
     [ApiController]
     [Authorize(Roles = "Admin")]
     public class WearRatingController : ControllerBase
@@ -18,34 +18,34 @@ namespace LootBox.Server.Controllers
             _wearRatingService=wearRatingService;
         }
 
-        [HttpGet("WearRating")]
+        [HttpGet]
         public async Task<IActionResult> GetAllWearRating()
         {
             var wearRating = await _wearRatingService.GetAllWearRating();
             return Ok(wearRating);
         }
-        [HttpGet("WearRating/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetWearRatingById(int id)
         {
             var wearRating = await _wearRatingService.GetWearRatingById(id);
             return Ok(wearRating);
         }
 
-        [HttpPost("WearRating")]
+        [HttpPost]
         public async Task<IActionResult> CreateWearRating([FromBody] WearRatingDto wearRatingDto)
         {
             await _wearRatingService.Create(wearRatingDto);
             return Ok();
         }
 
-        [HttpPut("WearRating/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateWearRating(int id, [FromBody] WearRatingDto wearRatingDto)
         {
             await _wearRatingService.Update(id, wearRatingDto);
             return Ok();
         }
 
-        [HttpDelete("WearRating/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteWearRating(int id)
         {
             await _wearRatingService.Delete(id);

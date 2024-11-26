@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace LootBox.Server.Controllers
 {
     [ApiController]
-    [Route("api")]
+    [Route("api/rarity")]
     [Authorize(Roles ="Admin")]
     public class RarityController : ControllerBase
     {
@@ -17,35 +17,35 @@ namespace LootBox.Server.Controllers
             _rarityService=rarityService;
         }
 
-        [HttpGet("/rarity")]
+        [HttpGet]
         public async Task<IActionResult> GetAllRarity()
         {
             var rarity = await _rarityService.GetAllRarity();
             return Ok(rarity);
         }
 
-        [HttpGet("/rarity/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetRarityById(int id)
         {
             var rarity = await _rarityService.GetRarityById(id);
             return Ok(rarity);
         }
 
-        [HttpPost("/rarity")]
+        [HttpPost]
         public async Task<IActionResult> CreateRarity([FromBody] RarityDto rarityDto)
         {
             await _rarityService.Create(rarityDto);
             return Ok();
         }
 
-        [HttpPut("/rarity/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateRarity(int id, [FromBody] RarityDto rarityDto)
         {
             await _rarityService.Update(id, rarityDto);
             return Ok();
         }
 
-        [HttpDelete("/rarity/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRarity(int id)
         {
             await _rarityService.Delete(id);

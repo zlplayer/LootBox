@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace LootBox.Server.Controllers
 {
     [ApiController]
-    [Route("api")]
+    [Route("api/case")]
     public class CaseController : ControllerBase
     {
         private readonly ICaseService _caseService;
@@ -18,7 +18,7 @@ namespace LootBox.Server.Controllers
             _caseService= caseService;
         }
 
-        [HttpPost("/Case")]
+        [HttpPost]
         //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create( [FromForm] CreateCaseDto caseDto)
         {
@@ -30,21 +30,21 @@ namespace LootBox.Server.Controllers
         }
 
 
-        [HttpGet("/Case")]
+        [HttpGet]
         public async Task<IActionResult> GetAllCase()
         {
             var cases = await _caseService.GetAllCase();
             return Ok(cases);
         }
 
-        [HttpGet("/Case/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetCaseById([FromRoute]int id)
         {
             var @case = await _caseService.GetCaseById(id);
             return Ok(@case);
         }
 
-        [HttpPut("/Case/{id}")]
+        [HttpPut("{id}")]
         //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update([FromRoute]int id, [FromForm] CreateCaseDto caseDto)
         {
@@ -52,7 +52,7 @@ namespace LootBox.Server.Controllers
             return Ok();
         }
 
-        [HttpDelete("/Case/{id}")]
+        [HttpDelete("{id}")]
         //[Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> Delete([FromRoute]int id)
@@ -63,7 +63,7 @@ namespace LootBox.Server.Controllers
 
 
 
-        [HttpPost("/Case/{caseId}/Item/{itemId}")]
+        [HttpPost("{caseId}/item/{itemId}")]
         //[Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> AddItemToCase([FromRoute] int caseId, [FromRoute] int itemId)
@@ -72,14 +72,14 @@ namespace LootBox.Server.Controllers
             return Ok();
         }
 
-        [HttpGet("/Case/{caseId}/Items")]
+        [HttpGet("{caseId}/items")]
         public async Task<IActionResult> GetItemsByCaseId([FromRoute] int caseId)
         {
             var items = await _caseService.GetItemsByCaseId(caseId);
             return Ok(items);
         }
 
-        [HttpDelete("/Case/{caseId}/Items/{itemId}")]
+        [HttpDelete("{caseId}/items/{itemId}")]
         //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteItemInCase([FromRoute] int caseId, [FromRoute] int itemId)
         {
@@ -87,7 +87,7 @@ namespace LootBox.Server.Controllers
             return Ok();
         }
 
-        [HttpPost("/Case/{caseId}/Draw")]
+        [HttpPost("{caseId}/draw")]
         //[Authorize]
         public async Task<IActionResult> DrawItemFromCase([FromRoute] int caseId)
         {
