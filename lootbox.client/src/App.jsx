@@ -5,7 +5,7 @@ function App() {
     const [forecasts, setForecasts] = useState();
 
     useEffect(() => {
-        populateWeatherData();
+        setTimeout(()=>populateWeatherData(),20);
     }, []);
 
     const contents = forecasts === undefined

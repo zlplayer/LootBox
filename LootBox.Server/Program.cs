@@ -15,6 +15,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost", policy =>
+    {
+        policy.WithOrigins("https://localhost:5173")  // Frontend URL
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -47,9 +57,10 @@ builder.Services.AddSwaggerGen(options =>
     builder.Services.AddApplication(builder.Configuration);
 
     var app = builder.Build();
+    app.UseCors("AllowLocalhost");
 
 
-    var scope = app.Services.CreateScope();
+var scope = app.Services.CreateScope();
     var seeder = scope.ServiceProvider.GetRequiredService<LootBoxSeeder>();
     seeder.Seed();
 

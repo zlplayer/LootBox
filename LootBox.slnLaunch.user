@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Nowy Profil",
+    "Projects": [
+      {
+        "Path": "LootBox.Server\\LootBox.Server.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "lootbox.client\\lootbox.client.esproj",
+        "Action": "Start",
+        "DebugTarget": "localhost (Chrome)"
+      }
+    ]
+  }
+]
