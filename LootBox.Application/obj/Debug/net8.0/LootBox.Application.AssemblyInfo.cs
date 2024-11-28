@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LootBox.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72167f715c9c9f7817804a1e92c1f9d771d9d2d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8db69dbbbfc0d78b6888cb0e50ad1019554d824")]
 [assembly: System.Reflection.AssemblyProductAttribute("LootBox.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LootBox.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
