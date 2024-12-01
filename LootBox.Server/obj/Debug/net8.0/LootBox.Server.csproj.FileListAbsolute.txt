@@ -155,7 +155,6 @@ C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\LootBox.Serv
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\obj\Debug\net8.0\LootBox.Server.sourcelink.json
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\obj\Debug\net8.0\staticwebassets\msbuild.LootBox.Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\Konzo\source\repos\LootBox\LootBox.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -163,3 +162,4 @@ C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\Microsoft.Ex
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

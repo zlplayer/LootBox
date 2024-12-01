@@ -9,7 +9,7 @@ namespace LootBox.Server.Controllers
 {
     [Route("api/wearRating")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class WearRatingController : ControllerBase
     {
         private readonly IWearRatingService _wearRatingService;

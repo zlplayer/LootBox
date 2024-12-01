@@ -9,7 +9,7 @@ namespace LootBox.Server.Controllers
 {
     [Route("api/typeItem")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+   // [Authorize(Roles = "Admin")]
     public class TypeItemController : ControllerBase
     {
         private readonly ITypeItemService _typeItemService;

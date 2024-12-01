@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5173",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\..\\lootbox.client",
+"WorkingDirectory": "c:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\..\\lootbox.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

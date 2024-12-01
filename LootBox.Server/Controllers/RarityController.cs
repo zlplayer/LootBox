@@ -8,7 +8,7 @@ namespace LootBox.Server.Controllers
 {
     [ApiController]
     [Route("api/rarity")]
-    [Authorize(Roles ="Admin")]
+    //[Authorize(Roles ="Admin")]
     public class RarityController : ControllerBase
     {
         private readonly IRarityService _rarityService;

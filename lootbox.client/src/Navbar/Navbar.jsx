@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import './Navbar.css'; // Dla stylów, opcjonalne
+import './Navbar.css'; 
 
 function Navbar() {
     return (
@@ -15,7 +15,11 @@ function Navbar() {
                         Create Case
                     </NavLink>
                 </li>
-                {/* Dodaj wiêcej linków w miarê potrzeby */}
+                <li className="navbar-item">
+                    <NavLink to="/items" activeClassName="active-link">
+                        Items
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );

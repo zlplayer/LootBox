@@ -11,14 +11,14 @@ function UpdateCase() {
     const [price, setPrice] = useState("");
 
     useEffect(() => {
-        // Pobranie danych skrzynki z API i wype³nienie pól formularza
+        // Pobranie danych skrzynki z API i wypeï¿½nienie pï¿½l formularza
         const fetchCaseDetails = async () => {
             try {
                 const response = await axios.get(`/api/case/${caseid}`);
                 const { name, price, image } = response.data;
                 setName(name);
                 setPrice(price);
-                setImageFile(image); // Zak³adam, ¿e API zwraca obraz jako URL
+                setImageFile(image); // Zakï¿½adam, ï¿½e API zwraca obraz jako URL
             } catch (error) {
                 console.error("Failed to fetch case details:", error);
                 alert("Failed to load case details. Please try again.");
@@ -51,7 +51,7 @@ function UpdateCase() {
             });
             if (response.status === 200) {
                 alert("Case updated successfully!");
-                navigate("/"); // Powrót na stronê g³ówn¹
+                navigate("/"); // Powrï¿½t na stronï¿½ gï¿½ï¿½wnï¿½
             }
         } catch (error) {
             console.error("Error updating case:", error);
