@@ -37,7 +37,7 @@ namespace LootBox.Application.Services
             await _accountRepository.RegisterUser(newUser);
         }
 
-        public async Task<string> GenerateJwt(LoginDto loginDto)
+        public async Task<object> GenerateJwt(LoginDto loginDto)
         {
             var user = await _accountRepository.GetUserByEmail(loginDto.Email);
             if (user == null)
@@ -73,7 +73,14 @@ namespace LootBox.Application.Services
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenString = tokenHandler.WriteToken(token);
-            return tokenString;
+
+            var response = new
+            {
+                Token = tokenString,  
+                Name = user.UserName  
+            };
+
+            return response;
         }
 
         public async Task ChangeRole(int userId, int roleId)

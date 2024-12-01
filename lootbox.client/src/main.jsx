@@ -9,6 +9,8 @@ import Navbar from './Navbar/Navbar';
 import Item from './Item/Item';
 import CreateItem from './CreateItem/CreateItem';
 import UpdateItem from './UpdateItem/UpdateItem.jsx';
+import Register from './Register/Register';
+import Login from './Login/Login';
 
 createRoot(document.getElementById('root')).render(
     <Router>
@@ -21,7 +23,8 @@ createRoot(document.getElementById('root')).render(
             <Route path="/items" element={<Item />} />
             <Route path="/item/create" element={<CreateItem />} />
             <Route path="/item/:itemid/update" element={<UpdateItem />} />
-
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
         </Routes>
     </Router>
 )

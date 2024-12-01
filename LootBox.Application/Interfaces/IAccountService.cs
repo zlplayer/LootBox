@@ -11,7 +11,7 @@ namespace LootBox.Application.Interfaces
     public interface IAccountService
     {
         Task RegisterUser(RegisterUserDto registerUserDto);
-        Task<string> GenerateJwt(LoginDto loginDto);
+        Task<object> GenerateJwt(LoginDto loginDto);
         Task ChangeRole(int userId, int roleId);
         Task UpdateUser(int id, UpdateUserDto user);
         Task DeleteUser(int id);
