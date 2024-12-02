@@ -74,10 +74,14 @@ namespace LootBox.Application.Services
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenString = tokenHandler.WriteToken(token);
 
+
+
             var response = new
             {
-                Token = tokenString,  
-                Name = user.UserName  
+                Id = user.Id,
+                Token = tokenString,
+                Name = user.UserName,
+                Role = user.Role.Name
             };
 
             return response;

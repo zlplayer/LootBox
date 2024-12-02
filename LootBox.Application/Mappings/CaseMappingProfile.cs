@@ -60,10 +60,14 @@ namespace LootBox.Application.Mappings
             CreateMap<User, UserDto>()
                 .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.Name));
 
-            CreateMap<Item, EquipmentDto>().
-                ForMember(m => m.RarityColor, opt => opt.MapFrom(src => src.Rarity.Color))
-                .ForMember(m => m.TypeItemName, opt => opt.MapFrom(src => src.TypeItem.Name))
-                .ForMember(m => m.WearRatingName, opt => opt.MapFrom(src => src.WearRating.Name));
+            CreateMap<Equipment, EquipmentDto>()
+             .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))  // Id z Equipment
+             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Item.Name))  // Name z Item
+             .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Item.Image))  // Image z Item
+             .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Item.Price))  // Price z Item
+             .ForMember(dest => dest.RarityColor, opt => opt.MapFrom(src => src.Item.Rarity.Color))  // Rarity z Item
+             .ForMember(dest => dest.WearRatingName, opt => opt.MapFrom(src => src.Item.WearRating.Name))  // WearRating z Item
+             .ForMember(dest => dest.TypeItemName, opt => opt.MapFrom(src => src.Item.TypeItem.Name));  // TypeItem z Item;
         }
     }
 }

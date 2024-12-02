@@ -57,7 +57,7 @@ namespace LootBox.Server.Controllers
             return Ok();
         }
 
-        [HttpGet("user")]
+        [HttpGet("users")]
         //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllUsers()
         {

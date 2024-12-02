@@ -10,11 +10,13 @@ function Navbar() {
 
     // SprawdŸ, czy u¿ytkownik jest zalogowany
     const userName = localStorage.getItem('userName');  // Pobierz nazwê u¿ytkownika z localStorage
+    const userRole = localStorage.getItem('userRole');  // Pobierz rolê u¿ytkownika z localStorage
 
     // Funkcja wylogowania
     const handleLogout = () => {
         localStorage.removeItem('token');  // Usuñ token JWT
-        localStorage.removeItem('userName');  // Usuñ nazwê u¿ytkownika
+        localStorage.removeItem('userName'); // Usuñ nazwê u¿ytkownika
+        localStorage.removeItem('userRole'); // Usuñ rolê u¿ytkownika
         navigate('/login');  // Przekierowanie na stronê logowania
     };
 
@@ -41,8 +43,8 @@ function Navbar() {
                         Items
                     </NavLink>
                 </li>
+                {/* Jeœli u¿ytkownik jest zalogowany */}
                 {userName ? (
-                    // Jeœli u¿ytkownik jest zalogowany, poka¿ nazwê u¿ytkownika
                     <li className="navbar-item">
                         <span
                             className="user-name"
@@ -54,6 +56,31 @@ function Navbar() {
                         {/* Jeœli menu jest otwarte, poka¿ opcjê logout */}
                         {isMenuOpen && (
                             <div className="dropdown-menu">
+                                <li className="navbar-item">
+                                    <NavLink to="/profile" className={({ isActive }) => (isActive ? "active-link" : "")}>
+                                        Profile
+                                    </NavLink>
+                                </li>
+                                <li className="navbar-item">
+                                    <NavLink to="/equipment" className={({ isActive }) => (isActive ? "active-link" : "")}>
+                                        Equipment
+                                    </NavLink>
+                                </li>
+                                <li className="navbar-item">
+                                    <NavLink to="/change-password" className={({ isActive }) => (isActive ? "active-link" : "")}>
+                                        Change Password
+                                    </NavLink>
+                                </li>
+
+                                {/* Link widoczny tylko dla admina */}
+                                {userRole === 'Admin' && (
+                                    <li className="navbar-item">
+                                        <NavLink to="/users" className={({ isActive }) => (isActive ? "active-link" : "")}>
+                                            All Users
+                                        </NavLink>
+                                    </li>
+                                )}
+
                                 <button onClick={handleLogout} className="logout-button">
                                     Logout
                                 </button>

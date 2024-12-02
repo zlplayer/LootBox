@@ -2,12 +2,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate(); // Hook do nawigacji po zalogowaniu
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -33,14 +36,12 @@ const Login = () => {
                 throw new Error('Invalid login or password');
             }
 
-            // Zmieniamy na .json(), aby otrzymaæ zarówno token, jak i nazwê u¿ytkownika
             const data = await response.json();
+            localStorage.setItem('id', data.id);
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('userName', data.name);
+            localStorage.setItem('userRole', data.role);
 
-            // Zapisz token i nazwê u¿ytkownika w localStorage
-            localStorage.setItem('token', data.token);  
-            localStorage.setItem('userName', data.name); 
-
-            // Przekierowanie na stronê g³ówn¹ lub inn¹ stronê po zalogowaniu
             navigate('/');
         } catch (error) {
             setError(error.message);

@@ -9,7 +9,8 @@ namespace LootBox.Domain.Interfaces
 {
     public interface IEquipmentRepository
     {
-        Task<IEnumerable<Item>> GetAllEquipmentUser(int id);
+        //Task<IEnumerable<Item>> GetAllEquipmentUser(int id);
+        Task<IEnumerable<Equipment>> GetAllEquipmentUser(int userId);
         Task<Equipment> GetEquipmentById(int id);
         Task Create(int itemId, int userId);
         Task Delete(int id);

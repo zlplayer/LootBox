@@ -21,11 +21,19 @@ namespace LootBox.Application.Services
             _equipmentRepository = equipmentRepository;
         }
 
-        public async Task<IEnumerable<EquipmentDto>> GetAllEquipmentUser(int id)
+        public async Task<IEnumerable<EquipmentDto>> GetAllEquipmentUser(int userId)
         {
-            var equipments = await _equipmentRepository.GetAllEquipmentUser(id);
-            return _mapper.Map<IEnumerable<EquipmentDto>>(equipments);
+            // Pobieramy dane Equipment z repozytorium
+            var equipments = await _equipmentRepository.GetAllEquipmentUser(userId);
+            var equipmentDtos = _mapper.Map<IEnumerable<EquipmentDto>>(equipments);
+
+            Console.WriteLine($"Mapped {equipmentDtos.Count()} equipment items.");
+
+            return equipmentDtos;
+
+
         }
+
 
         public async Task<EquipmentDto> GetEquipmentById(int id)
         {

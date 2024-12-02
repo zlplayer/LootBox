@@ -8,6 +8,8 @@ function Case() {
     const [cases, setCase] = useState([]);
     const navigate = useNavigate();
 
+    const userRole = localStorage.getItem('userRole');  // Pobierz rolê u¿ytkownika z localStorage
+
     useEffect(() => {
         allCase();
     }, []);
@@ -56,8 +58,12 @@ function Case() {
                     <th>CaseName</th>
                     <th>CaseImage</th>
                     <th>CasePrice</th>
-                    <th>Delete</th>
-                    <th>Update</th>
+                    {userRole === 'Admin' && (  // SprawdŸ rolê u¿ytkownika przed renderowaniem przycisków
+                        <>
+                            <th>Delete</th>
+                            <th>Update</th>
+                        </>
+                    )}
                 </tr>
             </thead>
             <tbody>
@@ -66,23 +72,27 @@ function Case() {
                         <td onClick={() => handleRowClick(singleCase)}>{singleCase.id}</td>
                         <td onClick={() => handleRowClick(singleCase)}>{singleCase.name}</td>
                         <td onClick={() => handleRowClick(singleCase)}>{singleCase.image}</td>
-                        <td onClick={() => handleRowClick(singleCase)}>{singleCase.price}</td>
-                        <td>
-                            <button
-                                className="btn btn-danger"
-                                onClick={() => handleDeleteCase(singleCase.id)}
-                            >
-                                Delete
-                            </button>
-                        </td>
-                        <td>
-                            <button
-                                className="btn btn-primary"
-                                onClick={() => handleUpdateClick(singleCase)}
-                            >
-                                Update
-                            </button>
-                        </td>
+                        <td onClick={() => handleRowClick(singleCase)}>{singleCase.price} </td>
+                        {userRole === 'Admin' && (  // SprawdŸ rolê u¿ytkownika przed renderowaniem przycisków
+                            <>
+                                <td>
+                                    <button
+                                        className="btn btn-danger"
+                                        onClick={() => handleDeleteCase(singleCase.id)}
+                                    >
+                                        Delete
+                                    </button>
+                                </td>
+                                <td>
+                                    <button
+                                        className="btn btn-primary"
+                                        onClick={() => handleUpdateClick(singleCase)}
+                                    >
+                                        Update
+                                    </button>
+                                </td>
+                            </>
+                        )}
                     </tr>
                 ))}
             </tbody>
@@ -92,9 +102,11 @@ function Case() {
         <div>
             <h1>Case</h1>
             <p>This component demonstrates fetching data from the server.</p>
-            <button className="btn btn-primary" onClick={handleCreateCase}>
-                Create New Case
-            </button>
+            {userRole === 'Admin' && (  // SprawdŸ rolê u¿ytkownika przed renderowaniem przycisku Create
+                <button className="btn btn-primary" onClick={handleCreateCase}>
+                    Create New Case
+                </button>
+            )}
             {contents}
         </div>
     );
