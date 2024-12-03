@@ -4,98 +4,84 @@ import { useState } from 'react';
 
 function Navbar() {
     const navigate = useNavigate();
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // GÅ‚Ã³wne menu
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown uÅ¼ytkownika
 
-    // Stan do kontrolowania, czy menu rozwijane jest widoczne
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const userName = localStorage.getItem('userName');
+    const userRole = localStorage.getItem('userRole');
 
-    // SprawdŸ, czy u¿ytkownik jest zalogowany
-    const userName = localStorage.getItem('userName');  // Pobierz nazwê u¿ytkownika z localStorage
-    const userRole = localStorage.getItem('userRole');  // Pobierz rolê u¿ytkownika z localStorage
-
-    // Funkcja wylogowania
     const handleLogout = () => {
-        localStorage.removeItem('token');  // Usuñ token JWT
-        localStorage.removeItem('userName'); // Usuñ nazwê u¿ytkownika
-        localStorage.removeItem('userRole'); // Usuñ rolê u¿ytkownika
-        navigate('/login');  // Przekierowanie na stronê logowania
+        localStorage.removeItem('token');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('userRole');
+        navigate('/login');
     };
 
-    // Funkcja do prze³¹czania widocznoœci menu
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const closeDropdown = () => {
+        setIsDropdownOpen(false);
+    };
+
     return (
-        <nav className="navbar">
-            <ul className="navbar-list">
-                <li className="navbar-item">
+        <nav className="nav">
+            <NavLink to="/" className="site-title">
+                LootBox
+            </NavLink>
+            <button
+                className="menu-toggle"
+                onClick={toggleMenu}
+                aria-label="Toggle menu">
+                â˜°
+            </button>
+            <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+                <li>
                     <NavLink to="/" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                        Home
+                        Cases
                     </NavLink>
                 </li>
-                <li className="navbar-item">
-                    <NavLink to="/case/create" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                        Create Case
-                    </NavLink>
-                </li>
-                <li className="navbar-item">
+                <li>
                     <NavLink to="/items" className={({ isActive }) => (isActive ? "active-link" : "")}>
                         Items
                     </NavLink>
                 </li>
-                {/* Jeœli u¿ytkownik jest zalogowany */}
                 {userName ? (
-                    <li className="navbar-item">
-                        <span
-                            className="user-name"
-                            style={{ color: 'white', fontWeight: 'bold', cursor: 'pointer' }}
-                            onClick={toggleMenu}
-                        >
-                            Hello, {userName}
-                        </span>
-                        {/* Jeœli menu jest otwarte, poka¿ opcjê logout */}
-                        {isMenuOpen && (
-                            <div className="dropdown-menu">
-                                <li className="navbar-item">
-                                    <NavLink to="/profile" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                                        Profile
-                                    </NavLink>
+                    <li className="user-section">
+                        <button
+                            className={`user-dropdown-toggle ${isDropdownOpen ? 'open' : ''}`}
+                            onClick={toggleDropdown}>
+                            {userName}
+                        </button>
+                        {isDropdownOpen && (
+                            <ul className="user-dropdown">
+                                <li onClick={closeDropdown}>
+                                    <NavLink to="/profile">Profile</NavLink>
                                 </li>
-                                <li className="navbar-item">
-                                    <NavLink to="/equipment" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                                        Equipment
-                                    </NavLink>
+                                <li onClick={closeDropdown}>
+                                    <NavLink to="/equipment">Equipment</NavLink>
                                 </li>
-                                <li className="navbar-item">
-                                    <NavLink to="/change-password" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                                        Change Password
-                                    </NavLink>
+                                <li>
+                                    <button className="logout-btn" onClick={handleLogout}>
+                                        Logout
+                                    </button>
                                 </li>
-
-                                {/* Link widoczny tylko dla admina */}
-                                {userRole === 'Admin' && (
-                                    <li className="navbar-item">
-                                        <NavLink to="/users" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                                            All Users
-                                        </NavLink>
-                                    </li>
-                                )}
-
-                                <button onClick={handleLogout} className="logout-button">
-                                    Logout
-                                </button>
-                            </div>
+                            </ul>
                         )}
                     </li>
                 ) : (
-                    // Jeœli u¿ytkownik nie jest zalogowany, poka¿ linki do logowania i rejestracji
                     <>
-                        <li className="navbar-item">
+                        <li>
                             <NavLink to="/register" className={({ isActive }) => (isActive ? "active-link" : "")}>
                                 Register
                             </NavLink>
                         </li>
-                        <li className="navbar-item">
+                        <li>
                             <NavLink to="/login" className={({ isActive }) => (isActive ? "active-link" : "")}>
                                 Login
                             </NavLink>

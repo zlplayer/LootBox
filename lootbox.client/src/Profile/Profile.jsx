@@ -79,6 +79,10 @@ function Profile() {
         }
     };
 
+    const handleChangePassword = async () => {
+        navigate('/change-password');
+    }
+
     if (loading) {
         return <p>Loading...</p>;
     }
@@ -94,6 +98,7 @@ function Profile() {
                 <div className="profile-info">
                     <p><strong>Username:</strong> {user.userName}</p>
                     <p><strong>Email:</strong> {user.email}</p>
+                    <p><strong>Password:</strong> ********* <button onClick={handleChangePassword }>Change Password</button></p>
                     {/* Przycisk do usuwania konta */}
                     <button onClick={handleDeleteAccount} className="delete-button">
                         Delete Account
