@@ -1,89 +1,103 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {
+    Dialog,
+    DialogTrigger,
+    DialogContent,
+    DialogHeader,
+    DialogFooter,
+    DialogTitle,
+  } from "@/components/ui/dialog";
+  import { Button } from "@/components/ui/button";
 
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const navigate = useNavigate(); // Hook do nawigacji po zalogowaniu
+    const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    if (!email || !password) {
+      setError("Please fill out all fields.");
+      return;
+    }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    setError(null);
+    setLoading(true);
 
-        if (!email || !password) {
-            setError('Please fill out all fields.');
-            return;
-        }
+    try {
+      const response = await fetch("/api/account/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
-        setError(null);
-        setLoading(true);
+      if (!response.ok) {
+        throw new Error("Invalid login or password");
+      }
 
-        try {
-            const response = await fetch('/api/account/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
+      const data = await response.json();
+      localStorage.setItem("id", data.id);
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("userName", data.name);
+      localStorage.setItem("userRole", data.role);
 
-            if (!response.ok) {
-                throw new Error('Invalid login or password');
-            }
+      window.location.reload(); // Odśwież stronę po zalogowaniu
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-            const data = await response.json();
-            localStorage.setItem('id', data.id);
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('userName', data.name);
-            localStorage.setItem('userRole', data.role);
-
-            navigate('/');
-        } catch (error) {
-            setError(error.message);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-
-    return (
-        <div className="login-container">
-            <h2>Login</h2>
-            {error && <div className="error">{error}</div>}
-            <form onSubmit={handleSubmit} className="login-form">
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="form-actions">
-                    <button type="submit" disabled={loading}>
-                        {loading ? 'Logging in...' : 'Login'}
-                    </button>
-                </div>
-            </form>
-        </div>
-    );
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline" className="bg-white text-gray-800 hover:text-gray-900 hover:shadow-md px-4 py-2 rounded">Login</Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Login</DialogTitle>
+        </DialogHeader>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {error && <div className="text-red-500">{error}</div>}
+          <div className="flex flex-col">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border p-2 rounded"
+              required
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="border p-2 rounded"
+              required
+            />
+          </div>
+          <DialogFooter>
+            <Button type="submit" disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
+            </Button>
+          </DialogFooter>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
 };
 
 export default Login;
