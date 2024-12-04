@@ -74,6 +74,7 @@ const Login = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
               className="border p-2 rounded"
               required
             />
@@ -84,7 +85,9 @@ const Login = () => {
               type="password"
               id="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+                          onChange={(e) => setPassword(e.target.value)}
+                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
+
               className="border p-2 rounded"
               required
             />

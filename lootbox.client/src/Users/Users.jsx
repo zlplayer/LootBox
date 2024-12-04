@@ -1,6 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table"
+import { Button } from "@/components/ui/button";
 
 function Users() {
     const [users, setUsers] = useState([]);
@@ -10,21 +19,21 @@ function Users() {
     const navigate = useNavigate();
 
     const token = localStorage.getItem('token');  // Token JWT
-    const userRole = localStorage.getItem('userRole');  // Rola u¿ytkownika
+    const userRole = localStorage.getItem('userRole');  // Rola uï¿½ytkownika
 
     useEffect(() => {
-        // Sprawdzenie, czy u¿ytkownik jest administratorem
+        // Sprawdzenie, czy uï¿½ytkownik jest administratorem
         if (userRole !== 'Admin') {
-            navigate('/'); // Jeœli u¿ytkownik nie jest administratorem, przekieruj go na stronê g³ówn¹
+            navigate('/'); // Jeï¿½li uï¿½ytkownik nie jest administratorem, przekieruj go na stronï¿½ gï¿½ï¿½wnï¿½
         } else {
-            // Wykonaj zapytanie do endpointu /api/account/users, jeœli u¿ytkownik ma rolê admin
+            // Wykonaj zapytanie do endpointu /api/account/users, jeï¿½li uï¿½ytkownik ma rolï¿½ admin
             const fetchUsers = async () => {
                 try {
                     const response = await fetch('/api/account/users', {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
-                            'Authorization': `Bearer ${token}`,  // Przekazanie tokenu w nag³ówku
+                            'Authorization': `Bearer ${token}`,  // Przekazanie tokenu w nagï¿½ï¿½wku
                         },
                     });
 
@@ -33,7 +42,7 @@ function Users() {
                     }
 
                     const data = await response.json();
-                    setUsers(data);  // Zapisz dane u¿ytkowników w stanie
+                    setUsers(data);  // Zapisz dane uï¿½ytkownikï¿½w w stanie
                 } catch (error) {
                     setError(error.message);
                 } finally {
@@ -41,11 +50,11 @@ function Users() {
                 }
             };
 
-            fetchUsers();  // Wywo³aj funkcjê fetchUsers
+            fetchUsers();  // Wywoï¿½aj funkcjï¿½ fetchUsers
         }
     }, [token, userRole, navigate]);
 
-    // Funkcja do usuwania u¿ytkownika
+    // Funkcja do usuwania uï¿½ytkownika
     const handleDeleteUser = async (userId) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
             try {
@@ -53,7 +62,7 @@ function Users() {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`,  // Przekazanie tokenu w nag³ówku
+                        'Authorization': `Bearer ${token}`,  // Przekazanie tokenu w nagï¿½ï¿½wku
                     },
                 });
 
@@ -61,7 +70,7 @@ function Users() {
                     throw new Error('Failed to delete user');
                 }
 
-                // Po usuniêciu u¿ytkownika, zaktualizuj listê u¿ytkowników
+                // Po usuniï¿½ciu uï¿½ytkownika, zaktualizuj listï¿½ uï¿½ytkownikï¿½w
                 setUsers((prevUsers) => prevUsers.filter(user => user.id !== userId));
                 alert('User deleted successfully');
             } catch (error) {
@@ -81,35 +90,42 @@ function Users() {
     return (
         <div>
             <h2>All Users</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>User Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <Table>
+                <TableHeader>
+                    <TableRow>
+                        <TableHead></TableHead>
+                        <TableHead>User Name</TableHead>
+                        <TableHead>E-mail</TableHead>
+                        <TableHead>Role</TableHead>
+                        <TableHead>Delete</TableHead>
+                        <TableHead>Change Role</TableHead>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
                     {users.map((user) => (
-                        <tr key={user.id}>
-                            <td>{user.id}</td>
-                            <td>{user.userName}</td>
-                            <td>{user.email}</td>
-                            <td>{user.role}</td>
-                            <td>
-                                <button
-                                    className="btn btn-danger"
+                        <TableRow key={user.id}>
+                            <TableCell></TableCell>
+                            <TableCell>{user.userName}</TableCell>
+                            <TableCell>{user.email}</TableCell>
+                            <TableCell>{user.role}</TableCell>
+                            <TableCell>
+                                <Button variant="destructive"
                                     onClick={() => handleDeleteUser(user.id)}
                                 >
                                     Delete
-                                </button>
-                            </td>
-                        </tr>
+                                </Button>
+                            </TableCell>
+                            <TableCell>
+                                <Button variant="destructive"
+                                    onClick={() => handleDeleteUser(user.id)}
+                                >
+                                    Delete
+                                </Button>
+                            </TableCell>
+                        </TableRow>
                     ))}
-                </tbody>
-            </table>
+                </TableBody>
+            </Table>
         </div>
     );
 }

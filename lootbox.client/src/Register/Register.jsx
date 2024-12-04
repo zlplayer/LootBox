@@ -82,7 +82,9 @@ const Register = () => {
               type="email"
               id="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+                          onChange={(e) => setEmail(e.target.value)}
+                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
+
               className="border p-2 rounded"
               required
             />
@@ -93,7 +95,9 @@ const Register = () => {
               type="text"
               id="username"
               value={userName}
-              onChange={(e) => setUserName(e.target.value)}
+                          onChange={(e) => setUserName(e.target.value)}
+                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
+
               className="border p-2 rounded"
               required
             />
@@ -104,7 +108,9 @@ const Register = () => {
               type="password"
               id="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+                          onChange={(e) => setPassword(e.target.value)}
+                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
+
               className="border p-2 rounded"
               required
             />
@@ -115,7 +121,9 @@ const Register = () => {
               type="password"
               id="confirmPassword"
               value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
+                          onChange={(e) => setConfirmPassword(e.target.value)}
+                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
+
               className="border p-2 rounded"
               required
             />
