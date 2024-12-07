@@ -33,7 +33,7 @@ namespace LootBox.Server.Controllers
             return Ok(response);
         }
 
-        [HttpPost("{userId}")]
+        [HttpPut("changeRole/{userId}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> ChangeRole([FromRoute] int userId, int roleId)
         {

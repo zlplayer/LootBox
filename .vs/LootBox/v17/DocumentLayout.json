@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Konzo\\source\\repos\\LootBox\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79483562-930B-4370-9946-F8BFEC1623E6}|lootbox.client\\lootbox.client.esproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{79483562-930B-4370-9946-F8BFEC1623E6}|lootbox.client\\lootbox.client.esproj|solutionrelative:lootbox.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{79483562-930B-4370-9946-F8BFEC1623E6}|lootbox.client\\lootbox.client.esproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.client\\src\\case\\case.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{79483562-930B-4370-9946-F8BFEC1623E6}|lootbox.client\\lootbox.client.esproj|solutionrelative:lootbox.client\\src\\case\\case.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569E25D1-F77E-4B70-B520-1E70200E8913}|LootBox.Server\\LootBox.Server.csproj|solutionrelative:lootbox.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7DDF504-DC3D-4869-B3AD-5408701903F5}|LootBox.Infrastructure\\LootBox.Infrastructure.csproj|c:\\users\\konzo\\source\\repos\\lootbox\\lootbox.infrastructure\\repositories\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -338,7 +338,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -346,69 +346,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Register.jsx",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Register\\Register.jsx",
-              "RelativeDocumentMoniker": "lootbox.client\\src\\Register\\Register.jsx",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Register\\Register.jsx",
-              "RelativeToolTip": "lootbox.client\\src\\Register\\Register.jsx",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAIwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-12-04T21:28:54.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.css",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Login\\Login.css",
-              "RelativeDocumentMoniker": "lootbox.client\\src\\Login\\Login.css",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Login\\Login.css",
-              "RelativeToolTip": "lootbox.client\\src\\Login\\Login.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-04T21:23:33.097Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.jsx",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Login\\Login.jsx",
-              "RelativeDocumentMoniker": "lootbox.client\\src\\Login\\Login.jsx",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Login\\Login.jsx",
-              "RelativeToolTip": "lootbox.client\\src\\Login\\Login.jsx",
-              "ViewState": "AgIAADoAAAAAAAAAAADwv1wAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-12-04T21:19:12.034Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "tailwind.config.js",
-              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\tailwind.config.js",
-              "RelativeDocumentMoniker": "lootbox.client\\tailwind.config.js",
-              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\tailwind.config.js",
-              "RelativeToolTip": "lootbox.client\\tailwind.config.js",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-12-04T21:04:46.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "index.css",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\index.css",
               "RelativeDocumentMoniker": "lootbox.client\\src\\index.css",
               "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\index.css",
               "RelativeToolTip": "lootbox.client\\src\\index.css",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFMAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAEoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-02T22:34:40.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\main.jsx",
               "RelativeDocumentMoniker": "lootbox.client\\src\\main.jsx",
@@ -444,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\index.html",
               "RelativeDocumentMoniker": "lootbox.client\\index.html",
@@ -480,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Case.jsx",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Case\\Case.jsx",
               "RelativeDocumentMoniker": "lootbox.client\\src\\Case\\Case.jsx",
@@ -504,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Case.css",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Case\\Case.css",
               "RelativeDocumentMoniker": "lootbox.client\\src\\Case\\Case.css",
@@ -516,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CaseDetails.css",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\CaseDetails\\CaseDetails.css",
               "RelativeDocumentMoniker": "lootbox.client\\src\\CaseDetails\\CaseDetails.css",
@@ -528,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Navbar.css",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Navbar\\Navbar.css",
               "RelativeDocumentMoniker": "lootbox.client\\src\\Navbar\\Navbar.css",
@@ -540,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Navbar.jsx",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Navbar\\Navbar.jsx",
               "RelativeDocumentMoniker": "lootbox.client\\src\\Navbar\\Navbar.jsx",
@@ -548,8 +499,7 @@
               "RelativeToolTip": "lootbox.client\\src\\Navbar\\Navbar.jsx",
               "ViewState": "AgIAADEAAAAAAAAAAAAAAE8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-11-28T18:46:57.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T18:46:57.396Z"
             },
             {
               "$type": "Document",
@@ -565,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Users.jsx",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Users\\Users.jsx",
               "RelativeDocumentMoniker": "lootbox.client\\src\\Users\\Users.jsx",
@@ -577,15 +527,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 0,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "LootBox.Server\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\LootBox.Server\\Controllers\\AccountController.cs",
               "RelativeToolTip": "LootBox.Server\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAQwD4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAxwB8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T17:09:02.854Z"
+              "WhenOpened": "2024-11-21T17:09:02.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "tailwind.config.js",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\tailwind.config.js",
+              "RelativeDocumentMoniker": "lootbox.client\\tailwind.config.js",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\tailwind.config.js",
+              "RelativeToolTip": "lootbox.client\\tailwind.config.js",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-04T21:04:46.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.jsx",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Login\\Login.jsx",
+              "RelativeDocumentMoniker": "lootbox.client\\src\\Login\\Login.jsx",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Login\\Login.jsx",
+              "RelativeToolTip": "lootbox.client\\src\\Login\\Login.jsx",
+              "ViewState": "AgIAADoAAAAAAAAAAADwv1wAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-12-04T21:19:12.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.css",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Login\\Login.css",
+              "RelativeDocumentMoniker": "lootbox.client\\src\\Login\\Login.css",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Login\\Login.css",
+              "RelativeToolTip": "lootbox.client\\src\\Login\\Login.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-04T21:23:33.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.jsx",
+              "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Register\\Register.jsx",
+              "RelativeDocumentMoniker": "lootbox.client\\src\\Register\\Register.jsx",
+              "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Register\\Register.jsx",
+              "RelativeToolTip": "lootbox.client\\src\\Register\\Register.jsx",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAIwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-12-04T21:28:54.204Z"
             },
             {
               "$type": "Document",
@@ -601,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Profile.jsx",
               "DocumentMoniker": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Profile\\Profile.jsx",
               "RelativeDocumentMoniker": "lootbox.client\\src\\Profile\\Profile.jsx",
