@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import DeleteUserDialog from "@/Users/DeleteDialog";
 import ChangePasswordDialog from "./ChangePasswordDialog";
+import EditProfileDialog from "./EditProfileDialog";
 
 function Profile() {
     const [user, setUser] = useState(null);
@@ -135,9 +136,7 @@ function Profile() {
                                 userName={user.userName}
                                 onDelete={() => handleDeleteAccount(user.id)}
                             />
-                            <Button variant="outline" onClick={() => alert("Additional Action")}>
-                                Może będzie edit albo do edycji hasła
-                            </Button>
+                            <EditProfileDialog user={user} onProfileUpdate={(updatedUser) => setUser(updatedUser)} />
                         </div>
                     </div>
                 </CardContent>

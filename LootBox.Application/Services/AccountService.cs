@@ -102,10 +102,6 @@ namespace LootBox.Application.Services
 
             var mapperUser= _mapper.Map(user, userToUpdate);
 
-            if (!string.IsNullOrEmpty(user.Password) && user.Password == user.ConfirmPassword)
-            {
-                userToUpdate.PasswordHash = _passwordHasher.HashPassword(userToUpdate, user.Password);
-            }
             await _accountRepository.UpdateUser(mapperUser);
         }
 
