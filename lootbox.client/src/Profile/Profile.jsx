@@ -1,41 +1,43 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Hook do nawigacji
+import React, { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
+import DeleteUserDialog from "@/Users/DeleteDialog";
+import ChangePasswordDialog from "./ChangePasswordDialog";
 
 function Profile() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const userId = localStorage.getItem('id');  // ID uøytkownika z localStorage
-    const token = localStorage.getItem('token');  // Token JWT
-    const navigate = useNavigate(); // Inicjalizowanie hooka nawigacji
+    const userId = localStorage.getItem("id"); // ID u≈ºytkownika z localStorage
+    const token = localStorage.getItem("token"); // Token JWT
 
     useEffect(() => {
-        // Sprawdü, czy token i userId sπ dostÍpne
         if (!token || !userId) {
-            setError('No token or user ID found');
+            setError("No token or user ID found");
             setLoading(false);
             return;
         }
 
-        // Wykonaj zapytanie o dane uøytkownika
         const fetchUserData = async () => {
             try {
                 const response = await fetch(`/api/account/user/${userId}`, {
-                    method: 'GET',
+                    method: "GET",
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`,  // Dodaj token w nag≥Ûwku
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
                     },
                 });
 
                 if (!response.ok) {
-                    throw new Error('Failed to fetch user data');
+                    throw new Error("Failed to fetch user data");
                 }
 
                 const data = await response.json();
-                setUser(data);  // Zapisz dane uøytkownika w stanie
+                setUser(data);
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -43,70 +45,103 @@ function Profile() {
             }
         };
 
-        fetchUserData();  // Wywo≥aj funkcjÍ fetch
-    }, [token, userId]);  // Uruchom ponownie, gdy token lub userId siÍ zmieni
+        fetchUserData();
+    }, [token, userId]);
 
-    // Funkcja do usuwania uøytkownika
     const handleDeleteAccount = async () => {
         if (!userId || !token) {
-            setError('No user ID or token found');
+            setError("No user ID or token found");
             return;
         }
 
         try {
             const response = await fetch(`/api/account/${userId}`, {
-                method: 'DELETE',
+                method: "DELETE",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
                 },
             });
 
             if (!response.ok) {
-                throw new Error('Failed to delete user account');
+                throw new Error("Failed to delete user account");
             }
 
-            // UsuÒ dane z localStorage
-            localStorage.removeItem('token');
-            localStorage.removeItem('id');
-            localStorage.removeItem('userName');
-            localStorage.removeItem('userRole');
-
-            // Przekierowanie na stronÍ logowania po usuniÍciu konta
-            navigate('/login');
+            localStorage.clear();
+            window.location.href = "/";
         } catch (error) {
             setError(error.message);
         }
     };
 
-    const handleChangePassword = async () => {
-        navigate('/change-password');
-    }
-
     if (loading) {
-        return <p>Loading...</p>;
+        return (
+            <div className="max-w-md mx-auto mt-10">
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Loading...</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <Skeleton className="h-6 w-1/2 mb-4" />
+                        <Skeleton className="h-6 w-2/3 mb-4" />
+                        <Skeleton className="h-6 w-full mb-4" />
+                    </CardContent>
+                </Card>
+            </div>
+        );
     }
 
     if (error) {
-        return <p>Error: {error}</p>;
+        return (
+            <div className="max-w-md mx-auto mt-10">
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Error</CardTitle>
+                        <CardDescription>{error}</CardDescription>
+                    </CardHeader>
+                </Card>
+            </div>
+        );
     }
 
     return (
-        <div className="profile-container">
-            <h2>Profile</h2>
-            {user ? (
-                <div className="profile-info">
-                    <p><strong>Username:</strong> {user.userName}</p>
-                    <p><strong>Email:</strong> {user.email}</p>
-                    <p><strong>Password:</strong> ********* <button onClick={handleChangePassword }>Change Password</button></p>
-                    {/* Przycisk do usuwania konta */}
-                    <button onClick={handleDeleteAccount} className="delete-button">
-                        Delete Account
-                    </button>
-                </div>
-            ) : (
-                <p>No user data available</p>
-            )}
+        <div className="max-w-md mx-auto mt-10">
+            <Card>
+                <CardHeader>
+                    <CardTitle>User Profile</CardTitle>
+                    <CardDescription>Manage your account information and settings</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <div className="space-y-4">
+                        <div>
+                            <p className="text-sm font-medium">Username</p>
+                            <p className="text-lg font-semibold">{user.userName}</p>
+                        </div>
+                        <Separator />
+                        <div>
+                            <p className="text-sm font-medium">Email</p>
+                            <p className="text-lg font-semibold">{user.email}</p>
+                        </div>
+                        <Separator />
+                        <div>
+                            <p className="text-sm font-medium">Password</p>
+                            <p className="text-lg font-semibold">
+                                ********* <ChangePasswordDialog />
+                            </p>
+                        </div>
+                        <Separator />
+                        <div className="flex justify-end gap-4">
+                            <DeleteUserDialog
+                                userName={user.userName}
+                                onDelete={() => handleDeleteAccount(user.id)}
+                            />
+                            <Button variant="outline" onClick={() => alert("Additional Action")}>
+                                Mo≈ºe bƒôdzie edit albo do edycji has≈Ça
+                            </Button>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
         </div>
     );
 }
