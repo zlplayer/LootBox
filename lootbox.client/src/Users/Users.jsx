@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 import {
     Table,
@@ -11,8 +11,11 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import DeleteUserDialog from "./DeleteDialog"; // Importujemy komponent dialogowy do usuwania
-import ChangeRoleDialog from "./ChangeRoleDialog"; // Importujemy nowy komponent dialogowy do zmiany roli
+
+import { Trash2, UserCog } from 'lucide-react';
+
+import DeleteUserDialog from "./DeleteDialog"; // Import dialogu do usuwania
+import ChangeRoleDialog from "./ChangeRoleDialog"; // Import dialogu do zmiany roli
 
 function Users() {
     const [users, setUsers] = useState([]);
@@ -72,7 +75,6 @@ function Users() {
                 throw new Error('Failed to delete user');
             }
 
-
             fetchUsers(); // Odśwież dane użytkowników
         } catch (error) {
             setError(error.message);
@@ -128,7 +130,8 @@ function Users() {
                         <TableCell>{user.email}</TableCell>
                         <TableCell>{user.role}</TableCell>
                         <TableCell>
-                            <Button variant="destructive">
+                            <Button variant="destructive" className="flex items-center gap-1">
+                                <Trash2 className="w-4 h-4"/>
                                 <DeleteUserDialog
                                     userName={user.userName}
                                     onDelete={() => handleDeleteUser(user.id)}
@@ -136,7 +139,8 @@ function Users() {
                             </Button>
                         </TableCell>
                         <TableCell>
-                            <Button>
+                            <Button variant="secondary" className="flex items-center gap-1">
+                                <UserCog className="w-4 h-4"/>
                                 <ChangeRoleDialog
                                     currentRole={user.role}
                                     onChangeRole={(roleId) => handleChangeUserRole(user.id, roleId)}

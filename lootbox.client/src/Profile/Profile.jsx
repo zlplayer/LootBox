@@ -8,6 +8,8 @@ import DeleteUserDialog from "@/Users/DeleteDialog";
 import ChangePasswordDialog from "./ChangePasswordDialog";
 import EditProfileDialog from "./EditProfileDialog";
 
+import { Trash2, Pencil, Key } from "lucide-react"; // Dodajemy ikony z lucide-react
+
 function Profile() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -126,17 +128,46 @@ function Profile() {
                         <Separator />
                         <div>
                             <p className="text-sm font-medium">Password</p>
-                            <p className="text-lg font-semibold">
-                                ********* <ChangePasswordDialog />
+                            <p className="text-lg font-semibold flex items-center">
+                                *********
+                                <span className="ml-2"> 
+                                  {/* Dodajemy odstęp i ikonę Key przy ChangePasswordDialog */}
+                                  <ChangePasswordDialog 
+                                    trigger={
+                                      <Button variant="outline" size="sm" className="flex items-center gap-1 ml-2">
+                                        <Key className="w-4 h-4" />
+                                        Change Password
+                                      </Button>
+                                    }
+                                  />
+                                </span>
                             </p>
                         </div>
                         <Separator />
                         <div className="flex justify-end gap-4">
+                            {/* Delete User Dialog z ikoną kosza */}
                             <DeleteUserDialog
                                 userName={user.userName}
                                 onDelete={() => handleDeleteAccount(user.id)}
+                                trigger={
+                                    <Button variant="destructive" className="flex items-center gap-1">
+                                        <Trash2 className="w-4 h-4" />
+                                        Delete Account
+                                    </Button>
+                                }
                             />
-                            <EditProfileDialog user={user} onProfileUpdate={(updatedUser) => setUser(updatedUser)} />
+
+                            {/* Edit Profile Dialog z ikoną ołówka */}
+                            <EditProfileDialog 
+                                user={user} 
+                                onProfileUpdate={(updatedUser) => setUser(updatedUser)}
+                                trigger={
+                                    <Button variant="secondary" className="flex items-center gap-1">
+                                        <Pencil className="w-4 h-4" />
+                                        Edit Profile
+                                    </Button>
+                                }
+                            />
                         </div>
                     </div>
                 </CardContent>
