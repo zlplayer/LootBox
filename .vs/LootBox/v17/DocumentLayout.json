@@ -356,7 +356,7 @@
               "RelativeDocumentMoniker": "lootbox.client\\src\\Profile\\ChangePasswordDialog.jsx",
               "ToolTip": "C:\\Users\\Konzo\\source\\repos\\LootBox\\lootbox.client\\src\\Profile\\ChangePasswordDialog.jsx",
               "RelativeToolTip": "lootbox.client\\src\\Profile\\ChangePasswordDialog.jsx",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAkwHAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAkwFwAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2024-12-08T22:37:37.799Z",
               "EditorCaption": ""
@@ -383,8 +383,7 @@
               "RelativeToolTip": "LootBox.Application\\Mappings\\CaseMappingProfile.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwDUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:49:33.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:49:33.437Z"
             },
             {
               "$type": "Document",
@@ -504,8 +503,7 @@
               "RelativeToolTip": "LootBox.Server\\Controllers\\AccountController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwCsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T17:09:02.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T17:09:02.854Z"
             },
             {
               "$type": "Document",
@@ -529,8 +527,7 @@
               "RelativeToolTip": "LootBox.Application\\Dtos\\UpdateUserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:50:28.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T17:50:28.627Z"
             },
             {
               "$type": "Document",
@@ -542,8 +539,7 @@
               "RelativeToolTip": "LootBox.Application\\Services\\AccountService.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAwwF8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T20:27:20.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T20:27:20.032Z"
             },
             {
               "$type": "Document",
@@ -591,8 +587,7 @@
               "RelativeToolTip": "lootbox.client\\src\\Profile\\Profile.jsx",
               "ViewState": "AgIAAGkAAAAAAAAAAAAiwIoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-12-02T21:10:47.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T21:10:47.178Z"
             },
             {
               "$type": "Document",

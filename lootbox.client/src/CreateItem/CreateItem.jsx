@@ -1,182 +1,209 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectLabel,
+  SelectItem,
+  SelectValue,
+  SelectGroup,
+} from '@/components/ui/select';
+import axios from 'axios';
 
-function CreateItem() {
-    const [name, setName] = useState("");
-    const [imageFile, setImageFile] = useState(null);
-    const [price, setPrice] = useState("");
-    const [rarityId, setRarityId] = useState("");
-    const [typeItemId, setTypeItemId] = useState("");
-    const [wearRatingId, setWearRatingId] = useState("");
+function CreateItem({ onClose, onSuccess }) {
+  const [name, setName] = useState('');
+  const [imageFile, setImageFile] = useState(null);
+  const [price, setPrice] = useState('');
+  const [rarityId, setRarityId] = useState('');
+  const [typeItemId, setTypeItemId] = useState('');
+  const [wearRatingId, setWearRatingId] = useState('');
 
-    const [rarities, setRarities] = useState([]);
-    const [typeItems, setTypeItems] = useState([]);
-    const [wearRatings, setWearRatings] = useState([]);
+  const [rarities, setRarities] = useState([]);
+  const [typeItems, setTypeItems] = useState([]);
+  const [wearRatings, setWearRatings] = useState([]);
 
-    const navigate = useNavigate();
+  useEffect(() => {
+    fetchRarities();
+    fetchTypeItems();
+    fetchWearRatings();
+  }, []);
 
-    // Pobieranie danych przy załadowaniu komponentu
-    useEffect(() => {
-        fetchRarities();
-        fetchTypeItems();
-        fetchWearRatings();
-    }, []);
+  const fetchRarities = async () => {
+    try {
+      const response = await axios.get('/api/rarity');
+      setRarities(response.data);
+    } catch (error) {
+      console.error('Failed to fetch rarities:', error);
+      alert('Nie udało się załadować rzadkości.');
+    }
+  };
 
-    const fetchRarities = async () => {
-        try {
-            const response = await fetch("/api/rarity");
-            const data = await response.json();
-            setRarities(data);
-        } catch (error) {
-            console.error("Failed to fetch rarities:", error);
-            alert("Nie udało się załadować rzadkości.");
-        }
-    };
+  const fetchTypeItems = async () => {
+    try {
+      const response = await axios.get('/api/typeItem');
+      setTypeItems(response.data);
+    } catch (error) {
+      console.error('Failed to fetch type items:', error);
+      alert('Nie udało się załadować typów.');
+    }
+  };
 
-    const fetchTypeItems = async () => {
-        try {
-            const response = await fetch("/api/typeItem");
-            const data = await response.json();
-            setTypeItems(data);
-        } catch (error) {
-            console.error("Failed to fetch type items:", error);
-            alert("Nie udało się załadować typów.");
-        }
-    };
+  const fetchWearRatings = async () => {
+    try {
+      const response = await axios.get('/api/wearRating');
+      setWearRatings(response.data);
+    } catch (error) {
+      console.error('Failed to fetch wear ratings:', error);
+      alert('Nie udało się załadować wear ratings. ');
+    }
+  };
 
-    const fetchWearRatings = async () => {
-        try {
-            const response = await fetch("/api/wearRating");
-            const data = await response.json();
-            setWearRatings(data);
-        } catch (error) {
-            console.error("Failed to fetch wear ratings:", error);
-            alert("Nie udało się załadować wear ratings.");
-        }
-    };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    if (!name || !price || !rarityId || !typeItemId || !wearRatingId) {
+      alert('Wszystkie pola są wymagane.');
+      return;
+    }
 
-        if (!name || !price || !rarityId || !typeItemId || !wearRatingId) {
-            alert("Wszystkie pola są wymagane.");
-            return;
-        }
+    const formData = new FormData();
+    formData.append('Name', name);
+    if (imageFile) {
+      formData.append('ImageFile', imageFile);
+    }
+    formData.append('Price', price);
+    formData.append('RarityId', rarityId);
+    formData.append('TypeItemId', typeItemId);
+    formData.append('WearRatingId', wearRatingId);
 
-        const formData = new FormData();
-        formData.append("Name", name);
-        if (imageFile) formData.append("ImageFile", imageFile);
-        formData.append("Price", price);
-        formData.append("RarityId", rarityId);
-        formData.append("TypeItemId", typeItemId);
-        formData.append("WearRatingId", wearRatingId);
+    try {
+      const response = await axios.post('/api/item', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+      if (response.status === 200) {
+        setName('');
+        setImageFile(null);
+        setPrice('');
+        setRarityId('');
+        setTypeItemId('');
+        setWearRatingId('');
+        onSuccess();
+        onClose();
+      }
+    } catch (error) {
+      console.error('Error creating item:', error);
+      alert('Nie udało się utworzyć przedmiotu.');
+    }
+  };
 
-        try {
-            const response = await axios.post("/api/item", formData, {
-                headers: { "Content-Type": "multipart/form-data" },
-            });
-            if (response.status === 200) {
-                alert("Przedmiot został utworzony.");
-                navigate("/items");
-            }
-        } catch (error) {
-            console.error("Error creating item:", error);
-            alert("Nie udało się utworzyć przedmiotu.");
-        }
-    };
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="space-y-2">
+        <Label htmlFor="name">Nazwa</Label>
+        <Input
+          id="name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Wpisz nazwę przedmiotu"
+          required
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="image">Plik obrazu</Label>
+        <Input
+          id="image"
+          type="file"
+          accept="image/*"
+          onChange={(e) => setImageFile(e.target.files[0])}
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="price">Cena</Label>
+        <Input
+          id="price"
+          type="number"
+          step="0.01"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          placeholder="Wpisz cenę przedmiotu"
+          required
+        />
+      </div>
 
-    return (
-        <div>
-            <h2>Stwórz nowy przedmiot</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>
-                        Nazwa:
-                        <input
-                            type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required
-                        />
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Plik obrazu:
-                        <input
-                            type="file"
-                            onChange={(e) => setImageFile(e.target.files[0])}
-                        />
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Cena:
-                        <input
-                            type="number"
-                            value={price}
-                            onChange={(e) => setPrice(e.target.value)}
-                            required
-                        />
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Rzadkość:
-                        <select
-                            value={rarityId}
-                            onChange={(e) => setRarityId(e.target.value)}
-                            required
-                        >
-                            <option value="">-- Wybierz rzadkość --</option>
-                            {rarities.map((rarity) => (
-                                <option key={rarity.id} value={rarity.id}>
-                                    {rarity.name}
-                                </option>
-                            ))}
-                        </select>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Typ:
-                        <select
-                            value={typeItemId}
-                            onChange={(e) => setTypeItemId(e.target.value)}
-                            required
-                        >
-                            <option value="">-- Wybierz typ --</option>
-                            {typeItems.map((typeItem) => (
-                                <option key={typeItem.id} value={typeItem.id}>
-                                    {typeItem.name}
-                                </option>
-                            ))}
-                        </select>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Wear Rating:
-                        <select
-                            value={wearRatingId}
-                            onChange={(e) => setWearRatingId(e.target.value)}
-                            required
-                        >
-                            <option value="">-- Wybierz wear rating --</option>
-                            {wearRatings.map((wearRating) => (
-                                <option key={wearRating.id} value={wearRating.id}>
-                                    {wearRating.name}
-                                </option>
-                            ))}
-                        </select>
-                    </label>
-                </div>
-                <button type="submit">Stwórz przedmiot</button>
-            </form>
-        </div>
-    );
+      {/* Rzadkość */}
+      <div className="space-y-2">
+        <Label htmlFor="rarity">Rzadkość</Label>
+        <Select value={rarityId} onValueChange={(val) => setRarityId(val)} required>
+          <SelectTrigger id="rarity">
+            <SelectValue placeholder="Wybierz rzadkość" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Rzadkość</SelectLabel>
+              {rarities.map((rarity) => (
+                <SelectItem key={rarity.id} value={String(rarity.id)}>
+                  {rarity.color}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Typ przedmiotu */}
+      <div className="space-y-2">
+        <Label htmlFor="typeItem">Typ przedmiotu</Label>
+        <Select value={typeItemId} onValueChange={(val) => setTypeItemId(val)} required>
+          <SelectTrigger id="typeItem">
+            <SelectValue placeholder="Wybierz typ" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Typy</SelectLabel>
+              {typeItems.map((typeItem) => (
+                <SelectItem key={typeItem.id} value={String(typeItem.id)}>
+                  {typeItem.name}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Wear Rating */}
+      <div className="space-y-2">
+        <Label htmlFor="wearRating">Wear Rating</Label>
+        <Select value={wearRatingId} onValueChange={(val) => setWearRatingId(val)} required>
+          <SelectTrigger id="wearRating">
+            <SelectValue placeholder="Wybierz wear rating" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Wear Ratings</SelectLabel>
+              {wearRatings.map((rating) => (
+                <SelectItem key={rating.id} value={String(rating.id)}>
+                  {rating.name}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
+
+      <div className="flex justify-end gap-4">
+        <Button type="button" variant="secondary" onClick={onClose}>
+          Anuluj
+        </Button>
+        <Button type="submit" variant="primary">
+          Stwórz przedmiot
+        </Button>
+      </div>
+    </form>
+  );
 }
 
 export default CreateItem;
