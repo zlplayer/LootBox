@@ -16,6 +16,7 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const userName = localStorage.getItem("userName");
+  const userRole = localStorage.getItem("userRole");
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -93,11 +94,13 @@ function Navbar() {
                     Equipment
                   </NavLink>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <NavLink to="/users" className="w-full">
-                    Users
-                  </NavLink>
-                </DropdownMenuItem>
+                {userRole === "Admin" && (
+                  <DropdownMenuItem>
+                    <NavLink to="/users" className="w-full">
+                      Users
+                    </NavLink>
+                  </DropdownMenuItem>
+                )}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={handleLogout}>
                   Logout

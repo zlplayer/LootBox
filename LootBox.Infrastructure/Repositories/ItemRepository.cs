@@ -41,5 +41,15 @@ namespace LootBox.Infrastructure.Repositories
             _dbContext.Remove(item);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<CaseAndItem>> GetCasesByItemId(int id)
+        {
+            var items = await _dbContext.CaseAndItems
+                .Include(x => x.Case)
+                .Where(x => x.ItemId == id)
+                .ToListAsync();
+
+            return items;
+        }
     }
 }

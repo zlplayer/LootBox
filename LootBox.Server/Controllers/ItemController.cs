@@ -56,6 +56,13 @@ namespace LootBox.Server.Controllers
             await _itemService.Delete(id);
             return Ok();
         }
+
+        [HttpGet("case/{id}")]
+        public async Task<IActionResult> GetCasesByItemId(int id)
+        {
+            var casesItem= await _itemService.GetCasesByItemId(id);
+            return Ok(casesItem);
+        }
     }
 }
 

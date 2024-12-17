@@ -8,15 +8,22 @@ import {
     CardContent,
     CardFooter,
 } from '@/components/ui/card';
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogDescription,
+  } from '@/components/ui/dialog';
+  
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Tooltip, TooltipProvider, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Plus, Trash2, Edit } from 'lucide-react';
-import CreateItem from '@/CreateItem/CreateItem';     // <-- Upewnij się, że ten komponent istnieje
-import UpdateItem from '@/UpdateItem/UpdateItem';     // <-- Upewnij się, że ten komponent istnieje
+import CreateItem from '@/CreateItem/CreateItem';
+import UpdateItem from '@/UpdateItem/UpdateItem';
 
 function ItemPage() {
     const [items, setItems] = useState([]);
@@ -46,9 +53,8 @@ function ItemPage() {
     }
 
     const handleRowClick = (itemData) => {
-        // Możesz np. przekierować do szczegółów itemu lub innej strony:
-        // navigate(`/item/${itemData.id}/details`);
-        // Na razie brak, ale możesz tu zdefiniować akcję po kliknięciu w kartę itemu.
+        // Przejście do nowej strony z detalami przedmiotu
+        navigate(`/item/${itemData.id}`);
     };
 
     const handleUpdateClick = (itemData) => {

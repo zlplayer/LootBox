@@ -14,6 +14,7 @@ import Profile from './Profile/Profile';
 import Equipment from './Equipment/Equipment';
 import Users from './Users/Users';
 import AddItemsToCasePage from './AddItemsToCasePage/AddItemsToCasePage';
+import ItemDetailsPage  from './ItemDetails/ItemDetails.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')).render(
             <Route path="/case/create" element={<CreateCase />} />
             <Route path="/case/:caseid/update" element={<UpdateCase />} />
             <Route path="/items" element={<Item />} />
+            <Route path="/item/:id" element={<ItemDetailsPage />} />
             <Route path="/item/create" element={<CreateItem />} />
             <Route path="/item/:itemid/update" element={<UpdateItem />} />
             <Route path="/change-password" element={<ChangePassword />} />

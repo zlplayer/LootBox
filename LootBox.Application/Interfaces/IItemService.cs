@@ -1,4 +1,5 @@
 ﻿using LootBox.Application.Dtos;
+using LootBox.Domain.Entities;
 
 namespace LootBox.Application.Interfaces
 {
@@ -9,5 +10,6 @@ namespace LootBox.Application.Interfaces
         Task<IEnumerable<ItemDto>> GetAllItem();
         Task<ItemDto> GetItemById(int id);
         Task Update(int id, UpdateItemDto itemDto);
+        Task<IEnumerable<CaseAndItemDto>> GetCasesByItemId(int id);
     }
 }

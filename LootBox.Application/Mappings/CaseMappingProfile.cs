@@ -44,7 +44,11 @@ namespace LootBox.Application.Mappings
             CreateMap<RarityDto, Rarity>();
 
             CreateMap<CaseAndItemDto, CaseAndItem>();
-            CreateMap<CaseAndItem, CaseAndItemDto>();
+            CreateMap<CaseAndItem, CaseAndItemDto>()
+           .ForMember(dest => dest.CaseName, opt => opt.MapFrom(src => src.Case.Name))
+           .ForMember(dest => dest.CaseImage, opt => opt.MapFrom(src => src.Case.Image))
+           .ForMember(dest => dest.CasePrice, opt => opt.MapFrom(src => src.Case.Price));
+           
 
 
             CreateMap<RegisterUserDto, User>().ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.Password));

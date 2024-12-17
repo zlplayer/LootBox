@@ -21,14 +21,13 @@ namespace LootBox.Infrastructure.Repositories
         public async Task<IEnumerable<Equipment>> GetAllEquipmentUser(int userId)
         {
             var equipments = await _dbContext.Equipments
-        .Where(e => e.UserId == userId)  
-        .Include(e => e.Item)  
-        .Include(e => e.Item.TypeItem)  
-        .Include(e => e.Item.Rarity)  
-        .Include(e => e.Item.WearRating)  
-        .ToListAsync();
+            .Where(e => e.UserId == userId)  
+            .Include(e => e.Item)  
+            .Include(e => e.Item.TypeItem)  
+            .Include(e => e.Item.Rarity)  
+            .Include(e => e.Item.WearRating)  
+            .ToListAsync();
 
-            Console.WriteLine($"Found {equipments.Count} equipment items for user {userId}");
             return equipments;
         }
 
@@ -52,5 +51,6 @@ namespace LootBox.Infrastructure.Repositories
             _dbContext.Remove(equipment);
             await _dbContext.SaveChangesAsync();
         }
+
     }
 }

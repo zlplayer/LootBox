@@ -77,11 +77,20 @@ namespace LootBox.Application.Services
             await _itemRespository.Delete(id);
         }
 
+        public async Task<IEnumerable<CaseAndItemDto>> GetCasesByItemId(int id)
+        {
+            var cases= await _itemRespository.GetCasesByItemId(id);
+
+            return _mapper.Map<IEnumerable<CaseAndItemDto>>(cases);
+
+        }
+
         private async Task<string> ConvertFileToBase64Async(IFormFile file)
         {
             using var memoryStream = new MemoryStream();
             await file.CopyToAsync(memoryStream);
             return Convert.ToBase64String(memoryStream.ToArray());
         }
+
     }
 }
