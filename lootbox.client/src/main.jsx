@@ -13,6 +13,8 @@ import ChangePassword from './ChangePassword/ChangePassword';
 import Profile from './Profile/Profile';
 import Equipment from './Equipment/Equipment';
 import Users from './Users/Users';
+import AddItemsToCasePage from './AddItemsToCasePage/AddItemsToCasePage';
+
 
 createRoot(document.getElementById('root')).render(
     <Router>
@@ -29,6 +31,7 @@ createRoot(document.getElementById('root')).render(
             <Route path="profile" element={<Profile />} />
             <Route path="/equipment" element={<Equipment />} />
             <Route path="/users" element={<Users />} />
-        </Routes>
+            <Route path="/case/:caseId/add-items" element={<AddItemsToCasePage />} />
+            </Routes>
     </Router>
 )

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LootBox.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11d46f92230d5b2683c4cbde97a90e6c6e8548bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f823cc126e89c958fc69796a04b213687d131c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("LootBox.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LootBox.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
