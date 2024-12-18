@@ -1,42 +1,55 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogDescription,
+    DialogFooter,
+} from "@/components/ui/dialog";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { UserCircle2, KeyRound, LogOut, Shield } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import DeleteUserDialog from "@/Users/DeleteDialog";
 import ChangePasswordDialog from "./ChangePasswordDialog";
 import EditProfileDialog from "./EditProfileDialog";
-
-import { Trash2, Pencil, Key } from "lucide-react"; // Dodajemy ikony z lucide-react
 
 function Profile() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
+    const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
+    const [isChangePasswordDialogOpen, setIsChangePasswordDialogOpen] = useState(false);
 
-    const userId = localStorage.getItem("id"); // ID użytkownika z localStorage
-    const token = localStorage.getItem("token"); // Token JWT
+    const userId = localStorage.getItem("id");
+    const token = localStorage.getItem("token");
+    const navigate = useNavigate();
 
     useEffect(() => {
-        if (!token || !userId) {
-            setError("No token or user ID found");
-            setLoading(false);
-            return;
-        }
-
         const fetchUserData = async () => {
             try {
                 const response = await fetch(`/api/account/user/${userId}`, {
-                    method: "GET",
                     headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${token}`,
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
                     },
                 });
 
                 if (!response.ok) {
-                    throw new Error("Failed to fetch user data");
+                    throw new Error('Failed to fetch user data');
                 }
 
                 const data = await response.json();
@@ -49,129 +62,147 @@ function Profile() {
         };
 
         fetchUserData();
-    }, [token, userId]);
+    }, [userId, token]);
 
     const handleDeleteAccount = async () => {
-        if (!userId || !token) {
-            setError("No user ID or token found");
-            return;
-        }
-
         try {
             const response = await fetch(`/api/account/${userId}`, {
-                method: "DELETE",
+                method: 'DELETE',
                 headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
                 },
             });
 
             if (!response.ok) {
-                throw new Error("Failed to delete user account");
+                throw new Error('Failed to delete account');
             }
 
             localStorage.clear();
-            window.location.href = "/";
+            navigate('/');
         } catch (error) {
             setError(error.message);
         }
     };
 
+    const handleLogout = () => {
+        localStorage.clear();
+        navigate('/');
+    };
+
     if (loading) {
         return (
-            <div className="max-w-md mx-auto mt-10">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Loading...</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <Skeleton className="h-6 w-1/2 mb-4" />
-                        <Skeleton className="h-6 w-2/3 mb-4" />
-                        <Skeleton className="h-6 w-full mb-4" />
-                    </CardContent>
-                </Card>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="max-w-md mx-auto mt-10">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Error</CardTitle>
-                        <CardDescription>{error}</CardDescription>
-                    </CardHeader>
-                </Card>
+            <div className="flex items-center justify-center min-h-screen">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary" />
             </div>
         );
     }
 
     return (
-        <div className="max-w-md mx-auto mt-10">
-            <Card>
-                <CardHeader>
-                    <CardTitle>User Profile</CardTitle>
-                    <CardDescription>Manage your account information and settings</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <div className="space-y-4">
-                        <div>
-                            <p className="text-sm font-medium">Username</p>
-                            <p className="text-lg font-semibold">{user.userName}</p>
+        <div className="min-h-screen p-6 bg-background">
+            <div className="max-w-4xl mx-auto space-y-6">
+                {/* Profil użytkownika */}
+                <Card>
+                    <CardHeader className="space-y-4">
+                        <div className="flex items-start justify-between">
+                            <div className="flex items-center gap-4">
+                                <Avatar className="w-20 h-20">
+                                    <AvatarFallback className="text-2xl">
+                                        {user?.userName?.[0]?.toUpperCase()}
+                                    </AvatarFallback>
+                                </Avatar>
+                                <div>
+                                    <CardTitle className="text-2xl">{user?.userName}</CardTitle>
+                                    <CardDescription>{user?.email}</CardDescription>
+                                    <Badge variant="outline" className="mt-2">
+                                        <Shield className="w-3 h-3 mr-1" />
+                                        {user?.role}
+                                    </Badge>
+                                </div>
+                            </div>
+                            <Button variant="outline" onClick={handleLogout} className="gap-2">
+                                <LogOut className="w-4 h-4" />
+                                Wyloguj się
+                            </Button>
                         </div>
-                        <Separator />
-                        <div>
-                            <p className="text-sm font-medium">Email</p>
-                            <p className="text-lg font-semibold">{user.email}</p>
-                        </div>
-                        <Separator />
-                        <div>
-                            <p className="text-sm font-medium">Password</p>
-                            <p className="text-lg font-semibold flex items-center">
-                                *********
-                                <span className="ml-2"> 
-                                  {/* Dodajemy odstęp i ikonę Key przy ChangePasswordDialog */}
-                                  <ChangePasswordDialog 
-                                    trigger={
-                                      <Button variant="outline" size="sm" className="flex items-center gap-1 ml-2">
-                                        <Key className="w-4 h-4" />
-                                        Change Password
-                                      </Button>
-                                    }
-                                  />
-                                </span>
-                            </p>
-                        </div>
-                        <Separator />
-                        <div className="flex justify-end gap-4">
-                            {/* Delete User Dialog z ikoną kosza */}
-                            <DeleteUserDialog
-                                userName={user.userName}
-                                onDelete={() => handleDeleteAccount(user.id)}
-                                trigger={
-                                    <Button variant="destructive" className="flex items-center gap-1">
-                                        <Trash2 className="w-4 h-4" />
-                                        Delete Account
-                                    </Button>
-                                }
-                            />
+                    </CardHeader>
+                </Card>
 
-                            {/* Edit Profile Dialog z ikoną ołówka */}
-                            <EditProfileDialog 
-                                user={user} 
-                                onProfileUpdate={(updatedUser) => setUser(updatedUser)}
-                                trigger={
-                                    <Button variant="secondary" className="flex items-center gap-1">
-                                        <Pencil className="w-4 h-4" />
-                                        Edit Profile
-                                    </Button>
-                                }
-                            />
-                        </div>
-                    </div>
-                </CardContent>
-            </Card>
+                {/* Karty z ustawieniami */}
+                <Tabs defaultValue="account" className="space-y-4">
+                    <TabsList>
+                        <TabsTrigger value="account" className="gap-2">
+                            <UserCircle2 className="w-4 h-4" />
+                            Konto
+                        </TabsTrigger>
+                        <TabsTrigger value="security" className="gap-2">
+                            <KeyRound className="w-4 h-4" />
+                            Bezpieczeństwo
+                        </TabsTrigger>
+                    </TabsList>
+
+                    {/* Zakładka Konto */}
+                    <TabsContent value="account">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Informacje o koncie</CardTitle>
+                                <CardDescription>
+                                    Zarządzaj swoimi danymi i ustawieniami konta
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium">Nazwa użytkownika</label>
+                                    <p className="text-lg">{user?.userName}</p>
+                                </div>
+                                <Separator />
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium">Email</label>
+                                    <p className="text-lg">{user?.email}</p>
+                                </div>
+                            </CardContent>
+                            <CardFooter className="flex justify-between">
+                                <EditProfileDialog
+                                    open={isEditDialogOpen}
+                                    onOpenChange={setIsEditDialogOpen}
+                                    user={user}
+                                    onProfileUpdate={(updatedUser) => setUser(updatedUser)}
+                                />
+                                <DeleteUserDialog
+                                    open={isDeleteDialogOpen}
+                                    onOpenChange={setIsDeleteDialogOpen}
+                                    userName={user?.userName}
+                                    onDelete={handleDeleteAccount}
+                                />
+                            </CardFooter>
+                        </Card>
+                    </TabsContent>
+
+                    {/* Zakładka Bezpieczeństwo */}
+                    <TabsContent value="security">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Bezpieczeństwo</CardTitle>
+                                <CardDescription>
+                                    Zarządzaj hasłem i zabezpieczeniami konta
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium">Hasło</label>
+                                    <p className="text-lg">••••••••</p>
+                                </div>
+                            </CardContent>
+                            <CardFooter>
+                                <ChangePasswordDialog
+                                    open={isChangePasswordDialogOpen}
+                                    onOpenChange={setIsChangePasswordDialogOpen}
+                                />
+                            </CardFooter>
+                        </Card>
+                    </TabsContent>
+                </Tabs>
+            </div>
         </div>
     );
 }

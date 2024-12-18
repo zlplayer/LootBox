@@ -38,13 +38,13 @@ const ChangeRoleDialog = ({ currentRole, onChangeRole }) => {
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <Button variant="primary">Change Role</Button>
+                <Button variant="primary">Zmień role</Button>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent className="max-w-7xl mx-auto mb-8">
                 <DialogHeader>
-                    <DialogTitle>Change User Role</DialogTitle>
+                    <DialogTitle>Zmień role uzytkownika</DialogTitle>
                 </DialogHeader>
-                <p>Please select the new role for this user.</p>
+                <p>Wybierz role dla tego uzytkownika.</p>
                 <label htmlFor="roleSelect">
                     Role
                 </label>
@@ -54,7 +54,7 @@ const ChangeRoleDialog = ({ currentRole, onChangeRole }) => {
                     </SelectTrigger>
                     <SelectContent>
                         <SelectGroup>
-                            <SelectLabel>Roles</SelectLabel>
+                            <SelectLabel>Role</SelectLabel>
                             {roles.map((role) => (
                                 <SelectItem key={role.id} value={role.id}>
                                     {role.name}
@@ -65,10 +65,10 @@ const ChangeRoleDialog = ({ currentRole, onChangeRole }) => {
                 </Select>
                 <DialogFooter>
                     <Button variant="secondary" onClick={() => setIsOpen(false)}>
-                        Cancel
+                        Anuluj
                     </Button>
                     <Button  onClick={handleConfirm}>
-                        Confirm Change
+                        Zmień role
                     </Button>
                 </DialogFooter>
             </DialogContent>

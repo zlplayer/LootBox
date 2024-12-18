@@ -18,8 +18,8 @@ function UpdateCase({ caseId, onClose, onSuccess }) {
         setPrice(price);
         setImageFile(image); 
       } catch (error) {
-        console.error("Failed to fetch case details:", error);
-        alert("Failed to load case details. Please try again.");
+        console.error("Nie udało się pobrać szczegółów skrzynki:", error);
+        alert("Nie udało się załadować szczegółów skrzynki. Spróbuj ponownie.");
       }
     };
 
@@ -30,7 +30,7 @@ function UpdateCase({ caseId, onClose, onSuccess }) {
     event.preventDefault();
 
     if (!name || !price) {
-      alert("Name and Price are required.");
+      alert("Nazwa i cena są wymagane.");
       return;
     }
 
@@ -53,31 +53,31 @@ function UpdateCase({ caseId, onClose, onSuccess }) {
       });
 
       if (response.status === 200) {
-        alert("Case updated successfully!");
+        alert("Skrzynka została zaktualizowana pomyślnie!");
         onSuccess(); 
         onClose(); 
       }
     } catch (error) {
-      console.error("Error updating case:", error);
-      alert("Failed to update case. Please try again.");
+      console.error("Błąd podczas aktualizacji skrzynki:", error);
+      alert("Nie udało się zaktualizować skrzynki. Spróbuj ponownie.");
     }
   };
 
   return (
     <form onSubmit={handleUpdate} className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="name">Name</Label>
+        <Label htmlFor="name">Nazwa</Label>
         <Input
           id="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Enter case name"
+          placeholder="Wprowadź nazwę skrzynki"
           required
         />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="image">Image File</Label>
+        <Label htmlFor="image">Plik graficzny</Label>
         <Input
           id="image"
           type="file"
@@ -86,33 +86,33 @@ function UpdateCase({ caseId, onClose, onSuccess }) {
         />
         {imageFile && !(imageFile instanceof File) && (
           <p>
-            Current Image:
+            Obecny obraz:
             <img
               src={`data:image/png;base64,${imageFile}`}
-              alt="Current"
+              alt="Obecny"
               className="max-w-xs mt-2 w-40 h-40 object-contain"
             />
           </p>
         )}
       </div>
       <div className="space-y-2">
-        <Label htmlFor="price">Price</Label>
+        <Label htmlFor="price">Cena</Label>
         <Input
           id="price"
           type="number"
           step="0.01"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          placeholder="Enter case price"
+          placeholder="Wprowadź cenę skrzynki"
           required
         />
       </div>
       <div className="flex justify-end gap-4">
         <Button type="button" variant="secondary" onClick={onClose}>
-          Cancel
+          Anuluj
         </Button>
         <Button type="submit" variant="primary">
-          Update Case
+          Zaktualizuj skrzynkę
         </Button>
       </div>
     </form>

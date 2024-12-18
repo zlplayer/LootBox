@@ -23,7 +23,7 @@ const ChangePasswordDialog = ({ onPasswordChange }) => {
         e.preventDefault();
 
         if (newPassword !== confirmPassword) {
-            setError("Passwords do not match");
+            setError("Hasła nie są takie same.");
             return;
         }
 
@@ -43,10 +43,10 @@ const ChangePasswordDialog = ({ onPasswordChange }) => {
             });
 
             if (!response.ok) {
-                throw new Error("Failed to change password");
+                throw new Error("Nie udało się zmienić hasła.");
             }
 
-            
+            alert("Hasło zostało zmienione pomyślnie.");
             setIsOpen(false);
             if (onPasswordChange) onPasswordChange();
         } catch (error) {
@@ -59,11 +59,11 @@ const ChangePasswordDialog = ({ onPasswordChange }) => {
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <Button variant="outline">Change Password</Button>
+                <Button variant="outline">Zmień hasło</Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Change Password</DialogTitle>
+                    <DialogTitle>Zmień hasło</DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit}>
                     {error && (
@@ -73,34 +73,36 @@ const ChangePasswordDialog = ({ onPasswordChange }) => {
                     )}
                     <div className="mb-4">
                         <label htmlFor="newPassword" className="block text-sm font-medium">
-                            New Password
+                            Nowe hasło
                         </label>
                         <Input
                             id="newPassword"
                             type="password"
                             value={newPassword}
                             onChange={(e) => setNewPassword(e.target.value)}
+                            placeholder="Wprowadź nowe hasło"
                             required
                         />
                     </div>
                     <div className="mb-4">
                         <label htmlFor="confirmPassword" className="block text-sm font-medium">
-                            Confirm Password
+                            Potwierdź hasło
                         </label>
                         <Input
                             id="confirmPassword"
                             type="password"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
+                            placeholder="Powtórz nowe hasło"
                             required
                         />
                     </div>
                     <DialogFooter>
                         <Button variant="secondary" onClick={() => setIsOpen(false)}>
-                            Cancel
+                            Anuluj
                         </Button>
                         <Button type="submit" disabled={loading}>
-                            {loading ? "Changing..." : "Change Password"}
+                            {loading ? "Zmiana..." : "Zmień"}
                         </Button>
                     </DialogFooter>
                 </form>

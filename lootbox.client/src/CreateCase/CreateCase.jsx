@@ -13,7 +13,7 @@ function CreateCase({ onClose, onSuccess }) {
     event.preventDefault();
 
     if (!name || !price) {
-      alert('Name and Price are required.');
+      alert('Nazwa i cena są wymagane.');
       return;
     }
 
@@ -32,34 +32,37 @@ function CreateCase({ onClose, onSuccess }) {
       });
 
       if (response.status === 200) {
-        console.log('Case created successfully!');
+        console.log('Skrzynka została utworzona pomyślnie!');
         setName('');
         setImageFile(null);
         setPrice('');
-        onSuccess(); // Refresh case list
-        onClose(); // Close dialog
+        onSuccess(); // Odśwież listę skrzynek
+        onClose(); // Zamknij okno dialogowe
       }
     } catch (error) {
-      console.error('Error creating case:', error);
-      alert('Failed to create case. Please try again.');
+      console.error('Błąd podczas tworzenia skrzynki:', error);
+      alert('Nie udało się utworzyć skrzynki. Spróbuj ponownie.');
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Nazwa */}
       <div className="space-y-2">
-        <Label htmlFor="name">Name</Label>
+        <Label htmlFor="name">Nazwa</Label>
         <Input
           id="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Enter case name"
+          placeholder="Wprowadź nazwę skrzynki"
           required
         />
       </div>
+
+      {/* Plik obrazu */}
       <div className="space-y-2">
-        <Label htmlFor="image">Image File</Label>
+        <Label htmlFor="image">Plik obrazu</Label>
         <Input
           id="image"
           type="file"
@@ -67,24 +70,28 @@ function CreateCase({ onClose, onSuccess }) {
           onChange={(e) => setImageFile(e.target.files[0])}
         />
       </div>
+
+      {/* Cena */}
       <div className="space-y-2">
-        <Label htmlFor="price">Price</Label>
+        <Label htmlFor="price">Cena</Label>
         <Input
           id="price"
           type="number"
           step="0.01"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          placeholder="Enter case price"
+          placeholder="Wprowadź cenę skrzynki"
           required
         />
       </div>
+
+      {/* Przyciski */}
       <div className="flex justify-end gap-4">
         <Button type="button" variant="secondary" onClick={onClose}>
-          Cancel
+          Anuluj
         </Button>
         <Button type="submit" variant="primary">
-          Create Case
+          Stwórz skrzynkę
         </Button>
       </div>
     </form>

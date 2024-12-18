@@ -25,21 +25,21 @@ const DeleteUserDialog = ({ userName, onDelete }) => {
     return (
         <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
             <AlertDialogTrigger asChild>
-            <Button variant="destructive">Delete</Button>
+            <Button variant="destructive">Usuń konto</Button>
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>
-                    <AlertDialogTitle>Confirm Deletion</AlertDialogTitle>
+                    <AlertDialogTitle>Potwierdź usunięcie konta</AlertDialogTitle>
                     <AlertDialogDescription>
-                        Are you sure you want to delete the user "{userName}"? This action cannot be undone.
+                        Jesteś pewien że chcesz usunąć użytkownika "{userName}"? Tej akcji nie można cofnąć.
                     </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                     <AlertDialogCancel asChild>
-                        <Button variant="secondary" onClick={() => setIsOpen(false)}>Cancel</Button>
+                        <Button variant="secondary" onClick={() => setIsOpen(false)}>Anuluj</Button>
                     </AlertDialogCancel>
                     <AlertDialogAction asChild>
-                        <Button onClick={handleConfirm}>Yes</Button>
+                        <Button onClick={handleConfirm}>Tak</Button>
                     </AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>

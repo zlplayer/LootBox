@@ -1,89 +1,90 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 
 function ChangePassword() {
-    const [newPassword, setNewPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-    const userId = localStorage.getItem('id'); // Pobranie id uøytkownika z localStorage
-    const navigate = useNavigate();
+  const userId = localStorage.getItem('id'); // Pobranie ID u≈ºytkownika
+  const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-        // Sprawdzenie, czy has≥a siÍ zgadzajπ
-        if (newPassword !== confirmPassword) {
-            setError('Passwords do not match');
-            return;
-        }
+    if (newPassword !== confirmPassword) {
+      setError('Has≈Ça nie sƒÖ takie same.');
+      return;
+    }
 
-        setError(null); // Czyszczenie b≥ÍdÛw
-        setLoading(true); // Ustawienie stanu ≥adowania
+    setError(null);
+    setLoading(true);
 
-        try {
-            // Wys≥anie zapytania PUT do API
-            const response = await fetch(`/api/account/changePassword/${userId}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    newPassword,
-                    confirmPassword
-                }),
-            });
+    try {
+      const response = await fetch(`/api/account/changePassword/${userId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          newPassword,
+          confirmPassword,
+        }),
+      });
 
-            if (!response.ok) {
-                throw new Error('Failed to change password');
-            }
+      if (!response.ok) {
+        throw new Error('Nie uda≈Ço siƒô zmieniƒá has≈Ça.');
+      }
 
-            // Jeúli wszystko posz≥o pomyúlnie
-            alert('Password changed successfully');
-            navigate('/'); // Moøesz przekierowaÊ na stronÍ logowania lub innπ stronÍ
-        } catch (error) {
-            // Obs≥uga b≥ÍdÛw
-            setError(error.message);
-        } finally {
-            setLoading(false); // KoÒczenie ≥adowania
-        }
-    };
+      alert('Has≈Ço zosta≈Ço zmienione pomy≈õlnie.');
+      navigate('/'); // Przekierowanie do strony g≈Ç√≥wnej lub logowania
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    return (
-        <div className="change-password-container">
-            <h2>Change Password</h2>
-            {error && <div className="error">{error}</div>} {/* Wyúwietlanie b≥ÍdÛw */}
-            <form onSubmit={handleSubmit} className="change-password-form">
-                <div className="form-group">
-                    <label htmlFor="newPassword">New Password</label>
-                    <input
-                        type="password"
-                        id="newPassword"
-                        value={newPassword}
-                        onChange={(e) => setNewPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="confirmPassword">Confirm Password</label>
-                    <input
-                        type="password"
-                        id="confirmPassword"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="form-actions">
-                    <button type="submit" disabled={loading}>
-                        {loading ? 'Changing password...' : 'Change Password'}
-                    </button>
-                </div>
-            </form>
+  return (
+    <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-sm bg-background">
+      <h2 className="text-2xl font-semibold text-center mb-6">Zmie≈Ñ has≈Ço</h2>
+      {error && <div className="text-red-500 mb-4 text-center">{error}</div>}
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="newPassword">Nowe has≈Ço</Label>
+          <Input
+            id="newPassword"
+            type="password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+            placeholder="Wprowad≈∫ nowe has≈Ço"
+            required
+          />
         </div>
-    );
+        <div className="space-y-2">
+          <Label htmlFor="confirmPassword">Potwierd≈∫ has≈Ço</Label>
+          <Input
+            id="confirmPassword"
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Powt√≥rz nowe has≈Ço"
+            required
+          />
+        </div>
+        <div className="flex justify-end gap-4">
+          <Button type="button" variant="secondary" onClick={() => navigate('/')}>
+            Anuluj
+          </Button>
+          <Button type="submit" disabled={loading}>
+            {loading ? 'Zmiana has≈Ça...' : 'Zmie≈Ñ has≈Ço'}
+          </Button>
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default ChangePassword;

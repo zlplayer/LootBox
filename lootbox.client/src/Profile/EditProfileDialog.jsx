@@ -58,11 +58,11 @@ const EditProfileDialog = ({ user, onProfileUpdate }) => {
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <Button variant="outline">Edit Profile</Button>
+                <Button variant="outline">Edytuj profil</Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Edit Profile</DialogTitle>
+                    <DialogTitle>Edytuj profil</DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit}>
                     {error && (
@@ -72,7 +72,7 @@ const EditProfileDialog = ({ user, onProfileUpdate }) => {
                     )}
                     <div className="mb-4">
                         <label htmlFor="userName" className="block text-sm font-medium">
-                            Username
+                            Nazwa użytkownika
                         </label>
                         <Input
                             id="userName"
@@ -96,10 +96,10 @@ const EditProfileDialog = ({ user, onProfileUpdate }) => {
                     </div>
                     <DialogFooter>
                         <Button variant="secondary" onClick={() => setIsOpen(false)}>
-                            Cancel
+                            Anuluj
                         </Button>
                         <Button type="submit" disabled={loading}>
-                            {loading ? "Saving..." : "Save"}
+                            {loading ? "Zapisywanie..." : "Zapisz"}
                         </Button>
                     </DialogFooter>
                 </form>

@@ -1,28 +1,31 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import {
-    Dialog,
-    DialogTrigger,
-    DialogContent,
-    DialogHeader,
-    DialogFooter,
-    DialogTitle,
-  } from "@/components/ui/dialog";
-  import { Button } from "@/components/ui/button";
-
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Eye, EyeOff } from "lucide-react";
 
 const Login = () => {
-    const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email || !password) {
-      setError("Please fill out all fields.");
+      setError("Proszę wypełnić wszystkie pola.");
       return;
     }
 
@@ -39,7 +42,7 @@ const Login = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Invalid login or password");
+        throw new Error("Nieprawidłowy login lub hasło.");
       }
 
       const data = await response.json();
@@ -59,42 +62,52 @@ const Login = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="bg-white text-gray-800 hover:text-gray-900 hover:shadow-md px-4 py-2 rounded">Login</Button>
+        <Button variant="outline" className="bg-white text-gray-800 hover:text-gray-900 hover:shadow-md px-4 py-2 rounded">
+          Zaloguj się
+        </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Login</DialogTitle>
+          <DialogTitle>Logowanie</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && <div className="text-red-500">{error}</div>}
           <div className="flex flex-col">
             <label htmlFor="email">Email</label>
-            <input
+            <Input
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
-              className="border p-2 rounded"
+              placeholder="Wprowadź swój email"
               required
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
-
-              className="border p-2 rounded"
-              required
-            />
+            <label htmlFor="password">Hasło</label>
+            <div className="relative">
+              <Input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Wprowadź swoje hasło"
+                required
+                className="pr-10"
+              />
+              <Button
+                type="button"
+                variant="ghost"
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-0 bg-transparent hover:bg-transparent"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+              </Button>
+            </div>
           </div>
           <DialogFooter>
             <Button type="submit" disabled={loading}>
-              {loading ? "Logging in..." : "Login"}
+              {loading ? "Logowanie..." : "Zaloguj się"}
             </Button>
           </DialogFooter>
         </form>

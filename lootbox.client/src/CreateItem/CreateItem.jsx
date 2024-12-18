@@ -36,7 +36,7 @@ function CreateItem({ onClose, onSuccess }) {
       const response = await axios.get('/api/rarity');
       setRarities(response.data);
     } catch (error) {
-      console.error('Failed to fetch rarities:', error);
+      console.error('Nie udało się pobrać rzadkości:', error);
       alert('Nie udało się załadować rzadkości.');
     }
   };
@@ -46,8 +46,8 @@ function CreateItem({ onClose, onSuccess }) {
       const response = await axios.get('/api/typeItem');
       setTypeItems(response.data);
     } catch (error) {
-      console.error('Failed to fetch type items:', error);
-      alert('Nie udało się załadować typów.');
+      console.error('Nie udało się pobrać typów przedmiotów:', error);
+      alert('Nie udało się załadować typów przedmiotów.');
     }
   };
 
@@ -56,8 +56,8 @@ function CreateItem({ onClose, onSuccess }) {
       const response = await axios.get('/api/wearRating');
       setWearRatings(response.data);
     } catch (error) {
-      console.error('Failed to fetch wear ratings:', error);
-      alert('Nie udało się załadować wear ratings. ');
+      console.error('Nie udało się pobrać stanów zużycia:', error);
+      alert('Nie udało się załadować stanów zużycia.');
     }
   };
 
@@ -94,13 +94,14 @@ function CreateItem({ onClose, onSuccess }) {
         onClose();
       }
     } catch (error) {
-      console.error('Error creating item:', error);
+      console.error('Błąd podczas tworzenia przedmiotu:', error);
       alert('Nie udało się utworzyć przedmiotu.');
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Nazwa */}
       <div className="space-y-2">
         <Label htmlFor="name">Nazwa</Label>
         <Input
@@ -112,6 +113,8 @@ function CreateItem({ onClose, onSuccess }) {
           required
         />
       </div>
+
+      {/* Plik obrazu */}
       <div className="space-y-2">
         <Label htmlFor="image">Plik obrazu</Label>
         <Input
@@ -121,6 +124,8 @@ function CreateItem({ onClose, onSuccess }) {
           onChange={(e) => setImageFile(e.target.files[0])}
         />
       </div>
+
+      {/* Cena */}
       <div className="space-y-2">
         <Label htmlFor="price">Cena</Label>
         <Input
@@ -137,7 +142,7 @@ function CreateItem({ onClose, onSuccess }) {
       {/* Rzadkość */}
       <div className="space-y-2">
         <Label htmlFor="rarity">Rzadkość</Label>
-        <Select value={rarityId} onValueChange={(val) => setRarityId(val)} required>
+        <Select value={rarityId} onValueChange={setRarityId} required>
           <SelectTrigger id="rarity">
             <SelectValue placeholder="Wybierz rzadkość" />
           </SelectTrigger>
@@ -157,13 +162,13 @@ function CreateItem({ onClose, onSuccess }) {
       {/* Typ przedmiotu */}
       <div className="space-y-2">
         <Label htmlFor="typeItem">Typ przedmiotu</Label>
-        <Select value={typeItemId} onValueChange={(val) => setTypeItemId(val)} required>
+        <Select value={typeItemId} onValueChange={setTypeItemId} required>
           <SelectTrigger id="typeItem">
-            <SelectValue placeholder="Wybierz typ" />
+            <SelectValue placeholder="Wybierz typ przedmiotu" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectLabel>Typy</SelectLabel>
+              <SelectLabel>Typ przedmiotu</SelectLabel>
               {typeItems.map((typeItem) => (
                 <SelectItem key={typeItem.id} value={String(typeItem.id)}>
                   {typeItem.name}
@@ -174,16 +179,16 @@ function CreateItem({ onClose, onSuccess }) {
         </Select>
       </div>
 
-      {/* Wear Rating */}
+      {/* Stan zużycia */}
       <div className="space-y-2">
-        <Label htmlFor="wearRating">Wear Rating</Label>
-        <Select value={wearRatingId} onValueChange={(val) => setWearRatingId(val)} required>
+        <Label htmlFor="wearRating">Stan zużycia</Label>
+        <Select value={wearRatingId} onValueChange={setWearRatingId} required>
           <SelectTrigger id="wearRating">
-            <SelectValue placeholder="Wybierz wear rating" />
+            <SelectValue placeholder="Wybierz stan zużycia" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectLabel>Wear Ratings</SelectLabel>
+              <SelectLabel>Stan zużycia</SelectLabel>
               {wearRatings.map((rating) => (
                 <SelectItem key={rating.id} value={String(rating.id)}>
                   {rating.name}
@@ -194,6 +199,7 @@ function CreateItem({ onClose, onSuccess }) {
         </Select>
       </div>
 
+      {/* Przyciski */}
       <div className="flex justify-end gap-4">
         <Button type="button" variant="secondary" onClick={onClose}>
           Anuluj

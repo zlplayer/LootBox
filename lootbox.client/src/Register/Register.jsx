@@ -1,32 +1,38 @@
 import React, { useState } from "react";
 import {
-    Dialog,
-    DialogTrigger,
-    DialogContent,
-    DialogHeader,
-    DialogFooter,
-    DialogTitle,
-  } from "@/components/ui/dialog";
-  import { Button } from "@/components/ui/button";
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Eye, EyeOff } from "lucide-react";
 
 const Register = () => {
   const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [userName, setUserName] = useState("");
+
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email || !password || !confirmPassword || !userName) {
-      setError("All fields are required!");
+      setError("Wszystkie pola są wymagane!");
       return;
     }
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match!");
+      setError("Hasła nie są takie same!");
       return;
     }
 
@@ -48,10 +54,9 @@ const Register = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Registration failed");
+        throw new Error("Rejestracja nie powiodła się");
       }
 
-      alert("User registered successfully!");
       window.location.reload();
     } catch (error) {
       setError(error.message);
@@ -63,77 +68,85 @@ const Register = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          className="bg-white text-gray-800 hover:text-gray-900 hover:shadow-md px-4 py-2 rounded"
-        >
-          Register
+        <Button variant="outline" className="bg-white text-gray-800 hover:text-gray-900 hover:shadow-md px-4 py-2 rounded">
+          Zarejestruj się
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Register</DialogTitle>
+          <DialogTitle>Rejestracja</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && <div className="text-red-500">{error}</div>}
           <div className="flex flex-col">
             <label htmlFor="email">Email</label>
-            <input
+            <Input
               type="email"
               id="email"
               value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
-
-              className="border p-2 rounded"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Wprowadź swój email"
               required
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="username">Username</label>
-            <input
+            <label htmlFor="username">Nazwa użytkownika</label>
+            <Input
               type="text"
               id="username"
               value={userName}
-                          onChange={(e) => setUserName(e.target.value)}
-                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
-
-              className="border p-2 rounded"
+              onChange={(e) => setUserName(e.target.value)}
+              placeholder="Wprowadź swoją nazwę użytkownika"
               required
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
-
-              className="border p-2 rounded"
-              required
-            />
+            <label htmlFor="password">Hasło</label>
+            <div className="relative">
+              <Input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Wprowadź hasło"
+                required
+                className="pr-10"
+              />
+              <Button
+                type="button"
+                variant="ghost"
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-0 bg-transparent hover:bg-transparent"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+              </Button>
+            </div>
           </div>
           <div className="flex flex-col">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              value={confirmPassword}
-                          onChange={(e) => setConfirmPassword(e.target.value)}
-                          style={{ "--foreground": "hsl(0, 0%, 10%)", color: "var(--foreground)" }}
-
-              className="border p-2 rounded"
-              required
-            />
+            <label htmlFor="confirmPassword">Potwierdź hasło</label>
+            <div className="relative">
+              <Input
+                type={showConfirmPassword ? "text" : "password"}
+                id="confirmPassword"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Potwierdź hasło"
+                required
+                className="pr-10"
+              />
+              <Button
+                type="button"
+                variant="ghost"
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-0 bg-transparent hover:bg-transparent"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+              </Button>
+            </div>
           </div>
           <DialogFooter>
-            <Button
-              type="submit"
-              disabled={loading}
-            >
-              {loading ? "Registering..." : "Register"}
+            <Button type="submit" disabled={loading}>
+              {loading ? "Rejestrowanie..." : "Zarejestruj się"}
             </Button>
           </DialogFooter>
         </form>

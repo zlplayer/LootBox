@@ -1,148 +1,213 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  ChevronLeft,
+  Box,
+  Banknote,
+  Star,
+  CircleDot,
+  Archive,
+} from 'lucide-react';
 
 function ItemDetailsPage() {
-    const { id } = useParams();
-    const [item, setItem] = useState(null);
-    const [cases, setCases] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [casesLoading, setCasesLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const [casesError, setCasesError] = useState(null);
-    const navigate = useNavigate();
+  const { id } = useParams();
+  const [item, setItem] = useState(null);
+  const [cases, setCases] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
-
-
-    useEffect(() => {
-        const fetchItemDetails = async () => {
-            try {
-                const response = await fetch(`/api/item/${id}`);
-                if (!response.ok) {
-                    throw new Error(`Failed to fetch item details: ${response.statusText}`);
-                }
-                const data = await response.json();
-                setItem(data);
-            } catch (err) {
-                console.error("Error fetching item details:", err);
-                setError("Nie udało się pobrać szczegółów itemu.");
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchItemDetails();
-    }, [id]);
-
-    useEffect(() => {
-        const fetchCasesForItem = async () => {
-            if (!item) return;
-            setCasesLoading(true);
-            try {
-                const response = await fetch(`/api/item/case/${item.id}`);
-                if (!response.ok) {
-                    throw new Error(`Failed to fetch cases for item: ${response.statusText}`);
-                }
-                const data = await response.json();
-                setCases(data);
-            } catch (err) {
-                console.error("Error fetching cases for item:", err);
-                setCasesError("Nie udało się pobrać listy skrzynek dla tego przedmiotu.");
-            } finally {
-                setCasesLoading(false);
-            }
-        };
-        if (item) {
-            fetchCasesForItem();
+  useEffect(() => {
+    const fetchItemDetails = async () => {
+      try {
+        const response = await fetch(`/api/item/${id}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch item details: ${response.statusText}`);
         }
-    }, [item]);
+        const data = await response.json();
+        setItem(data);
+      } catch (err) {
+        console.error("Error fetching item details:", err);
+      }
+    };
 
-    if (loading) return <p className="p-8">Ładowanie szczegółów...</p>;
-    if (error) return <p className="p-8 text-red-500">{error}</p>;
+    const fetchCasesForItem = async () => {
+      try {
+        const response = await fetch(`/api/item/case/${id}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch cases for item: ${response.statusText}`);
+        }
+        const data = await response.json();
+        setCases(data);
+      } catch (err) {
+        console.error("Error fetching cases for item:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
+    fetchItemDetails();
+    fetchCasesForItem();
+  }, [id]);
+
+  if (loading) {
     return (
-        <div className="p-8">
-            <Card>
-                <CardHeader>
-                    <CardTitle>
-                        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
-                            Szczegóły itemu: {item.name}
-                        </h1>
-                    </CardTitle>
-                    <CardDescription>
-                        <p>Dane dotyczące wybranego przedmiotu.</p>
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <div className="flex flex-col items-center space-y-4">
-                        <div className="w-64">
-                            <AspectRatio ratio={1}>
-                                <img
-                                    src={`data:image/png;base64,${item.image}`}
-                                    alt={item.name}
-                                    className="object-cover w-full h-full rounded-md border border-gray-300"
-                                />
-                            </AspectRatio>
-                        </div>
-                        <p className="text-xl">{item.price} zł</p>
-                        <p>Rzadkość (Kolor): {item.rarityColor}</p>
-                        <p>Wear Rating: {item.wearRatingName}</p>
-                        <p>Typ: {item.typeItemName}</p>
-
-                        <Separator className="my-8" />
-
-                        <div className="w-full">
-                            <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-                                Skrzynki, z których można zdobyć ten przedmiot:
-                            </h2>
-                            {casesLoading && <p>Ładowanie skrzynek...</p>}
-                            {casesError && <p className="text-red-500">{casesError}</p>}
-                            {!casesLoading && !casesError && cases.length === 0 && (
-                                <p>Brak skrzynek dla tego przedmiotu.</p>
-                            )}
-                            {!casesLoading && !casesError && cases.length > 0 && (
-                                <ScrollArea className="w-full">
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-                                        {cases.map((caseItem) => (
-                                            <Card
-                                                key={caseItem.id}
-                                                className="w-full hover:scale-105 transition-transform cursor-pointer"
-                                                onClick={() => navigate(`/case/${caseItem.caseId}/items`)}
-                                            >
-                                                <CardContent className="p-6">
-                                                    <div className="flex flex-col space-y-4">
-                                                        <div className="h-48 flex items-center justify-center bg-muted rounded-md">
-                                                            <img
-                                                                src={`data:image/png;base64,${caseItem.caseImage}`}
-                                                                alt={caseItem.caseName}
-                                                                className="max-h-full max-w-full object-contain p-2"
-                                                            />
-                                                        </div>
-                                                        <div className="space-y-3">
-                                                            <h3 className="font-semibold text-lg truncate">{caseItem.caseName}</h3>
-                                                            <p className="text-sm text-muted-foreground">
-                                                                ID skrzynki: {caseItem.caseId}
-                                                            </p>
-                                                            <p className="text-lg font-semibold">
-                                                                {caseItem.casePrice.toFixed(2)} zł
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </CardContent>
-                                            </Card>
-                                        ))}
-                                    </div>
-                                </ScrollArea>
-                            )}
-                        </div>
-                    </div>
-                </CardContent>
-            </Card>
-        </div>
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
     );
+  }
+
+  return (
+    <div className="min-h-screen p-6 bg-background">
+      <div className="max-w-7xl mx-auto">
+        {/* Nagłówek z przyciskiem powrotu */}
+        <div className="mb-8">
+          <Button
+            variant="ghost"
+            className="mb-4"
+            onClick={() => navigate('/items')}
+          >
+            <ChevronLeft className="w-4 h-4 mr-2" />
+            Powrót do listy przedmiotów
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Kolumna lewa - główne informacje i obraz */}
+          <Card className="lg:col-span-2">
+            <CardHeader>
+              <CardTitle>{item?.name}</CardTitle>
+              <CardDescription>Szczegółowe informacje o przedmiocie</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Obraz przedmiotu */}
+                <Card className="bg-muted/50 flex items-center justify-center p-6">
+                  <div className="aspect-square w-full relative">
+                    <img
+                      src={`data:image/png;base64,${item?.image}`}
+                      alt={item?.name}
+                      className="object-contain w-full h-full"
+                    />
+                  </div>
+                </Card>
+
+                {/* Podstawowe informacje */}
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Specyfikacja</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <Box className="w-4 h-4 text-muted-foreground" />
+                        <span className="text-muted-foreground">Typ:</span>
+                        <span className="font-medium">{item?.typeItemName}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Banknote className="w-4 h-4 text-muted-foreground" />
+                        <span className="text-muted-foreground">Cena:</span>
+                        <span className="font-medium">{item?.price.toFixed(2)} zł</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Star className="w-4 h-4 text-muted-foreground" />
+                        <span className="text-muted-foreground">Rzadkość:</span>
+                        <div className="flex items-center gap-2">
+                          <div 
+                            className="w-3 h-3 rounded-full"
+                            style={{ backgroundColor: item?.rarityColor }}
+                          />
+                          <span className="font-medium">{item?.rarityColor}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CircleDot className="w-4 h-4 text-muted-foreground" />
+                        <span className="text-muted-foreground">Stan zużycia:</span>
+                        <span className="font-medium">{item?.wearRatingName}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <Separator />
+                  
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2">Status przedmiotu</h3>
+                    <div className="flex gap-2 flex-wrap">
+                      <Badge variant="outline">ID: {item?.id}</Badge>
+                      <Badge>{item?.wearRatingName}</Badge>
+                      <Badge variant="secondary">{item?.typeItemName}</Badge>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Kolumna prawa - dostępność w skrzynkach */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Archive className="w-5 h-5" />
+                Dostępność w skrzynkach
+              </CardTitle>
+              <CardDescription>
+                Skrzynki zawierające ten przedmiot
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {cases.length === 0 ? (
+                <p className="text-muted-foreground text-center py-4">
+                  Ten przedmiot nie jest obecnie dostępny w żadnej skrzynce.
+                </p>
+              ) : (
+                <ScrollArea className="h-[400px] pr-4">
+                  <div className="space-y-4">
+                    {cases.map((caseItem) => (
+                      <Card
+                        key={caseItem.caseId}
+                        className="cursor-pointer hover:bg-accent transition-colors"
+                        onClick={() => navigate(`/case/${caseItem.caseId}/items`)}
+                      >
+                        <CardContent className="p-4">
+                          <div className="flex items-center gap-4">
+                            <div className="w-16 h-16 relative flex-shrink-0">
+                              <img
+                                src={`data:image/png;base64,${caseItem.caseImage}`}
+                                alt={caseItem.caseName}
+                                className="object-contain w-full h-full"
+                              />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="font-medium truncate">
+                                {caseItem.caseName}
+                              </h4>
+                              <p className="text-sm text-muted-foreground">
+                                {caseItem.casePrice.toFixed(2)} zł
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </ScrollArea>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default ItemDetailsPage;

@@ -115,11 +115,11 @@ function Users() {
             <TableHeader>
                 <TableRow>
                     <TableHead></TableHead>
-                    <TableHead>User Name</TableHead>
+                    <TableHead>Nazwa uzytkownika</TableHead>
                     <TableHead>E-mail</TableHead>
                     <TableHead>Role</TableHead>
-                    <TableHead>Delete</TableHead>
-                    <TableHead>Change Role</TableHead>
+                    <TableHead>Usuń konto</TableHead>
+                    <TableHead>Zmień role</TableHead>
                 </TableRow>
             </TableHeader>
             <TableBody>

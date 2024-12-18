@@ -111,7 +111,7 @@ function UpdateItem({ itemId, onClose, onSuccess }) {
     event.preventDefault();
 
     if (!name || !price || !rarityId || !typeItemId || !wearRatingId) {
-      alert("Wszystkie pola są wymagane. 😅");
+      alert("Wszystkie pola są wymagane.");
       return;
     }
 
@@ -133,13 +133,12 @@ function UpdateItem({ itemId, onClose, onSuccess }) {
         headers: { "Content-Type": "multipart/form-data" },
       });
       if (response.status === 200) {
-        alert("Przedmiot zaktualizowany pomyślnie! 🎉");
         onSuccess();
         onClose();
       }
     } catch (error) {
       console.error("Error updating item:", error);
-      alert("Nie udało się zaktualizować przedmiotu. 😥");
+      alert("Nie udało się zaktualizować przedmiotu.");
     }
   };
 
@@ -230,14 +229,14 @@ function UpdateItem({ itemId, onClose, onSuccess }) {
 
       {/* Wear Rating */}
       <div className="space-y-2">
-        <Label htmlFor="wearRating">Wear Rating</Label>
+        <Label htmlFor="wearRating">Stan zużycia</Label>
         <Select value={wearRatingId} onValueChange={(val) => setWearRatingId(val)} required>
           <SelectTrigger id="wearRating">
-            <SelectValue placeholder="Wybierz wear rating" />
+            <SelectValue placeholder="Wybierz zużycie" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectLabel>Wear Ratings</SelectLabel>
+              <SelectLabel>Stan zużycia</SelectLabel>
               {wearRatings.map((rating) => (
                 <SelectItem key={rating.id} value={String(rating.id)}>
                   {rating.name}
