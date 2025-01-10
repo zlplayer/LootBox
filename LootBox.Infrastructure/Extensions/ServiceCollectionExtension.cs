@@ -27,7 +27,8 @@ namespace LootBox.Infrastructure.Extensions
             services.AddScoped<IRarityRepository, RarityRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IEquipmentRepository, EquipmentRepository>();
-            services.AddScoped<IWalletRepository, WalletRepository>(); 
+            services.AddScoped<IWalletRepository, WalletRepository>();
+            services.AddScoped<IRankingRepository, RankingRepository>();
         }
     }
 }
