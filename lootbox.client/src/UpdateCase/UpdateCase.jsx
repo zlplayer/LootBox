@@ -53,7 +53,6 @@ function UpdateCase({ caseId, onClose, onSuccess }) {
       });
 
       if (response.status === 200) {
-        alert("Skrzynka została zaktualizowana pomyślnie!");
         onSuccess(); 
         onClose(); 
       }

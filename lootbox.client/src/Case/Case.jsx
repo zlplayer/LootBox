@@ -99,7 +99,6 @@ function CasePage() {
 
             setCases((prevCases) => prevCases.filter((singleCase) => singleCase.id !== selectedCase.id));
             closeDeleteDialog();
-            alert('Case deleted successfully!');
         } catch (error) {
             console.error('Error deleting case:', error);
             alert('Failed to delete case. Please try again.');

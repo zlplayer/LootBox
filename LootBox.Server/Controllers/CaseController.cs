@@ -89,9 +89,9 @@ namespace LootBox.Server.Controllers
 
         [HttpPost("{caseId}/draw")]
         //[Authorize]
-        public async Task<IActionResult> DrawItemFromCase([FromRoute] int caseId)
+        public async Task<IActionResult> DrawItemFromCase([FromRoute] int caseId, [FromHeader] int userId)
         {
-            var item = await _caseService.DrawItemFromCase(caseId);
+            var item = await _caseService.DrawItemFromCase(caseId, userId);
             return Ok(item);
         }
     }

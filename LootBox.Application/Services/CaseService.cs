@@ -18,11 +18,13 @@ namespace LootBox.Application.Services
         private readonly IMapper _mapper;
         private readonly ICaseRepository _caseRepository;
         private readonly Random _random = new Random();
-        public CaseService(IMapper mapper, ICaseRepository caseRepository, Random random)
+        private readonly IWalletService _walletService;
+        public CaseService(IMapper mapper, ICaseRepository caseRepository, Random random, IWalletService walletService)
         {
             _mapper = mapper;
             _caseRepository = caseRepository;
             _random = random;
+            _walletService = walletService;
         }
         public async Task Create(CreateCaseDto caseDto)
         {
@@ -107,20 +109,34 @@ namespace LootBox.Application.Services
             await _caseRepository.DeleteItemInCase(caseAndItem);
         }
 
-        public async Task<ItemDto> DrawItemFromCase(int caseId)
+        public async Task<ItemDto> DrawItemFromCase(int caseId, int userId)
         {
-            
             var items = await _caseRepository.GetItemsByCaseId(caseId);
-
-            
             if (!items.Any())
             {
-                throw new NotFoundException("No items found in the case");
+                throw new NotFoundException("No items found in the case.");
             }
 
-            
+            var @case = await _caseRepository.GetCaseById(caseId);
+            if (@case == null)
+            {
+                throw new NotFoundException($"Case with ID {caseId} not found.");
+            }
+
+            var wallet = await _walletService.GetWalletByUserId(userId);
+            if (wallet == null)
+            {
+                throw new NotFoundException($"Wallet for user with ID {userId} not found.");
+            }
+
+            if (wallet.Money < @case.Price)
+            {
+                throw new InvalidOperationException("Not enough money in the wallet.");
+            }
+
             if (items.Count() == 1)
             {
+                await _walletService.UpdateWallet(userId, @case.Price);
                 return _mapper.Map<ItemDto>(items.First());
             }
 
@@ -133,27 +149,29 @@ namespace LootBox.Application.Services
 
             if (!availableRarities.Any())
             {
-                throw new InvalidOperationException("No rarities defined for items in this case");
+                throw new InvalidOperationException("No rarities defined for items in this case.");
             }
 
             var selectedRarity = DrawRarity(availableRarities);
             if (selectedRarity == null)
             {
-                throw new InvalidOperationException("Failed to draw a rarity from available rarities");
+                throw new InvalidOperationException("Failed to draw a rarity from available rarities.");
             }
 
             var itemsOfSelectedRarity = items.Where(i => i.Rarity.Id == selectedRarity.Id).ToList();
             if (!itemsOfSelectedRarity.Any())
             {
-                throw new NotFoundException("No items found for the selected rarity in the case");
+                throw new NotFoundException("No items found for the selected rarity in the case.");
             }
 
             var selectedItem = itemsOfSelectedRarity[_random.Next(itemsOfSelectedRarity.Count)];
 
+            await _walletService.UpdateWallet(userId, @case.Price);
+
             return _mapper.Map<ItemDto>(selectedItem);
         }
 
-        
+
         public Rarity DrawRarity(List<Rarity> availableRarities)
         {
             var totalPercent = availableRarities.Sum(r => r.Percent);

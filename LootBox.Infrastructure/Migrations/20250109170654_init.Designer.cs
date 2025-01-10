@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LootBox.Infrastructure.Migrations
 {
     [DbContext(typeof(LootBoxDbContext))]
-    [Migration("20241126210707_init")]
+    [Migration("20250109170654_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -230,11 +230,37 @@ namespace LootBox.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("WalletId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("RoleId");
 
+                    b.HasIndex("WalletId")
+                        .IsUnique()
+                        .HasFilter("[WalletId] IS NOT NULL");
+
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("LootBox.Domain.Entities.Wallet", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<float>("Money")
+                        .HasColumnType("real");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Wallets");
                 });
 
             modelBuilder.Entity("LootBox.Domain.Entities.WearRating", b =>
@@ -327,7 +353,14 @@ namespace LootBox.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("LootBox.Domain.Entities.Wallet", "Wallet")
+                        .WithOne("User")
+                        .HasForeignKey("LootBox.Domain.Entities.User", "WalletId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.Navigation("Role");
+
+                    b.Navigation("Wallet");
                 });
 
             modelBuilder.Entity("LootBox.Domain.Entities.Case", b =>
@@ -360,6 +393,12 @@ namespace LootBox.Infrastructure.Migrations
             modelBuilder.Entity("LootBox.Domain.Entities.User", b =>
                 {
                     b.Navigation("Equipments");
+                });
+
+            modelBuilder.Entity("LootBox.Domain.Entities.Wallet", b =>
+                {
+                    b.Navigation("User")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("LootBox.Domain.Entities.WearRating", b =>

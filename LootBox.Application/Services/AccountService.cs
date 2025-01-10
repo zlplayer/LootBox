@@ -22,19 +22,31 @@ namespace LootBox.Application.Services
         private readonly IAccountRepository _accountRepository;
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly AuthenticationSettings _authenticationSettings;
-        public AccountService(IMapper mapper, IAccountRepository accountRepository, IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings)
+        private readonly IWalletService _walletService;
+        public AccountService(IMapper mapper, IAccountRepository accountRepository, IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings, IWalletService walletService)
         {
             _mapper = mapper;
             _accountRepository = accountRepository;
             _passwordHasher = passwordHasher;
             _authenticationSettings = authenticationSettings;
+            _walletService=walletService;
         }
 
         public async Task RegisterUser(RegisterUserDto registerUserDto)
         {
             var newUser = _mapper.Map<User>(registerUserDto);
             newUser.PasswordHash = _passwordHasher.HashPassword(newUser, registerUserDto.Password);
+
             await _accountRepository.RegisterUser(newUser);
+
+            var walletDto = new WalletDto { UserId = newUser.Id, Money = 0 };
+            int walletId = await _walletService.CreateWallet(walletDto);
+
+            newUser.WalletId = walletId;
+
+            await _accountRepository.UpdateUser(newUser);
+
+
         }
 
         public async Task<object> GenerateJwt(LoginDto loginDto)
@@ -50,13 +62,19 @@ namespace LootBox.Application.Services
                 throw new BadRequestException("błędne hasło lub login");
             }
 
+            var wallet = await _walletService.GetWalletByUserId(user.Id);
+            if (wallet == null)
+            {
+                var walletDto = new WalletDto { UserId = user.Id, Money = 0 };
+                await _walletService.CreateWallet(walletDto);
+            }
+
             // Generate JWT
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Role, user.Role.Name),
-               
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authenticationSettings.JwtKey));

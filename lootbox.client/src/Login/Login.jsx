@@ -51,7 +51,7 @@ const Login = () => {
       localStorage.setItem("userName", data.name);
       localStorage.setItem("userRole", data.role);
 
-      window.location.reload(); // Odśwież stronę po zalogowaniu
+      window.location.reload();
     } catch (error) {
       setError(error.message);
     } finally {

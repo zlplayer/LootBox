@@ -162,3 +162,4 @@ C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\Microsoft.Ex
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Konzo\source\repos\LootBox\LootBox.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Konzo\source\repos\LootBox\LootBox.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

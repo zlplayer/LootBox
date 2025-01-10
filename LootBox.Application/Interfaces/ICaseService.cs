@@ -15,6 +15,6 @@ namespace LootBox.Application.Interfaces
         Task AddItemToCase(int caseId, int itemId);
         Task<IEnumerable<ItemDto>> GetItemsByCaseId(int caseId);
         Task DeleteItemInCase(int caseId, int itemId);
-        Task<ItemDto> DrawItemFromCase(int caseId);
+        Task<ItemDto> DrawItemFromCase(int caseId, int userId);
     }
 }

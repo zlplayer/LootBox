@@ -98,7 +98,6 @@ function ItemPage() {
 
       setItems((prevItems) => prevItems.filter((item) => item.id !== selectedItem.id));
       closeDeleteDialog();
-      alert('Przedmiot został usunięty.');
     } catch (error) {
       console.error('Error deleting item:', error);
       alert('Nie udało się usunąć przedmiotu.');

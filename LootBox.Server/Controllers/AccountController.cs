@@ -11,9 +11,11 @@ namespace LootBox.Server.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;
-        public AccountController(IAccountService accountService)
+        private readonly IWalletService _walletService;
+        public AccountController(IAccountService accountService, IWalletService walletService)
         {
             _accountService = accountService;
+            _walletService = walletService;
         }
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterUserDto registerDto)
@@ -30,6 +32,7 @@ namespace LootBox.Server.Controllers
             {
                 return Unauthorized();
             }
+
             return Ok(response);
         }
 

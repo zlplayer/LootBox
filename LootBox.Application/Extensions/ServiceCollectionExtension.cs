@@ -57,6 +57,7 @@ namespace LootBox.Application.Extensions
             services.AddScoped<IWearRatingService, WearRatingService>();
             services.AddScoped<IRarityService, RarityService>();
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IWalletService, WalletService>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();

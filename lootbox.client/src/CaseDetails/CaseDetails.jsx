@@ -141,7 +141,7 @@ function CaseDetailsPage() {
         if (containerRef.current) {
           containerRef.current.classList.remove('spin');
           containerRef.current.style.transform = `translateX(0px)`;
-          containerRef.current.offsetHeight; // reflow
+          containerRef.current.offsetHeight; 
 
           containerRef.current.classList.add('spin');
           containerRef.current.style.transform = `translateX(-2000px)`;
@@ -222,7 +222,6 @@ function CaseDetailsPage() {
             )}
           </div>
 
-          {/* Karuzela z przedmiotami (animacja w stylu slot machine) */}
           <div className="spin-container border rounded-lg bg-card/50 relative w-full overflow-hidden">
             <div 
               className="items-container" 

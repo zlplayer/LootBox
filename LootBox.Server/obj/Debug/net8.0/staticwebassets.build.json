@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jsBx7dNQ26tgyKya6myWT98xvORree8kwI5gI+28VH8=",
+  "Hash": "MfzyXNFPfeH+amR7MMDeSZMqp7Uz6SNKtYZUi64jWYc=",
   "Source": "LootBox.Server",
   "BasePath": "_content/LootBox.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "lootbox.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
