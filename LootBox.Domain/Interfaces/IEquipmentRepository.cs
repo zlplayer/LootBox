@@ -14,5 +14,9 @@ namespace LootBox.Domain.Interfaces
         Task<Equipment> GetEquipmentById(int id);
         Task Create(int itemId, int userId);
         Task Delete(int id);
+        Task<List<Equipment>> GetEquipmentsByIdsAsync(List<int> equipmentIds, int userId);
+        Task<List<Item>> GetItemsByRarityIdAsync(int rarityId);
+        Task RemoveEquipmentsAsync(List<int> equipmentIds);
+        Task AddEquipmentAsync(Equipment equipment);
     }
 }

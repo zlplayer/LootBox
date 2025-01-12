@@ -39,5 +39,12 @@ namespace LootBox.Infrastructure.Repositories
             _dbContext.Remove(rarity);
             await _dbContext.SaveChangesAsync();
         }
+        public async Task<Rarity> GetHigherRarityAsync(int currentRarityId)
+        {
+            return await _dbContext.Rarities
+                .Where(r => r.Id > currentRarityId)
+                .OrderBy(r => r.Id)
+                .FirstOrDefaultAsync();
+        }
     }
 }

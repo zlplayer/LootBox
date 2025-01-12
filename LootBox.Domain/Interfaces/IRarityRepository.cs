@@ -14,5 +14,6 @@ namespace LootBox.Domain.Interfaces
         Task<Rarity> GetRarityById(int id);
         Task Update(Rarity rarity);
         Task Delete(int id);
+        Task<Rarity> GetHigherRarityAsync(int currentRarityId);
     }
 }

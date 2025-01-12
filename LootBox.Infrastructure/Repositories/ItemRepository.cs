@@ -51,5 +51,14 @@ namespace LootBox.Infrastructure.Repositories
 
             return items;
         }
+        public async Task<List<Item>> GetItemsByIdsAsync(List<int> itemIds)
+        {
+            return await _dbContext.Items.Where(i => itemIds.Contains(i.Id)).ToListAsync();
+        }
+
+        public async Task<List<Item>> GetItemsByRarityIdAsync(int rarityId)
+        {
+            return await _dbContext.Items.Where(i => i.RarityId == rarityId).ToListAsync();
+        }
     }
 }

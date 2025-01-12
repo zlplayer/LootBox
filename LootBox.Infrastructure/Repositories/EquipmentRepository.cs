@@ -52,5 +52,31 @@ namespace LootBox.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task<List<Equipment>> GetEquipmentsByIdsAsync(List<int> equipmentIds, int userId)
+        {
+            return await _dbContext.Equipments
+                .Include(e => e.Item)
+                .Where(e => equipmentIds.Contains(e.Id) && e.UserId == userId)
+                .ToListAsync();
+        }
+
+        public async Task<List<Item>> GetItemsByRarityIdAsync(int rarityId)
+        {
+            return await _dbContext.Items.Where(i => i.RarityId == rarityId).ToListAsync();
+        }
+
+        public async Task RemoveEquipmentsAsync(List<int> equipmentIds)
+        {
+            var equipments = await _dbContext.Equipments.Where(e => equipmentIds.Contains(e.Id)).ToListAsync();
+            _dbContext.Equipments.RemoveRange(equipments);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task AddEquipmentAsync(Equipment equipment)
+        {
+            await _dbContext.Equipments.AddAsync(equipment);
+            await _dbContext.SaveChangesAsync();
+        }
+
     }
 }

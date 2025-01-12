@@ -16,5 +16,7 @@ namespace LootBox.Domain.Interfaces
         Task Update(Item item);
         Task Delete(int id);
         Task<IEnumerable<CaseAndItem>> GetCasesByItemId(int id);
+        Task<List<Item>> GetItemsByIdsAsync(List<int> itemIds);
+        Task<List<Item>> GetItemsByRarityIdAsync(int rarityId);
     }
 }
