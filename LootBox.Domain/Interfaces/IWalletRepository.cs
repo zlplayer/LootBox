@@ -11,7 +11,6 @@ namespace LootBox.Domain.Interfaces
     {
         Task CreateWallet(Wallet wallet);
         Task<Wallet> GetWalletByUserId(int userId);
-        Task AddMoney(Wallet wallet);
         Task UpdateWallet(Wallet wallet);
     }
 }

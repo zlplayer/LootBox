@@ -129,23 +129,35 @@ function CaseDetailsPage() {
     setDrawnItem(null);
 
     try {
-      const response = await axios.post(`/api/case/${caseid}/draw`, {}, {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
+      const response = await axios.post(
+        `/api/case/${caseid}/draw`,
+        {},
+        {
+          headers: { 
+            'Authorization': `Bearer ${token}`,
+            'userId': userId 
+          }
+        }
+      );
+      
       const resultItem = response.data;
-
+  
+      // Znajdź indeks wylosowanego przedmiotu
       const resultIndex = items.findIndex(item => item.id === resultItem.id);
       if (resultIndex !== -1) {
         const finalPosition = (resultIndex + (items.length * extraSpins)) * itemWidth;
-
+  
         if (containerRef.current) {
+          // Reset animacji
           containerRef.current.classList.remove('spin');
           containerRef.current.style.transform = `translateX(0px)`;
-          containerRef.current.offsetHeight; 
-
+          containerRef.current.offsetHeight; // Force reflow
+  
+          // Rozpocznij animację
           containerRef.current.classList.add('spin');
           containerRef.current.style.transform = `translateX(-2000px)`;
-
+  
+          // Po zakończeniu animacji pokaż wynik
           setTimeout(() => {
             containerRef.current.classList.remove('spin');
             containerRef.current.style.transform = `translateX(-${finalPosition}px)`;
@@ -157,8 +169,12 @@ function CaseDetailsPage() {
       }
     } catch (err) {
       console.error("Error drawing item:", err);
+      if (err.response?.status === 400 && err.response?.data === "Not enough money in the wallet") {
+        alert("Nie masz wystarczającej ilości środków w portfelu.");
+      } else {
+        alert("Nie udało się wylosować przedmiotu.");
+      }
       setIsDrawing(false);
-      alert("Nie udało się wylosować przedmiotu.");
     }
   };
 

@@ -15,6 +15,9 @@ import Equipment from './Equipment/Equipment';
 import Users from './Users/Users';
 import AddItemsToCasePage from './AddItemsToCasePage/AddItemsToCasePage';
 import ItemDetailsPage  from './ItemDetails/ItemDetails.jsx';
+import WalletComponent from './Wallet/Wallet.jsx';
+import RankingComponent from './Ranking/Ranking.jsx';
+import ContractComponent from './Contract/Contract.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -34,6 +37,9 @@ createRoot(document.getElementById('root')).render(
             <Route path="/equipment" element={<Equipment />} />
             <Route path="/users" element={<Users />} />
             <Route path="/case/:caseId/add-items" element={<AddItemsToCasePage />} />
+            <Route path="/wallet" element={<WalletComponent />} />
+            <Route path="/ranking" element={<RankingComponent />} />
+            <Route path="/contracts" element={<ContractComponent />} />
             </Routes>
     </Router>
 )

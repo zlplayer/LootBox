@@ -25,12 +25,6 @@ namespace LootBox.Infrastructure.Repositories
 
         public async Task<Wallet> GetWalletByUserId(int userId) => await _dbContext.Wallets.FirstOrDefaultAsync(x=>x.UserId==userId);
 
-        public async Task AddMoney(Wallet wallet)
-        {
-            _dbContext.Update(wallet);
-            await _dbContext.SaveChangesAsync();
-        }
-
         public async Task UpdateWallet(Wallet wallet)
         {
             _dbContext.Update(wallet);

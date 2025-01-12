@@ -11,7 +11,17 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useState } from "react";
-import { Menu, Package, BoxIcon, UserCircle2, Users, LogOut } from "lucide-react";
+import { 
+  Package, 
+  BoxIcon, 
+  UserCircle2, 
+  Users, 
+  LogOut, 
+  Trophy, 
+  Wallet, 
+  Repeat,
+  Menu
+} from 'lucide-react';
 import Login from "@/Login/Login";
 import Register from "@/Register/Register";
 
@@ -40,12 +50,15 @@ function Navbar() {
   const navigationLinks = [
     { path: '/', label: 'Skrzynki', icon: <Package className="w-4 h-4" /> },
     { path: '/items', label: 'Przedmioty', icon: <BoxIcon className="w-4 h-4" /> },
+  { path: '/ranking', label: 'Ranking', icon: <Trophy className="w-4 h-4" /> },
   ];
 
   // Linki dla zalogowanego użytkownika
   const userLinks = [
     { path: '/profile', label: 'Profil', icon: <UserCircle2 className="w-4 h-4" /> },
     { path: '/equipment', label: 'Ekwipunek', icon: <Package className="w-4 h-4" /> },
+    { path: '/wallet', label: 'Portfel', icon: <Wallet className="w-4 h-4" /> },
+    { path: '/contracts', label: 'Kontrakty', icon: <Repeat className="w-4 h-4" /> },
   ];
 
   // Dodatkowe linki dla admina

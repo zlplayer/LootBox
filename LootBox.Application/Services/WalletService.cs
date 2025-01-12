@@ -42,16 +42,15 @@ namespace LootBox.Application.Services
 
         public async Task AddMoney(int userId, float money)
         {
-            var walletDto = await GetWalletByUserId(userId);
-            if (walletDto == null)
+            var wallet = await _walletRepository.GetWalletByUserId(userId);
+            if (wallet == null)
             {
                 throw new Exception($"Wallet not found for UserId: {userId}");
             }
 
-            var wallet = _mapper.Map<Wallet>(walletDto);
-
             wallet.Money += money;
-            await _walletRepository.AddMoney(wallet); 
+
+            await _walletRepository.UpdateWallet(wallet);
         }
 
         public async Task UpdateWallet(int userId, float price)

@@ -1,10 +1,13 @@
 ﻿using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LootBox.Server.Controllers
 {
     [Route("api/wallet")]
+    [ApiController]
+    [Authorize]
     public class WalletController : ControllerBase
     {
         private readonly IWalletService _walletService;
@@ -29,6 +32,7 @@ namespace LootBox.Server.Controllers
         }
 
         [HttpPost("addMoney")]
+
         public async Task<IActionResult> AddMoney(int userId, float money)
         {
             await _walletService.AddMoney(userId, money);

@@ -1,5 +1,6 @@
 ﻿using LootBox.Application.Interfaces;
 using LootBox.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace LootBox.Server.Controllers
 {
     [Route("api/contract")]
     [ApiController]
+    [Authorize]
     public class ContractController : ControllerBase
     {
         private readonly IContractService _contractService;
