@@ -38,5 +38,12 @@ namespace LootBox.Server.Controllers
             await _walletService.AddMoney(userId, money);
             return Ok();
         }
+
+        [HttpPost("sellItem")]
+        public async Task<IActionResult> SellItem(int userId, int itemId)
+        {
+            await _walletService.SellItem(userId, itemId);
+            return Ok();
+        }
     }
 }

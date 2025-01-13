@@ -15,10 +15,12 @@ namespace LootBox.Application.Services
     {
         private readonly IMapper _mapper;
         private readonly IEquipmentRepository _equipmentRepository;
-        public EquipmentService(IMapper mapper, IEquipmentRepository equipmentRepository)
+        private readonly IWalletRepository _walletRepository;
+        public EquipmentService(IMapper mapper, IEquipmentRepository equipmentRepository, IWalletRepository walletRepository)
         {
             _mapper = mapper;
             _equipmentRepository = equipmentRepository;
+            _walletRepository = walletRepository;
         }
 
         public async Task<IEnumerable<EquipmentDto>> GetAllEquipmentUser(int userId)
@@ -54,6 +56,28 @@ namespace LootBox.Application.Services
                 throw new Exception("Equipment not found");
             }
             await _equipmentRepository.Delete(id);
+        }
+
+        public async Task SellItem(int userId, int equipmentId)
+        {
+            var wallet = await _walletRepository.GetWalletByUserId(userId);
+            if (wallet == null)
+            {
+                throw new Exception("Wallet not found");
+            }
+
+            var equipment = await _equipmentRepository.GetEquipemntByUserAndEquipemntId(userId, equipmentId);
+            if (equipment == null)
+            {
+                throw new Exception("Item not found in user's equipment");
+            }
+
+            var item = equipment.Item;
+
+            wallet.Money += item.Price;
+            await _walletRepository.UpdateWallet(wallet);
+
+            await _equipmentRepository.Delete(equipment.Id);
         }
     }
 }

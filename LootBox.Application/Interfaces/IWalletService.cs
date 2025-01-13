@@ -13,5 +13,6 @@ namespace LootBox.Application.Interfaces
         Task<WalletDto> GetWalletByUserId(int userId);
         Task AddMoney(int userId, float money);
         Task UpdateWallet(int userId, float price);
+        Task SellItem(int userId, int itemId);
     }
 }

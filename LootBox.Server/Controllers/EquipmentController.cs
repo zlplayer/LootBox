@@ -4,6 +4,7 @@ using LootBox.Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace LootBox.Server.Controllers
 {
@@ -39,5 +40,13 @@ namespace LootBox.Server.Controllers
             await _equipmentService.Delete(id);
             return Ok();
         }
+
+        [HttpPost("sellItem")]
+        public async Task<IActionResult> SellItem(int userId, int equipentId)
+        {
+            await _equipmentService.SellItem(userId, equipentId);
+            return Ok();
+        }
+
     }
 }

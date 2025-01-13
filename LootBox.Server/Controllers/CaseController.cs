@@ -1,5 +1,6 @@
 ﻿using LootBox.Application.Dtos;
 using LootBox.Application.Interfaces;
+using LootBox.Application.Services;
 using LootBox.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

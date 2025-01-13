@@ -30,7 +30,10 @@ import {
   Filter,
   Trash2,
   ChevronsUpDown,
+  Banknote
 } from 'lucide-react';
+import axios from 'axios';
+
 
 function EquipmentPage() {
   const userId = localStorage.getItem('id');
@@ -90,27 +93,18 @@ function EquipmentPage() {
     setDeleteDialogOpen(false);
   };
 
-  const handleDeleteEquipment = async () => {
-    if (!selectedItem) return;
-
+  const handleSellItem = async (item) => {
     try {
-      const response = await fetch(`/api/equipment/${selectedItem.id}`, {
-        method: 'DELETE',
+      await axios.post(`/api/equipment/sellItem?userId=${userId}&equipentId=${item.id}`, null, {
         headers: {
-          'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         }
       });
-
-      if (!response.ok) {
-        throw new Error('Failed to delete equipment');
-      }
-
-      setEquipment((prev) => prev.filter((item) => item.id !== selectedItem.id));
-      closeDeleteDialog();
+      await fetchEquipment();
+      alert(`Sprzedano przedmiot za ${item.price.toFixed(2)} zł`);
     } catch (error) {
-      console.error('Error deleting equipment:', error);
-      alert('Nie udało się usunąć przedmiotu z ekwipunku.');
+      console.error('Error selling item:', error.response ? error.response.data : error.message);
+      alert('Nie udało się sprzedać przedmiotu');
     }
   };
 
@@ -261,38 +255,38 @@ function EquipmentPage() {
                     variant="destructive"
                     size="sm"
                     className="w-full mt-4"
-                    onClick={() => openDeleteDialog(item)}
+                    onClick={() => handleSellItem(item)}
                   >
-                    <Trash2 className="w-4 h-4 mr-2" />
-                    Usuń z ekwipunku
+                    <Banknote className="w-4 h-4 mr-2" />
+                    Sprzedaj ({item.price.toFixed(2)} zł)
                   </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
         )}
-
-        {/* Dialog usuwania */}
-        <Dialog open={isDeleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Potwierdź usunięcie</DialogTitle>
-              <DialogDescription>
-                Czy na pewno chcesz usunąć przedmiot "{selectedItem?.name}" ze swojego ekwipunku?
-                Tej akcji nie można cofnąć.
-              </DialogDescription>
-            </DialogHeader>
-            <div className="flex justify-end space-x-2 mt-4">
-              <Button variant="outline" onClick={closeDeleteDialog}>
-                Anuluj
-              </Button>
-              <Button variant="destructive" onClick={handleDeleteEquipment}>
-                Usuń
-              </Button>
-            </div>
-          </DialogContent>
-        </Dialog>
       </div>
+
+      {/* Dialog usuwania */}
+      <Dialog open={isDeleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Potwierdź usunięcie</DialogTitle>
+            <DialogDescription>
+              Czy na pewno chcesz usunąć przedmiot "{selectedItem?.name}" ze swojego ekwipunku?
+              Tej akcji nie można cofnąć.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-end space-x-2 mt-4">
+            <Button variant="outline" onClick={closeDeleteDialog}>
+              Anuluj
+            </Button>
+            <Button variant="destructive" onClick={() => handleSellItem(selectedItem)}>
+              Sprzedaj
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

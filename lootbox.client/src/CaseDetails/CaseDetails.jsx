@@ -60,7 +60,7 @@ function CaseDetailsPage() {
   const containerRef = useRef(null);
 
   const itemWidth = 200;
-  const extraSpins = 2; 
+  const extraSpins = 2;
   let displayedItems = [];
   if (items.length > 0) {
     displayedItems = [...items, ...items, ...items];
@@ -133,30 +133,30 @@ function CaseDetailsPage() {
         `/api/case/${caseid}/draw`,
         {},
         {
-          headers: { 
+          headers: {
             'Authorization': `Bearer ${token}`,
-            'userId': userId 
+            'userId': userId
           }
         }
       );
-      
+
       const resultItem = response.data;
-  
+
       // Znajdź indeks wylosowanego przedmiotu
       const resultIndex = items.findIndex(item => item.id === resultItem.id);
       if (resultIndex !== -1) {
         const finalPosition = (resultIndex + (items.length * extraSpins)) * itemWidth;
-  
+
         if (containerRef.current) {
           // Reset animacji
           containerRef.current.classList.remove('spin');
           containerRef.current.style.transform = `translateX(0px)`;
           containerRef.current.offsetHeight; // Force reflow
-  
+
           // Rozpocznij animację
           containerRef.current.classList.add('spin');
           containerRef.current.style.transform = `translateX(-2000px)`;
-  
+
           // Po zakończeniu animacji pokaż wynik
           setTimeout(() => {
             containerRef.current.classList.remove('spin');
@@ -175,6 +175,21 @@ function CaseDetailsPage() {
         alert("Nie udało się wylosować przedmiotu.");
       }
       setIsDrawing(false);
+    }
+  };
+
+  const handleSellItem = async () => {
+    if (!userId || !token || !drawnItem) return;
+    try {
+      const response = await axios.post(`/api/wallet/sellItem?userId=${userId}&itemId=${drawnItem.id}`, '', {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (response.status === 200) {
+        setResultDialogOpen(false); 
+      }
+    } catch (error) {
+      console.error('Error selling item:', error);
+      alert('Nie udało się sprzedać przedmiotu');
     }
   };
 
@@ -216,8 +231,8 @@ function CaseDetailsPage() {
         <div className="max-w-7xl mx-auto mb-8">
           {/* Nagłówek */}
           <div className="flex items-center gap-4 mb-6">
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               className="flex items-center gap-2"
               onClick={() => navigate('/')}
             >
@@ -239,8 +254,8 @@ function CaseDetailsPage() {
           </div>
 
           <div className="spin-container border rounded-lg bg-card/50 relative w-full overflow-hidden">
-            <div 
-              className="items-container" 
+            <div
+              className="items-container"
               ref={containerRef}
               style={{ minWidth: 'max-content' }}
             >
@@ -337,10 +352,10 @@ function CaseDetailsPage() {
             <DialogHeader>
               <DialogTitle>Gratulacje!</DialogTitle>
               <DialogDescription>
-                Wylosowałeś nowy przedmiot. Czy chcesz dodać go do swojego ekwipunku?
+                Wylosowałeś nowy przedmiot. Co chcesz z nim zrobić?
               </DialogDescription>
             </DialogHeader>
-            
+
             {drawnItem && (
               <div className="flex flex-col items-center p-4">
                 <Card
@@ -367,11 +382,11 @@ function CaseDetailsPage() {
                 </Card>
               </div>
             )}
-            
+
             <DialogFooter>
-              <Button variant="secondary" onClick={() => setResultDialogOpen(false)}>
-                Odrzuć
-              </Button>
+            <Button variant="secondary" onClick={handleSellItem}>
+            Sprzedaj ({drawnItem?.price.toFixed(2)} zł)
+          </Button>
               <Button onClick={handleAddToEquipment} disabled={!userId || !token}>
                 Dodaj do ekwipunku
               </Button>

@@ -18,5 +18,8 @@ namespace LootBox.Domain.Interfaces
         Task<List<Item>> GetItemsByRarityIdAsync(int rarityId);
         Task RemoveEquipmentsAsync(List<int> equipmentIds);
         Task AddEquipmentAsync(Equipment equipment);
+        Task<Equipment> GetEquipmentByUserAndItemId(int userId, int itemId);
+        Task<Equipment> GetEquipemntByUserAndEquipemntId(int userId, int equipmentId);
+
     }
 }

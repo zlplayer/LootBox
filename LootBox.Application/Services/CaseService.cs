@@ -19,12 +19,16 @@ namespace LootBox.Application.Services
         private readonly ICaseRepository _caseRepository;
         private readonly Random _random = new Random();
         private readonly IWalletService _walletService;
-        public CaseService(IMapper mapper, ICaseRepository caseRepository, Random random, IWalletService walletService)
+        private readonly IWalletRepository _walletRepository;
+        private readonly IItemRepository _itemRepository;
+        public CaseService(IMapper mapper, ICaseRepository caseRepository, Random random, IWalletService walletService, IWalletRepository walletRepository, IItemRepository itemRepository)
         {
             _mapper = mapper;
             _caseRepository = caseRepository;
             _random = random;
             _walletService = walletService;
+            _caseRepository = caseRepository;
+            _itemRepository= itemRepository;
         }
         public async Task Create(CreateCaseDto caseDto)
         {
@@ -170,7 +174,6 @@ namespace LootBox.Application.Services
 
             return _mapper.Map<ItemDto>(selectedItem);
         }
-
 
         public Rarity DrawRarity(List<Rarity> availableRarities)
         {

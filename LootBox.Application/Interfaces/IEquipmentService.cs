@@ -13,5 +13,6 @@ namespace LootBox.Application.Interfaces
         Task<EquipmentDto> GetEquipmentById(int id);
         Task Create(int itemId, int userId);
         Task Delete(int id);
+        Task SellItem(int userId, int equipmentId);
     }
 }

@@ -78,5 +78,19 @@ namespace LootBox.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task<Equipment> GetEquipmentByUserAndItemId(int userId, int itemId)
+        {
+            return await _dbContext.Equipments
+                .Include(e => e.Item)
+                .FirstOrDefaultAsync(e => e.UserId == userId && e.ItemId == itemId);
+        }
+
+        public async Task<Equipment> GetEquipemntByUserAndEquipemntId(int userId, int equipmentId)
+        {
+            return await _dbContext.Equipments
+                .Include(e => e.Item)
+                .FirstOrDefaultAsync(e => e.UserId == userId && e.Id == equipmentId);
+        }
+
     }
 }
