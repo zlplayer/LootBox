@@ -7,16 +7,16 @@
 
  Navbar container 
 .nav {
-    background-color: #2d2d2d;  Ciemniejszy kolor dla bardziej nowoczesnego wyglądu 
+    background-color: #2d2d2d;  
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    position: sticky;  Sticky navbar 
+    position: sticky;  
     top: 0;
     z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);  Dodano cień 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);  
 }
 
  Logo 
@@ -36,7 +36,7 @@
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    display: none;  Ukrywamy hamburger na desktopie 
+    display: none;  
 }
 
  Navigation links 
@@ -92,7 +92,6 @@
     display: block;
 }
 
- Mobile Styles 
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;

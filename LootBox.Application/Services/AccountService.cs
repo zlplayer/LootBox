@@ -151,5 +151,16 @@ namespace LootBox.Application.Services
             user.PasswordHash = _passwordHasher.HashPassword(user, newPassword.NewPassword);
             await _accountRepository.UpdateUser(user);
         }
+
+        public async Task UpdateUserTradeLink(int userId, string tradeLink)
+        {
+            var user = await _accountRepository.GetUserById(userId);
+            if (user == null)
+            {
+                throw new NotFoundException("User not found");
+            }
+            user.TradeLink = tradeLink;
+            await _accountRepository.UpdateUser(user);
+        }
     }
 }

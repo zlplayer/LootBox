@@ -20,6 +20,7 @@ namespace LootBox.Infrastructure
         public DbSet<Role> Roles { get; set; }
         public DbSet<Equipment> Equipments { get; set; }
         public DbSet<Wallet> Wallets { get; set; }
+        public DbSet<ItemWithdrawal> ItemWithdrawals { get; set; }
 
         public LootBoxDbContext(DbContextOptions<LootBoxDbContext> options) : base(options)
         {

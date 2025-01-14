@@ -18,6 +18,7 @@ import ItemDetailsPage  from './ItemDetails/ItemDetails.jsx';
 import WalletComponent from './Wallet/Wallet.jsx';
 import RankingComponent from './Ranking/Ranking.jsx';
 import ContractComponent from './Contract/Contract.jsx';
+import AdminWithdrawalsPage from './AdminWithdrawals/AdminWithdrawals.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -40,6 +41,7 @@ createRoot(document.getElementById('root')).render(
             <Route path="/wallet" element={<WalletComponent />} />
             <Route path="/ranking" element={<RankingComponent />} />
             <Route path="/contracts" element={<ContractComponent />} />
+            <Route path="/withdrawals" element={<AdminWithdrawalsPage />} />
             </Routes>
     </Router>
 )

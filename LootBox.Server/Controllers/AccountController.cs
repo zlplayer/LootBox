@@ -83,5 +83,12 @@ namespace LootBox.Server.Controllers
             return Ok();
         }
 
+        [HttpPut("updateTradeLink")]
+        [Authorize]
+        public async Task<IActionResult> UpdateTradeLink(int userId, string tradeLink)
+        {
+            await _accountService.UpdateUserTradeLink(userId, tradeLink);
+            return Ok();
+        }
     }
 }

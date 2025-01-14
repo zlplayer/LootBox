@@ -8,6 +8,8 @@ function CreateCase({ onClose, onSuccess }) {
   const [name, setName] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [price, setPrice] = useState('');
+  const [walletBalance, setWalletBalance] = useState(0);
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -77,7 +79,8 @@ function CreateCase({ onClose, onSuccess }) {
         <Input
           id="price"
           type="number"
-          step="0.01"
+          step="0,01"
+          min="0"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           placeholder="Wprowadź cenę skrzynki"

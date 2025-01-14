@@ -2,6 +2,7 @@
 using LootBox.Application.Dtos;
 using LootBox.Domain.Entities;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing.Constraints;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,6 +74,19 @@ namespace LootBox.Application.Mappings
 
             CreateMap<Wallet, WalletDto>();
             CreateMap<WalletDto, Wallet>();
+
+            CreateMap<ItemWithdrawal, ItemWithdrawalDto>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Item.Name))
+                .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Item.Image))
+                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.Item.Price))
+                .ForMember(dest => dest.RarityColor, opt => opt.MapFrom(src => src.Item.Rarity.Color))
+                .ForMember(dest => dest.WearRatingName, opt => opt.MapFrom(src => src.Item.WearRating.Name))
+                .ForMember(dest => dest.TypeItemName, opt => opt.MapFrom(src => src.Item.TypeItem.Name))
+                .ForMember(dest=>dest.TradeLink, opt=>opt.MapFrom(src=>src.User.TradeLink))
+                .ForMember(dest=>dest.UserName, opt=>opt.MapFrom(src=>src.User.UserName));
+
+
+            CreateMap<AddItemWithdrawalDto, ItemWithdrawal>();
         }
     }
 }

@@ -131,7 +131,8 @@ function CreateItem({ onClose, onSuccess }) {
         <Input
           id="price"
           type="number"
-          step="0.01"
+          step="0,01"
+          min="0"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           placeholder="Wpisz cenę przedmiotu"

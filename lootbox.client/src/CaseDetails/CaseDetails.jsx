@@ -56,6 +56,7 @@ function CaseDetailsPage() {
 
   const [itemToDelete, setItemToDelete] = useState(null);
   const [isDeleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [walletBalance, setWalletBalance] = useState(0);
 
   const containerRef = useRef(null);
 
@@ -75,6 +76,29 @@ function CaseDetailsPage() {
     setItemToDelete(null);
     setDeleteDialogOpen(false);
   };
+
+  useEffect(() => {
+    const fetchWalletBalance = async () => {
+      if (!userId || !token) return;
+      
+      try {
+        const response = await fetch(`/api/wallet?userId=${userId}`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (!response.ok) throw new Error('Failed to fetch wallet balance');
+        const data = await response.json();
+        setWalletBalance(data.money);
+      } catch (error) {
+        console.error('Error fetching wallet balance:', error);
+      }
+    };
+  
+    fetchWalletBalance();
+  }, [userId, token]);
 
   const handleDeleteItemFromCase = async () => {
     if (!itemToDelete) return;
@@ -185,7 +209,7 @@ function CaseDetailsPage() {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.status === 200) {
-        setResultDialogOpen(false); 
+        setResultDialogOpen(false);
       }
     } catch (error) {
       console.error('Error selling item:', error);
@@ -288,11 +312,16 @@ function CaseDetailsPage() {
           <div className="flex justify-center mb-8 mt-4">
             <Button
               size="lg"
-              disabled={isDrawing || items.length === 0 || !userId || !token}
+              disabled={isDrawing || items.length === 0 || !userId || !token || walletBalance < currentCase?.price}
               onClick={handleDraw}
               className="px-8 py-6 text-lg"
             >
-              {isDrawing ? "Losowanie..." : `Otwórz za ${currentCase?.price.toFixed(2)} zł`}
+              {isDrawing ?
+                "Losowanie..." :
+                walletBalance < currentCase?.price ?
+                  `Niewystarczające środki (potrzebujesz ${currentCase?.price.toFixed(2)} zł)` :
+                  `Otwórz za ${currentCase?.price.toFixed(2)} zł`
+              }
             </Button>
           </div>
 
@@ -347,7 +376,10 @@ function CaseDetailsPage() {
         </div>
 
         {/* Dialog z wynikiem */}
-        <Dialog open={isResultDialogOpen} onOpenChange={setResultDialogOpen}>
+        <Dialog
+          open={isResultDialogOpen}
+          onOpenChange={() => { }} // Usuwamy możliwość zamknięcia przez kliknięcie poza oknem
+        >
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
               <DialogTitle>Gratulacje!</DialogTitle>
@@ -384,10 +416,10 @@ function CaseDetailsPage() {
             )}
 
             <DialogFooter>
-            <Button variant="secondary" onClick={handleSellItem}>
-            Sprzedaj ({drawnItem?.price.toFixed(2)} zł)
-          </Button>
-              <Button onClick={handleAddToEquipment} disabled={!userId || !token}>
+              <Button variant="secondary" onClick={handleSellItem}>
+                Sprzedaj ({drawnItem?.price.toFixed(2)} zł)
+              </Button>
+              <Button onClick={handleAddToEquipment}>
                 Dodaj do ekwipunku
               </Button>
             </DialogFooter>

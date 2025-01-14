@@ -146,6 +146,35 @@ namespace LootBox.Infrastructure.Migrations
                     b.ToTable("Items");
                 });
 
+            modelBuilder.Entity("LootBox.Domain.Entities.ItemWithdrawal", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("DateWithdrawal")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAccepted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ItemWithdrawals");
+                });
+
             modelBuilder.Entity("LootBox.Domain.Entities.Rarity", b =>
                 {
                     b.Property<int>("Id")
@@ -222,6 +251,9 @@ namespace LootBox.Infrastructure.Migrations
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
+
+                    b.Property<string>("TradeLink")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -340,6 +372,25 @@ namespace LootBox.Infrastructure.Migrations
                     b.Navigation("TypeItem");
 
                     b.Navigation("WearRating");
+                });
+
+            modelBuilder.Entity("LootBox.Domain.Entities.ItemWithdrawal", b =>
+                {
+                    b.HasOne("LootBox.Domain.Entities.Item", "Item")
+                        .WithMany()
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LootBox.Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("LootBox.Domain.Entities.User", b =>

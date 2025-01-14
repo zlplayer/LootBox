@@ -19,8 +19,17 @@ import {
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { UserCircle2, KeyRound, LogOut, Shield } from "lucide-react";
+import { 
+    UserCircle2, 
+    KeyRound, 
+    LogOut, 
+    Shield,
+    Link as LinkIcon,
+    ExternalLink
+} from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import DeleteUserDialog from "@/Users/DeleteDialog";
 import ChangePasswordDialog from "./ChangePasswordDialog";
@@ -33,36 +42,39 @@ function Profile() {
     const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
     const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
     const [isChangePasswordDialogOpen, setIsChangePasswordDialogOpen] = useState(false);
+    const [isTradeLinkDialogOpen, setIsTradeLinkDialogOpen] = useState(false);
+    const [tradeLink, setTradeLink] = useState("");
 
     const userId = localStorage.getItem("id");
     const token = localStorage.getItem("token");
     const navigate = useNavigate();
 
     useEffect(() => {
-        const fetchUserData = async () => {
-            try {
-                const response = await fetch(`/api/account/user/${userId}`, {
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
-                    },
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch user data');
-                }
-
-                const data = await response.json();
-                setUser(data);
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
         fetchUserData();
-    }, [userId, token]);
+    }, []);
+
+    const fetchUserData = async () => {
+        try {
+            const response = await fetch(`/api/account/user/${userId}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch user data');
+            }
+
+            const data = await response.json();
+            setUser(data);
+            setTradeLink(data.tradeLink || '');
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     const handleDeleteAccount = async () => {
         try {
@@ -83,6 +95,32 @@ function Profile() {
         } catch (error) {
             setError(error.message);
         }
+    };
+
+    const handleUpdateTradeLink = async () => {
+        try {
+            const response = await fetch(`/api/account/updateTradeLink?userId=${userId}&tradeLink=${tradeLink}`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error('Nie udało się zaktualizować TradeLink');
+            }
+
+            await fetchUserData();
+            setIsTradeLinkDialogOpen(false);
+        } catch (error) {
+            console.error('Error updating trade link:', error);
+            alert('Nie udało się zaktualizować TradeLink');
+        }
+    };
+
+    const validateTradeLink = (link) => {
+        return link.startsWith('https://steamcommunity.com/tradeoffer/new/');
     };
 
     const handleLogout = () => {
@@ -138,6 +176,10 @@ function Profile() {
                         <TabsTrigger value="security" className="gap-2">
                             <KeyRound className="w-4 h-4" />
                             Bezpieczeństwo
+                        </TabsTrigger>
+                        <TabsTrigger value="steam" className="gap-2">
+                            <LinkIcon className="w-4 h-4" />
+                            Steam
                         </TabsTrigger>
                     </TabsList>
 
@@ -201,7 +243,105 @@ function Profile() {
                             </CardFooter>
                         </Card>
                     </TabsContent>
+
+                    {/* Zakładka Steam */}
+                    <TabsContent value="steam">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Ustawienia Steam</CardTitle>
+                                <CardDescription>
+                                    Zarządzaj swoimi ustawieniami Steam Trade
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <div className="space-y-2">
+                                    <div className="flex items-center justify-between">
+                                        <label className="text-sm font-medium">Trade URL</label>
+                                        <Button 
+                                            variant="ghost" 
+                                            size="sm"
+                                            className="text-xs"
+                                            onClick={() => window.open('https://steamcommunity.com/my/tradeoffers/privacy#trade_offer_access_url', '_blank')}
+                                        >
+                                            Jak znaleźć Trade URL?
+                                            <ExternalLink className="w-3 h-3 ml-1" />
+                                        </Button>
+                                    </div>
+                                    {user?.tradeLink ? (
+                                        <div className="flex items-center justify-between bg-muted p-3 rounded-md">
+                                            <p className="text-sm truncate max-w-[300px]">{user.tradeLink}</p>
+                                            <Button
+                                                variant="outline"
+                                                size="sm"
+                                                onClick={() => setIsTradeLinkDialogOpen(true)}
+                                            >
+                                                Edytuj
+                                            </Button>
+                                        </div>
+                                    ) : (
+                                        <div className="flex flex-col items-center gap-4 bg-muted/50 p-6 rounded-lg">
+                                            <LinkIcon className="w-8 h-8 text-muted-foreground" />
+                                            <div className="text-center">
+                                                <p className="text-sm text-muted-foreground">
+                                                    Nie ustawiono jeszcze Trade URL
+                                                </p>
+                                                <p className="text-xs text-muted-foreground">
+                                                    Trade URL jest wymagany do wypłacania przedmiotów
+                                                </p>
+                                            </div>
+                                            <Button
+                                                variant="default"
+                                                onClick={() => setIsTradeLinkDialogOpen(true)}
+                                            >
+                                                Ustaw Trade URL
+                                            </Button>
+                                        </div>
+                                    )}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </TabsContent>
                 </Tabs>
+
+                {/* Dialog edycji TradeLink */}
+                <Dialog open={isTradeLinkDialogOpen} onOpenChange={setIsTradeLinkDialogOpen}>
+                    <DialogContent>
+                        <DialogHeader>
+                            <DialogTitle>Trade URL Steam</DialogTitle>
+                            <DialogDescription>
+                                Wprowadź swój Trade URL ze Steam, aby móc wypłacać przedmioty
+                            </DialogDescription>
+                        </DialogHeader>
+                        <div className="space-y-4">
+                            <div className="space-y-2">
+                                <Label htmlFor="tradeLink">Trade URL</Label>
+                                <Input
+                                    id="tradeLink"
+                                    value={tradeLink}
+                                    onChange={(e) => setTradeLink(e.target.value)}
+                                    placeholder="https://steamcommunity.com/tradeoffer/new/..."
+                                    className={!validateTradeLink(tradeLink) && tradeLink ? "border-red-500" : ""}
+                                />
+                                {!validateTradeLink(tradeLink) && tradeLink && (
+                                    <p className="text-xs text-red-500">
+                                        Nieprawidłowy format Trade URL
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                        <DialogFooter>
+                            <Button variant="outline" onClick={() => setIsTradeLinkDialogOpen(false)}>
+                                Anuluj
+                            </Button>
+                            <Button 
+                                onClick={handleUpdateTradeLink}
+                                disabled={!validateTradeLink(tradeLink)}
+                            >
+                                {!validateTradeLink(tradeLink) ? 'Nieprawidłowy Trade URL' : 'Zapisz'}
+                            </Button>
+                        </DialogFooter>
+                    </DialogContent>
+                </Dialog>
             </div>
         </div>
     );
