@@ -15,5 +15,8 @@ namespace LootBox.Domain.Interfaces
         Task<ItemWithdrawal> GetItemWithdrawalById(int id);
         Task<IEnumerable<ItemWithdrawal>> GetItemWithdrawalByIsAcceptedTrue(int userId);
         Task<IEnumerable<ItemWithdrawal>> GetItemWithdrawalByIsAcceptedFalse(int userId);
+        Task<ItemWithdrawal> GetItemWithdrawalByItemAndUserId(int itemId, int userId);
+
+
     }
 }

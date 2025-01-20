@@ -29,15 +29,26 @@ namespace LootBox.Application.Services
         {
             var user = await _accountRepository.GetUserById(userId);
 
-            if(user.TradeLink == null)
+            if (user.TradeLink == null)
             {
                 throw new Exception("Trade link is not set");
             }
 
-            var item = await _equipmentRepository.GetEquipemntByUserAndEquipemntId(userId, equipmentId);
+            var equipment = await _equipmentRepository.GetEquipemntByUserAndEquipemntId(userId, equipmentId);
+            if (equipment == null)
+            {
+                throw new Exception("Equipment not found");
+            }
+
+            var existingWithdrawal = await _itemWithdrawalRepository.GetItemWithdrawalByItemAndUserId(equipment.ItemId, userId);
+            if (existingWithdrawal != null)
+            {
+                throw new Exception("Item is already in withdrawal");
+            }
+
             var itemWithdrawal = new ItemWithdrawal
             {
-                ItemId = item.ItemId,
+                ItemId = equipment.ItemId,
                 UserId = userId,
                 IsAccepted = false,
             };

@@ -20,13 +20,18 @@ namespace LootBox.Infrastructure.Repositories
         //public async Task<IEnumerable<Item>>GetAllEquipmentUser(int id) => await _dbContext.Items.Where(i=>i.Equipments.Any(e => e.UserId == id)).Include(i => i.TypeItem).Include(i => i.Rarity).Include(i => i.WearRating).ToListAsync();
         public async Task<IEnumerable<Equipment>> GetAllEquipmentUser(int userId)
         {
+            var itemsInWithdrawal = await _dbContext.ItemWithdrawals
+                .Where(iw => iw.UserId == userId)
+                .Select(iw => iw.ItemId)
+                .ToListAsync();
+
             var equipments = await _dbContext.Equipments
-            .Where(e => e.UserId == userId)  
-            .Include(e => e.Item)  
-            .Include(e => e.Item.TypeItem)  
-            .Include(e => e.Item.Rarity)  
-            .Include(e => e.Item.WearRating)  
-            .ToListAsync();
+                .Where(e => e.UserId == userId && !itemsInWithdrawal.Contains(e.ItemId))
+                .Include(e => e.Item)
+                .Include(e => e.Item.TypeItem)
+                .Include(e => e.Item.Rarity)
+                .Include(e => e.Item.WearRating)
+                .ToListAsync();
 
             return equipments;
         }

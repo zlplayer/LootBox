@@ -60,6 +60,10 @@ namespace LootBox.Infrastructure.Repositories
                 .Include(iw => iw.User).Where(iw => iw.IsAccepted == true && iw.UserId==userId).ToListAsync();
             return itemWithdrawals;
         }
-
+        public async Task<ItemWithdrawal> GetItemWithdrawalByItemAndUserId(int itemId, int userId)
+        {
+            return await _dbContext.ItemWithdrawals
+                .FirstOrDefaultAsync(iw => iw.ItemId == itemId && iw.UserId == userId);
+        }
     }
 }
