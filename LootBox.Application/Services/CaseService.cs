@@ -175,7 +175,7 @@ namespace LootBox.Application.Services
             return _mapper.Map<ItemDto>(selectedItem);
         }
 
-        public Rarity DrawRarity(List<Rarity> availableRarities)
+        private Rarity DrawRarity(List<Rarity> availableRarities)
         {
             var totalPercent = availableRarities.Sum(r => r.Percent);
             var randomValue = _random.NextDouble() * totalPercent;
